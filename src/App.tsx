@@ -1,11 +1,9 @@
-import { Button } from "@/components/ui/button"
-
-
+import Layout from "@/layout"
+ 
 export default function MyApp() {
   return (
-    <div>
-      <h1>Welcome to my app</h1>
-      <Button>Button</Button>
-    </div>
-  );
+    <Layout>
+      <span className="text-2xl">Title</span>
+    </Layout>
+  )
 }

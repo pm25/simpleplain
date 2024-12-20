@@ -225,6 +225,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 -   [shadcn/ui](https://ui.shadcn.com)
+-   [Tailwind CSS](https://tailwindcss.com)
 -   [README Template](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
