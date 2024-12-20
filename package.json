@@ -4,20 +4,25 @@
   "private": true,
   "homepage": "https://pm25.github.io/personal-website-template",
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.1",
     "@types/jest": "^29.5.14",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
-    "cra-template": "1.2.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.469.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-scripts": "5.0.1",
-    "typescript": "^5.7.2"
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^4.9.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -40,7 +45,10 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "gh-pages": "^6.2.0",
+    "postcss": "^8.4.49",
+    "react-app-rewired": "^2.2.1",
     "tailwindcss": "^3.4.17"
   }
 }

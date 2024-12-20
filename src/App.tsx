@@ -1,14 +1,11 @@
-function MyButton({ title }: { title: string }) {
-  return (
-    <button>{title}</button>
-  );
-}
+import { Button } from "@/components/ui/button"
+
 
 export default function MyApp() {
   return (
     <div>
       <h1>Welcome to my app</h1>
-      <MyButton title="I'm a button" />
+      <Button>Button</Button>
     </div>
   );
 }
