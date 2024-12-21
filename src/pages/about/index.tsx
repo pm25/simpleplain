@@ -1,13 +1,9 @@
+import Intro from "./intro";
+
 export default function About() {
     return (
-        <div>
-            <span className="text-2xl">About</span>
-            <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-                <div className="aspect-video rounded-xl bg-muted/50" />
-                <div className="aspect-video rounded-xl bg-muted/50" />
-                <div className="aspect-video rounded-xl bg-muted/50" />
-            </div>
-            {/* <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" /> */}
+        <div className="flex flex-col items-center">
+            <Intro />
         </div>
     );
 }
