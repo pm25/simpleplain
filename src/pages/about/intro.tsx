@@ -44,7 +44,7 @@ const user = {
 
 export default function Intro() {
     return (
-        <div className="flex flex-row gap-16">
+        <div className="flex flex-row items-center gap-16">
             <Profile />
             <Biography />
         </div>
@@ -96,7 +96,7 @@ function Profile() {
 function Biography() {
     return (
         <div className="w-96">
-            <div className="text-2xl font-semibold">About Me</div>
+            <div className="text-2xl my-2 font-semibold ">About Me</div>
             <p>
                 I'm currently working on [your field or project] and has a deep interest in
                 [specific area of focus]. With a background in [mention education or professional
