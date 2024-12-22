@@ -40,11 +40,20 @@ const user = {
             icon: FaSquareFacebook,
         },
     ],
+    biography: `
+        I'm currently working on [your field or project] and has a deep interest in
+        [specific area of focus]. With a background in [mention education or professional
+        background], they have contributed to [mention any notable work or achievements, if
+        applicable]. [Your Name] is passionate about [mention specific interests or goals]
+        and is committed to furthering knowledge in this area. Outside of [work/study], they
+        enjoy [mention hobbies or personal interests]. Feel free to reach out via [email or
+        contact form] for more information or collaboration inquiries.
+    `,
 };
 
 export default function Introduction() {
     return (
-        <div className="flex flex-row items-center justify-around max-w-[60rem] w-full gap-6">
+        <div className="flex flex-row items-center justify-around max-w-[60rem] w-full gap-12">
             <Profile />
             <Biography />
         </div>
@@ -95,17 +104,9 @@ function Profile() {
 
 function Biography() {
     return (
-        <div className="w-[36rem]">
-            <div className="text-2xl my-2 font-semibold ">About Me</div>
-            <p>
-                I'm currently working on [your field or project] and has a deep interest in
-                [specific area of focus]. With a background in [mention education or professional
-                background], they have contributed to [mention any notable work or achievements, if
-                applicable]. [Your Name] is passionate about [mention specific interests or goals]
-                and is committed to furthering knowledge in this area. Outside of [work/study], they
-                enjoy [mention hobbies or personal interests]. Feel free to reach out via [email or
-                contact form] for more information or collaboration inquiries.
-            </p>
+        <div className="min-w-64 w-full">
+            <div className="text-2xl font-semibold mb-2">About Me</div>
+            <p>{user.biography}</p>
         </div>
     );
 }
