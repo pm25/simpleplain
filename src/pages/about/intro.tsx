@@ -95,7 +95,7 @@ function Profile() {
 
 function Biography() {
     return (
-        <div className="w-96">
+        <div className="w-[32rem]">
             <div className="text-2xl my-2 font-semibold ">About Me</div>
             <p>
                 I'm currently working on [your field or project] and has a deep interest in
