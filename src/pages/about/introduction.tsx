@@ -42,9 +42,9 @@ const user = {
     ],
 };
 
-export default function Intro() {
+export default function Introduction() {
     return (
-        <div className="flex flex-row items-center gap-16">
+        <div className="flex flex-row items-center justify-around max-w-[60rem] w-full gap-6">
             <Profile />
             <Biography />
         </div>
@@ -53,13 +53,13 @@ export default function Intro() {
 
 function Profile() {
     return (
-        <div className="flex flex-col items-center space-y-4 flex-shrink-0">
+        <div className="flex flex-col items-center gap-y-4 flex-shrink-0">
             <img
                 src={user.profile_url}
                 alt="Profile"
                 className="w-60 h-auto rounded-xl object-cover"
             />
-            <div className="flex flex-col items-center space-y-2">
+            <div className="flex flex-col items-center gap-y-2">
                 <p className="text-3xl font-semibold text-foreground">{user.name}</p>
                 <p className="text-lg font-medium text-muted-foreground">{user.headline}</p>
                 <p className="flex flex-row items-center gap-1 text-base font-medium text-foreground">
@@ -95,7 +95,7 @@ function Profile() {
 
 function Biography() {
     return (
-        <div className="w-[32rem]">
+        <div className="w-[36rem]">
             <div className="text-2xl my-2 font-semibold ">About Me</div>
             <p>
                 I'm currently working on [your field or project] and has a deep interest in
