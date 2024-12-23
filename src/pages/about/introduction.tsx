@@ -53,7 +53,7 @@ const user = {
 
 export default function Introduction() {
     return (
-        <div className="flex flex-row items-center justify-around max-w-[60rem] w-full gap-12">
+        <div className="flex flex-col sm:flex-row items-center gap-8 lg:gap-16 max-w-[60rem] w-full">
             <Profile />
             <Biography />
         </div>
