@@ -53,7 +53,7 @@ const user = {
 
 export default function Introduction() {
     return (
-        <div className="flex flex-col sm:flex-row items-center gap-8 md:gap-12 lg:gap-16 max-w-[60rem] w-full">
+        <div className="flex flex-col sm:flex-row items-center gap-8 md:gap-12 lg:gap-16 mx-auto">
             <Profile />
             <Biography />
         </div>
@@ -104,9 +104,9 @@ function Profile() {
 
 function Biography() {
     return (
-        <div className="min-w-64 w-full px-4 sm:px-0">
+        <div className="min-w-64 max-w-prose w-full px-4 sm:px-0">
             <div className="text-2xl font-semibold mb-2">About Me</div>
-            <p>{user.biography}</p>
+            <p className="text-justify hyphens-auto break-words">{user.biography}</p>
         </div>
     );
 }
