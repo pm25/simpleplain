@@ -1,4 +1,4 @@
-import { FaUsers, FaBook } from "react-icons/fa6";
+import { FaUsers, FaBook, FaRegCalendar } from "react-icons/fa6";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -9,7 +9,7 @@ const user = {
             title: "RankUp: Boosting Semi-Supervised Regression with an Auxiliary Ranking Classifier",
             authors: "Pin-Yen Huang, Szu-Wei Fu, Yu Tsao",
             year: 2024,
-            booktitle: "Neural Information Processing Systems (NeurIPS)",
+            booktitle: "38th Neural Information Processing Systems (NeurIPS)",
             link: "https://arxiv.org/abs/2410.22124",
         },
         {
@@ -22,21 +22,21 @@ const user = {
         {
             title: "Title",
             authors: "Author",
-            year: 2024,
+            year: "year",
             booktitle: "Booktitle",
             link: "https://example.com",
         },
         {
             title: "Title",
             authors: "Author",
-            year: 2024,
+            year: "year",
             booktitle: "Booktitle",
             link: "https://example.com",
         },
         {
             title: "Title",
             authors: "Author",
-            year: 2024,
+            year: "year",
             booktitle: "Booktitle",
             link: "https://example.com",
         },
@@ -45,12 +45,13 @@ const user = {
 
 export default function Publication() {
     return (
-        <div className="w-full max-w-[64rem] rounded-xl bg-muted p-4 sm:p-8">
-            <div className="text-2xl font-semibold text-center mb-6">Publications</div>
-
-            <ul className="space-y-4">
+        <Card className="w-full max-w-[64rem] rounded-xl bg-muted">
+            <CardHeader>
+                <CardTitle className="text-center">Publications</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
                 {user.publications.map((pub, index) => (
-                    <li key={index} className="bg-white shadow-sm rounded-xl py-4 px-8">
+                    <div key={index} className="bg-white rounded-xl shadow-none py-4 px-8">
                         <a
                             href={pub.link}
                             target="_blank"
@@ -75,13 +76,17 @@ export default function Publication() {
                                 ))}
                             </span>
                         </span>
-                        <div className="grid grid-cols-[auto,1fr] items-center gap-2 text-muted-foreground">
+                        <div className="grid grid-cols-[auto,1fr,auto] items-center gap-2 text-muted-foreground">
                             <FaBook className="w-4 h-4" />
                             <div className="truncate">{pub.booktitle}</div>
+                            <div className="flex flex-row items-center gap-2 text-right">
+                                <FaRegCalendar className="w-4 h-4" />
+                                {pub.year}
+                            </div>
                         </div>
-                    </li>
+                    </div>
                 ))}
-            </ul>
-        </div>
+            </CardContent>
+        </Card>
     );
 }
