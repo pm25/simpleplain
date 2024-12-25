@@ -1,5 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
+import { FaGraduationCap, FaBriefcase } from "react-icons/fa6";
+
 const user = {
     education: [
         { degree: "Ph.D. in Computer Science", school: "XYZ University", years: "2020 - Present" },
@@ -19,7 +21,10 @@ export default function Experience() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card className="rounded-xl">
                     <CardHeader>
-                        <CardTitle>Education</CardTitle>
+                        <CardTitle className="flex flex-row justify-center items-center gap-2">
+                            <FaGraduationCap />
+                            Education
+                        </CardTitle>
                     </CardHeader>
                     <CardContent>
                         <ul className="list-disc pl-6 space-y-1">
@@ -34,7 +39,10 @@ export default function Experience() {
 
                 <Card className="rounded-xl">
                     <CardHeader>
-                        <CardTitle>Work Experiences</CardTitle>
+                        <CardTitle className="flex flex-row justify-center items-center gap-2">
+                            <FaBriefcase />
+                            Work Experiences
+                        </CardTitle>
                     </CardHeader>
                     <CardContent>
                         <ul className="list-disc pl-6 space-y-1">

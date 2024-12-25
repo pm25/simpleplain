@@ -1,7 +1,7 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import {
     FaLinkedin,
-    FaGraduationCap,
+    FaGoogleScholar,
     FaRegIdBadge,
     FaGithub,
     FaSquareFacebook,
@@ -22,7 +22,7 @@ const user = {
         {
             name: "Google Scholar",
             url: "https://scholar.google.com.tw/citations?user=nQdpH2MAAAAJ",
-            icon: FaGraduationCap,
+            icon: FaGoogleScholar,
         },
         {
             name: "Résumé",

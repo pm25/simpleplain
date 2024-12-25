@@ -45,9 +45,12 @@ const user = {
 
 export default function Publication() {
     return (
-        <Card className="w-full max-w-[64rem] rounded-xl bg-muted">
+        <Card className="bg-muted rounded-xl w-full max-w-[64rem]">
             <CardHeader>
-                <CardTitle className="text-center">Publications</CardTitle>
+                <CardTitle className="flex flex-row justify-center items-center gap-2">
+                    <FaBook />
+                    Publications
+                </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
                 {user.publications.map((pub, index) => (
