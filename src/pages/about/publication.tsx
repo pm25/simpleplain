@@ -53,7 +53,7 @@ export default function Publication() {
                 </CardTitle>
             </CardHeader>
 
-            <CardContent className="space-y-3 px-6 md:px-12">
+            <CardContent className="space-y-3 lg:px-12">
                 {user.publications.map((pub, index) => (
                     <div key={index} className="space-y-0.5">
                         <a
