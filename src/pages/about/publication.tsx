@@ -84,9 +84,7 @@ export default function Publication() {
 
                         <div className="text-sm sm:text-base grid grid-cols-[auto,1fr,auto] items-center gap-2 text-muted-foreground leading-tight">
                             <FaBook />
-                            {pub.booktitle.length > 110
-                                ? `${pub.booktitle.slice(0, 110)}...`
-                                : pub.booktitle}
+                            <div className="line-clamp-2">{pub.booktitle}</div>
                             <div className="grid grid-cols-[auto,1fr,auto] items-center gap-2 text-right">
                                 <FaRegCalendar />
                                 {pub.year}
