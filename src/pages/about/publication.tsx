@@ -45,16 +45,19 @@ const user = {
 
 export default function Publication() {
     return (
-        <Card className="bg-muted rounded-xl w-full max-w-[64rem]">
+        <Card className="rounded-xl w-full max-w-[64rem]">
             <CardHeader>
                 <CardTitle className="flex flex-row justify-center items-center gap-2">
                     <FaBook />
                     Publications
                 </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-3">
+            <CardContent>
                 {user.publications.map((pub, index) => (
-                    <div key={index} className="bg-white rounded-xl py-4 px-4 sm:px-8 space-y-0.5">
+                    <div
+                        key={index}
+                        className="rounded-xl py-4 px-4 sm:px-8 space-y-0.5 hover:bg-muted"
+                    >
                         <a
                             href={pub.link}
                             target="_blank"
