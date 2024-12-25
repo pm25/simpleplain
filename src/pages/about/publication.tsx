@@ -45,19 +45,17 @@ const user = {
 
 export default function Publication() {
     return (
-        <Card className="rounded-xl w-full max-w-[64rem]">
+        <Card className="rounded-lg w-full max-w-[64rem]">
             <CardHeader>
                 <CardTitle className="flex flex-row justify-center items-center gap-2">
                     <FaBook />
                     Publications
                 </CardTitle>
             </CardHeader>
-            <CardContent>
+
+            <CardContent className="space-y-3 px-6 md:px-12">
                 {user.publications.map((pub, index) => (
-                    <div
-                        key={index}
-                        className="rounded-xl py-2 px-4 sm:px-8 space-y-0.5 hover:bg-muted"
-                    >
+                    <div key={index} className="space-y-0.5">
                         <a
                             href={pub.link}
                             target="_blank"
@@ -66,6 +64,7 @@ export default function Publication() {
                         >
                             {pub.title}
                         </a>
+
                         <span className="text-sm sm:text-base grid grid-cols-[auto,1fr] items-center gap-2 text-muted-foreground">
                             <FaUsers />
                             <span className="truncate">
@@ -82,6 +81,7 @@ export default function Publication() {
                                 ))}
                             </span>
                         </span>
+
                         <div className="text-sm sm:text-base grid grid-cols-[auto,1fr,auto] items-center gap-2 text-muted-foreground leading-tight">
                             <FaBook />
                             {pub.booktitle.length > 110
