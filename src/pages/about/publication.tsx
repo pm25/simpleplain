@@ -56,13 +56,13 @@ export default function Publication() {
                 {user.publications.map((pub, index) => (
                     <div
                         key={index}
-                        className="rounded-xl py-4 px-4 sm:px-8 space-y-0.5 hover:bg-muted"
+                        className="rounded-xl py-2 px-4 sm:px-8 space-y-0.5 hover:bg-muted"
                     >
                         <a
                             href={pub.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-base sm:text-lg font-semibold leading-tight block hover:underline"
+                            className="text-base sm:text-lg font-semibold leading-tight hover:underline"
                         >
                             {pub.title}
                         </a>

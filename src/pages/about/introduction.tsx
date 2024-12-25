@@ -10,7 +10,7 @@ import {
 
 const user = {
     name: "Pin-Yen Huang",
-    profile_url: "https://pm25.github.io/static/media/profile2.9db5d4c6.webp",
+    profile_url: "https://avatars.githubusercontent.com/u/33774054?v=4",
     headline: "CLLab • National Taiwan University",
     email: "pyhuang97@gmail.com",
     links: [
