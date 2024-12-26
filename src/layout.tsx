@@ -11,12 +11,13 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Separator } from "@/components/ui/separator";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { Button } from "@/components/ui/button";
 
 export default function Layout() {
     return (
         <SidebarProvider>
             <AppSidebar />
-            <SidebarInset>
+            <SidebarInset className="min-h-screen">
                 <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
                     <div className="flex items-center gap-2 px-4">
                         <SidebarTrigger className="-ml-1" />
@@ -36,9 +37,20 @@ export default function Layout() {
                         </Breadcrumb>
                     </div>
                 </header>
-                <div className="p-6 sm:p-12">
+                <div className="p-6 sm:p-12 flex-grow">
                     <Outlet />
                 </div>
+                <footer className="w-full py-4 text-sm text-center border-t">
+                    <Button variant="link">
+                        <a
+                            href="https://github.com/pm25/personal-website-template"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            SimplePlain Template
+                        </a>
+                    </Button>
+                </footer>
             </SidebarInset>
         </SidebarProvider>
     );
