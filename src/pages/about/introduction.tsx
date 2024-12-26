@@ -1,4 +1,3 @@
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import {
     FaLinkedin,
     FaGoogleScholar,
@@ -7,6 +6,8 @@ import {
     FaSquareFacebook,
     FaRegEnvelope,
 } from "react-icons/fa6";
+
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const user = {
     name: "Pin-Yen Huang",

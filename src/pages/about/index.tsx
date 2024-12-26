@@ -1,7 +1,7 @@
 import Introduction from "./introduction";
 import Experience from "./experience";
 import Publication from "./publication";
-// import Project from "./project";
+import Project from "./project";
 
 export default function About() {
     return (
@@ -9,7 +9,7 @@ export default function About() {
             <Introduction />
             <Experience />
             <Publication />
-            {/* <Project /> */}
+            <Project />
         </div>
     );
 }

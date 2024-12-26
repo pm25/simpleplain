@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 import { FaGraduationCap, FaBriefcase } from "react-icons/fa6";
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const user = {
     education: [
