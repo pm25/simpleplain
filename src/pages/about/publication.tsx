@@ -9,7 +9,7 @@ const user = {
             title: "RankUp: Boosting Semi-Supervised Regression with an Auxiliary Ranking Classifier",
             authors: "Pin-Yen Huang, Szu-Wei Fu, Yu Tsao",
             year: 2024,
-            booktitle: "38th Neural Information Processing Systems (NeurIPS 2024)",
+            booktitle: "38th Conference on Neural Information Processing Systems (NeurIPS 2024)",
             link: "https://arxiv.org/abs/2410.22124",
         },
         {

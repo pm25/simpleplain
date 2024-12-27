@@ -40,7 +40,7 @@ export default function Layout() {
                 <div className="p-6 sm:p-12 flex-grow">
                     <Outlet />
                 </div>
-                <footer className="w-full py-4 text-sm text-center border-t">
+                <footer className="w-full text-center border-t py-2 sm:py-4">
                     <Button variant="link">
                         <a
                             href="https://github.com/pm25/personal-website-template"
