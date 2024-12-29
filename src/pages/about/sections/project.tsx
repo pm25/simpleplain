@@ -10,17 +10,17 @@ const projects = [
     },
     {
         name: "SimplePlus Beamer Theme",
-        img: "https://raw.githubusercontent.com/PM25/simpleplus-beamerTheme/master/preview/1.webp",
+        image: "https://raw.githubusercontent.com/PM25/simpleplus-beamerTheme/master/preview/1.webp",
         github: "pm25/simpleplus-beamertheme",
     },
     {
         name: "SimpleDarkBlue Beamer Theme",
-        img: "https://raw.githubusercontent.com/pm25/simpledarkblue-beamertheme/master/preview/0001.webp",
+        image: "https://raw.githubusercontent.com/pm25/simpledarkblue-beamertheme/master/preview/0001.webp",
         github: "pm25/simpledarkBlue-beamertheme",
     },
     {
         name: "Semi-Supervised Regression",
-        img: "https://pm25.github.io/Research-Figures/rankup/figures/rankup-illustration.png",
+        image: "https://pm25.github.io/Research-Figures/rankup/figures/rankup-illustration.png",
         github: "pm25/semi-supervised-regression",
     },
     {
@@ -35,7 +35,7 @@ const projects = [
 
 interface ProjectProp {
     name: string;
-    img?: string;
+    image?: string;
     github: string;
 }
 
@@ -98,9 +98,9 @@ function ProjectCard({ project }: { project: ProjectProp }) {
     return (
         <Card className="rounded-lg overflow-hidden">
             <div className="aspect-video w-full overflow-hidden">
-                {project.img ? (
+                {project.image ? (
                     <img
-                        src={project.img}
+                        src={project.image}
                         alt={project.name || "Project image"}
                         className="w-full h-full object-contain"
                     />
