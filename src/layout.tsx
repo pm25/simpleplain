@@ -37,11 +37,15 @@ export default function Layout() {
                         </Breadcrumb>
                     </div>
                 </header>
+
                 <div className="p-6 sm:p-12 flex-grow">
                     <Outlet />
                 </div>
-                <footer className="w-full text-center border-t py-2 sm:py-4">
-                    <Button variant="link">
+
+                {/* It's not mandatory, but if you could leave the footer as it is, it would be greatly appreciated! */}
+                <footer className="text-sm w-full text-center border-t py-2 sm:py-4">
+                    Created by
+                    <Button variant="link" className="px-1">
                         <a
                             href="https://github.com/pm25/personal-website-template"
                             target="_blank"
