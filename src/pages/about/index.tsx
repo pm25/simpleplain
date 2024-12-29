@@ -2,6 +2,7 @@ import Introduction from "./sections/introduction";
 import Experience from "./sections/experience";
 import Publication from "./sections/publication";
 import Project from "./sections/project";
+import Talk from "./sections/talk";
 
 export default function About() {
     return (
@@ -10,6 +11,7 @@ export default function About() {
             <Experience />
             <Publication />
             <Project />
+            <Talk />
         </div>
     );
 }
