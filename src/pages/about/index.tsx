@@ -1,7 +1,7 @@
-import Introduction from "./introduction";
-import Experience from "./experience";
-import Publication from "./publication";
-import Project from "./project";
+import Introduction from "./sections/introduction";
+import Experience from "./sections/experience";
+import Publication from "./sections/publication";
+import Project from "./sections/project";
 
 export default function About() {
     return (
