@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaDiagramProject, FaGithub, FaGlobe, FaRegStar } from "react-icons/fa6";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 
 const projects = [
     {
@@ -10,12 +10,12 @@ const projects = [
     },
     {
         name: "SimplePlus Beamer Theme",
-        image: "https://raw.githubusercontent.com/PM25/simpleplus-beamerTheme/master/preview/1.webp",
+        image: "https://raw.githubusercontent.com/PM25/simpleplus-beamerTheme/master/preview/slide-1.webp",
         github: "pm25/simpleplus-beamertheme",
     },
     {
         name: "SimpleDarkBlue Beamer Theme",
-        image: "https://raw.githubusercontent.com/pm25/simpledarkblue-beamertheme/master/preview/0001.webp",
+        image: "https://raw.githubusercontent.com/pm25/simpledarkblue-beamertheme/master/preview/slide-1.webp",
         github: "pm25/simpledarkBlue-beamertheme",
     },
     {
@@ -41,22 +41,18 @@ interface ProjectProp {
 
 export default function Project() {
     return (
-        <Card className="rounded-lg w-full max-w-[64rem]">
-            <CardHeader>
-                <CardTitle className="flex flex-row justify-center items-center gap-2">
-                    <FaDiagramProject />
-                    Projects
-                </CardTitle>
-            </CardHeader>
+        <div className="w-full max-w-[64rem] border-t py-6 space-y-6">
+            <div className="flex flex-row justify-center items-center gap-2 text-2xl font-semibold">
+                <FaDiagramProject />
+                Projects
+            </div>
 
-            <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                    {projects.map((project, index) => (
-                        <ProjectCard key={index} project={project} />
-                    ))}
-                </div>
-            </CardContent>
-        </Card>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-6">
+                {projects.map((project, index) => (
+                    <ProjectCard key={index} project={project} />
+                ))}
+            </div>
+        </div>
     );
 }
 

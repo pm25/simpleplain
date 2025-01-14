@@ -2,8 +2,6 @@ import { useState } from "react";
 import { MdCoPresent } from "react-icons/md";
 import { FaRegCalendar } from "react-icons/fa6";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 const talks = [
     {
         title: "Cost Learning Network for Imbalanced Classification",
@@ -26,15 +24,13 @@ export default function Talk() {
     };
 
     return (
-        <Card className="rounded-lg w-full max-w-[64rem]">
-            <CardHeader>
-                <CardTitle className="flex flex-row justify-center items-center gap-2">
-                    <MdCoPresent />
-                    Presentations / Talks
-                </CardTitle>
-            </CardHeader>
+        <div className="w-full max-w-[64rem] border-t py-6 space-y-6">
+            <div className="flex flex-row justify-center items-center gap-2 text-2xl font-semibold">
+                <MdCoPresent />
+                Presentations / Talks
+            </div>
 
-            <CardContent className="px-6">
+            <div className="px-6">
                 {talks.map((talk, index) => (
                     <div
                         key={index}
@@ -54,7 +50,7 @@ export default function Talk() {
                         <div className="flex flex-col gap-0.5">
                             <div className="text-lg font-semibold">{talk.title}</div>
                             <div className="flex flex-row justify-between text-sm text-muted-foreground">
-                                <p>{talk.location}</p>
+                                <p className="line-clamp-2">{talk.location}</p>
                                 <p className="flex flex-row gap-1 items-center">
                                     <FaRegCalendar />
                                     {talk.date}
@@ -63,7 +59,7 @@ export default function Talk() {
                         </div>
                     </div>
                 ))}
-            </CardContent>
-        </Card>
+            </div>
+        </div>
     );
 }

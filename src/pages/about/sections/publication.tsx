@@ -1,7 +1,5 @@
 import { FaUsers, FaBook, FaRegCalendar } from "react-icons/fa6";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 const user = {
     author_name: "Pin-Yen Huang",
     publications: [
@@ -45,15 +43,13 @@ const user = {
 
 export default function Publication() {
     return (
-        <Card className="rounded-lg w-full max-w-[64rem]">
-            <CardHeader>
-                <CardTitle className="flex flex-row justify-center items-center gap-2">
-                    <FaBook />
-                    Publications
-                </CardTitle>
-            </CardHeader>
+        <div className="w-full max-w-[64rem] border-t py-6 space-y-6">
+            <div className="flex flex-row justify-center items-center gap-2 text-2xl font-semibold">
+                <FaBook />
+                Publications
+            </div>
 
-            <CardContent className="space-y-3 lg:px-12">
+            <div className="space-y-3 px-6 lg:px-12">
                 {user.publications.map((pub, index) => (
                     <div key={index} className="space-y-0.5">
                         <a
@@ -92,7 +88,7 @@ export default function Publication() {
                         </div>
                     </div>
                 ))}
-            </CardContent>
-        </Card>
+            </div>
+        </div>
     );
 }
