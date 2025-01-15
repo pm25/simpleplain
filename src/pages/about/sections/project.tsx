@@ -5,8 +5,8 @@ import { Card } from "@/components/ui/card";
 
 const projects = [
     {
-        name: "Personal Website Template",
-        github: "pm25/personal-website-template",
+        name: "SimplePlain",
+        github: "pm25/simpleplain",
     },
     {
         name: "SimplePlus Beamer Theme",

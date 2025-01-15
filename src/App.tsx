@@ -1,12 +1,14 @@
 import { HashRouter as Router, Routes, Route } from "react-router";
 
 import Layout from "@/layout";
-import Home from "@/pages/home";
-import About from "@/pages/about";
-import Movie from "@/pages/movie";
-import Music from "@/pages/music";
-import Project from "@/pages/project";
-import Article from "@/pages/article";
+import { loadLazy } from "@/lib/loadComponent";
+
+const Home = loadLazy(() => import("@/pages/home"));
+const About = loadLazy(() => import("@/pages/about"));
+const Movie = loadLazy(() => import("@/pages/movie"));
+const Music = loadLazy(() => import("@/pages/music"));
+const Project = loadLazy(() => import("@/pages/project"));
+const Article = loadLazy(() => import("@/pages/article"));
 
 export default function App() {
     return (
