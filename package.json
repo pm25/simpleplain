@@ -1,8 +1,8 @@
 {
-  "name": "personal-website-template",
+  "name": "simpleplain",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pm25.github.io/personal-website-template",
+  "homepage": "https://pm25.github.io/simpleplain",
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.2",
     "@radix-ui/react-collapsible": "^1.1.2",
