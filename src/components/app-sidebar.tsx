@@ -48,7 +48,7 @@ const data = {
     navMain: [
         {
             title: "About",
-            url: "/about",
+            url: "/",
             icon: User,
         },
         {

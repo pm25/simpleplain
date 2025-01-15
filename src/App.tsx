@@ -3,7 +3,6 @@ import { HashRouter as Router, Routes, Route } from "react-router";
 import Layout from "@/layout";
 import { loadLazy } from "@/lib/loadComponent";
 
-const Home = loadLazy(() => import("@/pages/home"));
 const About = loadLazy(() => import("@/pages/about"));
 const Movie = loadLazy(() => import("@/pages/movie"));
 const Music = loadLazy(() => import("@/pages/music"));
@@ -15,8 +14,7 @@ export default function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
-                    <Route path="about" element={<About />} />
+                    <Route index element={<About />} />
                     <Route path="movie" element={<Movie />} />
                     <Route path="music" element={<Music />} />
                     <Route path="project" element={<Project />} />
