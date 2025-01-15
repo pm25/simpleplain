@@ -43,7 +43,7 @@ const user = {
 
 export default function Publication() {
     return (
-        <div className="w-full max-w-[64rem] border-t py-6 space-y-6">
+        <div className="w-full max-w-[64rem] space-y-6">
             <div className="flex flex-row justify-center items-center gap-2 text-2xl font-semibold">
                 <FaBook />
                 Publications
