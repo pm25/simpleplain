@@ -16,11 +16,11 @@ export default function About() {
         <div className="flex flex-1 flex-col items-center gap-8">
             <Introduction />
             <Experience />
-            <Separator orientation="horizontal" className="w-full max-w-[64rem] mt-4" />
+            <Separator orientation="horizontal" className="max-w-[64rem] mt-4" />
             <Publication />
-            <Separator orientation="horizontal" className="w-full max-w-[64rem] mt-4" />
+            <Separator orientation="horizontal" className="max-w-[64rem] mt-4" />
             <Project />
-            <Separator orientation="horizontal" className="w-full max-w-[64rem] mt-4" />
+            <Separator orientation="horizontal" className="max-w-[64rem] mt-4" />
             <Talk />
         </div>
     );

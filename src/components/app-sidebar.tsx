@@ -1,50 +1,24 @@
 import * as React from "react";
-import {
-    AudioWaveform,
-    Command,
-    User,
-    GalleryVerticalEnd,
-    Clapperboard,
-    Hammer,
-    Music,
-    Newspaper,
-} from "lucide-react";
+import { User, Clapperboard, Hammer, Music, Newspaper } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
 import { NavUser } from "@/components/nav-user";
-import { TeamSwitcher } from "@/components/team-switcher";
+import { Separator } from "@/components/ui/separator";
 import {
     Sidebar,
     SidebarContent,
     SidebarFooter,
     SidebarHeader,
     SidebarRail,
+    SidebarTrigger,
 } from "@/components/ui/sidebar";
 
-// This is sample data.
 const data = {
     user: {
         name: "shadcn",
         email: "m@example.com",
         avatar: "/avatars/shadcn.jpg",
     },
-    teams: [
-        {
-            name: "Acme Inc",
-            logo: GalleryVerticalEnd,
-            plan: "Enterprise",
-        },
-        {
-            name: "Acme Corp.",
-            logo: AudioWaveform,
-            plan: "Startup",
-        },
-        {
-            name: "Evil Corp.",
-            logo: Command,
-            plan: "Free",
-        },
-    ],
     navMain: [
         {
             title: "About",
@@ -78,7 +52,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     return (
         <Sidebar collapsible="icon" {...props}>
             <SidebarHeader>
-                <TeamSwitcher teams={data.teams} />
+                <SidebarTrigger className="flex aspect-square size-8 items-center justify-center hover:bg-sidebar-accent hover:text-sidebar-accent-foreground" />
+                <Separator orientation="horizontal" />
             </SidebarHeader>
             <SidebarContent>
                 <NavMain items={data.navMain} />
