@@ -5,10 +5,10 @@ import { loadLazy } from "@/lib/loadComponent";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const About = loadLazy(() => import("@/pages/about"));
-const Movie = loadLazy(() => import("@/pages/movie"));
+const Movies = loadLazy(() => import("@/pages/movies"));
 const Music = loadLazy(() => import("@/pages/music"));
-const Project = loadLazy(() => import("@/pages/project"));
-const Article = loadLazy(() => import("@/pages/article"));
+const Projects = loadLazy(() => import("@/pages/projects"));
+const Articles = loadLazy(() => import("@/pages/articles"));
 
 export default function App() {
     return (
@@ -17,10 +17,10 @@ export default function App() {
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<About />} />
-                        <Route path="movie" element={<Movie />} />
+                        <Route path="movies" element={<Movies />} />
                         <Route path="music" element={<Music />} />
-                        <Route path="project" element={<Project />} />
-                        <Route path="article" element={<Article />} />
+                        <Route path="projects" element={<Projects />} />
+                        <Route path="articles" element={<Articles />} />
                     </Route>
                 </Routes>
             </Router>

@@ -1,7 +1,13 @@
-export default function Project() {
+import { useEffect } from "react";
+
+export default function Articles() {
+    useEffect(() => {
+        document.title = "Articles - My Website";
+    }, []);
+
     return (
         <div>
-            <span className="text-2xl">Project</span>
+            <span className="text-2xl">Articles</span>
             <div className="grid auto-rows-min gap-4 md:grid-cols-3">
                 <div className="aspect-video rounded-xl bg-muted/50" />
                 <div className="aspect-video rounded-xl bg-muted/50" />

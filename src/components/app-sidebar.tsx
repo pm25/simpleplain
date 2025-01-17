@@ -17,23 +17,23 @@ import {
 
 const navMain = [
     {
-        title: "About",
+        title: "About Me",
         url: "/",
         icon: User,
     },
     {
-        title: "Project",
-        url: "/project",
+        title: "Projects",
+        url: "/projects",
         icon: Hammer,
     },
     {
-        title: "Article",
-        url: "/article",
+        title: "Articles",
+        url: "/articles",
         icon: Newspaper,
     },
     {
-        title: "Movie",
-        url: "/movie",
+        title: "Movies",
+        url: "/movies",
         icon: Clapperboard,
     },
     {

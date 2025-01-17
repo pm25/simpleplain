@@ -9,7 +9,7 @@ export default function Layout() {
         <SidebarProvider defaultOpen={false}>
             <AppSidebar variant="floating" />
             <SidebarInset className="min-h-screen">
-                <SidebarTrigger className="fixed left-4 top-4 md:hidden z-[5]" />
+                <SidebarTrigger className="fixed left-3 top-3 md:hidden z-[5]" />
 
                 <div className="p-6 sm:p-12 flex-grow">
                     <Outlet />

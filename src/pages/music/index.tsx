@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 export default function Music() {
+    useEffect(() => {
+        document.title = "About Me - My Website";
+    }, []);
+
     return (
         <div>
             <span className="text-2xl">Music</span>
