@@ -29,8 +29,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/pm25/simpleplain" style="text-decoration: none;">
-    <span style="font-size: 80px;">🍞</span>
+  <a href="https://github.com/pm25/simpleplain">
+    <img src="public/logo192.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">SimplePlain Website Template</h3>

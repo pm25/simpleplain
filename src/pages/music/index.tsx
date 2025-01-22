@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export default function Music() {
     useEffect(() => {
-        document.title = "About Me - My Website";
+        document.title = "About Me - SimplePlain";
     }, []);
 
     return (

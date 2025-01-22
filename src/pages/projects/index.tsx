@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export default function Projects() {
     useEffect(() => {
-        document.title = "Projects - My Website";
+        document.title = "Projects - SimplePlain";
     }, []);
 
     return (

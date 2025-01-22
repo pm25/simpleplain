@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export default function Movies() {
     useEffect(() => {
-        document.title = "Movies - My Website";
+        document.title = "Movies - SimplePlain";
     }, []);
 
     return (

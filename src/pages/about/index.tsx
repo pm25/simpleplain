@@ -9,7 +9,7 @@ import Talk from "./sections/talk";
 
 export default function About() {
     useEffect(() => {
-        document.title = "About Me - My Website";
+        document.title = "About Me - SimplePlain";
     }, []);
 
     return (
