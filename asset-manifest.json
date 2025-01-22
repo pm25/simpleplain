@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/simpleplain/static/css/main.81905921.css",
-    "main.js": "/simpleplain/static/js/main.90a70358.js",
-    "static/js/9.3c1aff0c.chunk.js": "/simpleplain/static/js/9.3c1aff0c.chunk.js",
-    "static/js/929.5d14d521.chunk.js": "/simpleplain/static/js/929.5d14d521.chunk.js",
-    "static/js/971.2b9bfa71.chunk.js": "/simpleplain/static/js/971.2b9bfa71.chunk.js",
-    "static/js/188.3ba265e8.chunk.js": "/simpleplain/static/js/188.3ba265e8.chunk.js",
-    "static/js/707.a496579d.chunk.js": "/simpleplain/static/js/707.a496579d.chunk.js",
+    "main.css": "/simpleplain/static/css/main.7c5ff0dc.css",
+    "main.js": "/simpleplain/static/js/main.2757f6da.js",
+    "static/js/9.2b099833.chunk.js": "/simpleplain/static/js/9.2b099833.chunk.js",
+    "static/js/929.1d0485fc.chunk.js": "/simpleplain/static/js/929.1d0485fc.chunk.js",
+    "static/js/971.9f884b34.chunk.js": "/simpleplain/static/js/971.9f884b34.chunk.js",
+    "static/js/188.adeac417.chunk.js": "/simpleplain/static/js/188.adeac417.chunk.js",
+    "static/js/707.8a9c9984.chunk.js": "/simpleplain/static/js/707.8a9c9984.chunk.js",
     "static/js/19.eaadba6f.chunk.js": "/simpleplain/static/js/19.eaadba6f.chunk.js",
     "index.html": "/simpleplain/index.html",
-    "main.81905921.css.map": "/simpleplain/static/css/main.81905921.css.map",
-    "main.90a70358.js.map": "/simpleplain/static/js/main.90a70358.js.map",
-    "9.3c1aff0c.chunk.js.map": "/simpleplain/static/js/9.3c1aff0c.chunk.js.map",
-    "929.5d14d521.chunk.js.map": "/simpleplain/static/js/929.5d14d521.chunk.js.map",
-    "971.2b9bfa71.chunk.js.map": "/simpleplain/static/js/971.2b9bfa71.chunk.js.map",
-    "188.3ba265e8.chunk.js.map": "/simpleplain/static/js/188.3ba265e8.chunk.js.map",
-    "707.a496579d.chunk.js.map": "/simpleplain/static/js/707.a496579d.chunk.js.map",
+    "main.7c5ff0dc.css.map": "/simpleplain/static/css/main.7c5ff0dc.css.map",
+    "main.2757f6da.js.map": "/simpleplain/static/js/main.2757f6da.js.map",
+    "9.2b099833.chunk.js.map": "/simpleplain/static/js/9.2b099833.chunk.js.map",
+    "929.1d0485fc.chunk.js.map": "/simpleplain/static/js/929.1d0485fc.chunk.js.map",
+    "971.9f884b34.chunk.js.map": "/simpleplain/static/js/971.9f884b34.chunk.js.map",
+    "188.adeac417.chunk.js.map": "/simpleplain/static/js/188.adeac417.chunk.js.map",
+    "707.8a9c9984.chunk.js.map": "/simpleplain/static/js/707.8a9c9984.chunk.js.map",
     "19.eaadba6f.chunk.js.map": "/simpleplain/static/js/19.eaadba6f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.81905921.css",
-    "static/js/main.90a70358.js"
+    "static/css/main.7c5ff0dc.css",
+    "static/js/main.2757f6da.js"
   ]
 }
