@@ -71,6 +71,7 @@ This project is primarily built with the following frameworks and libraries. Any
 
 -   [![React][React.js]][React-url]
 -   [![Tailwind CSS][Tailwind.css]][Tailwind-url]
+-   [![Typescript][Typescript]][Typescript-url]
 -   [![shadcn/ui][shadcn.ui]][shadcn-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -196,3 +197,5 @@ I am deeply grateful for the following tools and resources that contributed to t
 [shadcn-url]: https://ui.shadcn.com
 [Tailwind.css]: https://img.shields.io/badge/Tailwind_CSS-grey?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC
 [Tailwind-url]: https://tailwindcss.com
+[Typescript]: https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white
+[Typescript-url]: https://www.typescriptlang.org
