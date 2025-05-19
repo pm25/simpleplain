@@ -43,7 +43,7 @@ const user = {
 
 export default function Publication() {
     return (
-        <div className="w-full max-w-[64rem] space-y-6">
+        <div className="w-full max-w-5xl space-y-6">
             <div className="flex flex-row justify-center items-center gap-2 text-2xl font-semibold">
                 <FaBook />
                 Publications
@@ -61,7 +61,7 @@ export default function Publication() {
                             {pub.title}
                         </a>
 
-                        <span className="text-sm sm:text-base grid grid-cols-[auto,1fr] items-center gap-2 text-muted-foreground">
+                        <span className="text-sm sm:text-base grid grid-cols-[auto_1fr] items-center gap-2 text-muted-foreground">
                             <FaUsers />
                             <span className="truncate">
                                 {pub.authors.split(", ").map((author, i) => (
@@ -78,10 +78,10 @@ export default function Publication() {
                             </span>
                         </span>
 
-                        <div className="text-sm sm:text-base grid grid-cols-[auto,1fr,auto] items-center gap-2 text-muted-foreground leading-tight">
+                        <div className="text-sm sm:text-base grid grid-cols-[auto_1fr_auto] items-center gap-2 text-muted-foreground leading-tight">
                             <FaBook />
                             <div className="line-clamp-2">{pub.booktitle}</div>
-                            <div className="text-sm grid grid-cols-[auto,1fr,auto] items-center gap-2 text-right">
+                            <div className="text-sm grid grid-cols-[auto_1fr_auto] items-center gap-2 text-right">
                                 <FaRegCalendar />
                                 {pub.year}
                             </div>

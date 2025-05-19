@@ -9,9 +9,9 @@ export default function Layout() {
         <SidebarProvider defaultOpen={false}>
             <AppSidebar variant="floating" />
             <SidebarInset className="min-h-screen">
-                <SidebarTrigger className="fixed left-3 top-3 md:hidden z-[5]" />
+                <SidebarTrigger className="fixed left-3 top-3 md:hidden z-5" />
 
-                <div className="px-6 sm:px-12 py-20 flex-grow">
+                <div className="px-6 sm:px-12 py-20 grow">
                     <Outlet />
                 </div>
 

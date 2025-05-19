@@ -24,7 +24,7 @@ export default function Talk() {
     };
 
     return (
-        <div className="w-full max-w-[64rem] space-y-6">
+        <div className="w-full max-w-5xl space-y-6">
             <div className="flex flex-row justify-center items-center gap-2 text-2xl font-semibold">
                 <MdCoPresent />
                 Presentations / Talks

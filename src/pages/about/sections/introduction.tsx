@@ -63,7 +63,7 @@ export default function Introduction() {
 
 function Profile() {
     return (
-        <div className="flex flex-col items-center gap-y-4 flex-shrink-0">
+        <div className="flex flex-col items-center gap-y-4 shrink-0">
             <img
                 src={user.profile_url}
                 alt="Profile"
@@ -84,7 +84,7 @@ function Profile() {
                                 href={item.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex-shrink-0"
+                                className="shrink-0"
                             >
                                 <Tooltip>
                                     <TooltipTrigger>
