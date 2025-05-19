@@ -10,13 +10,10 @@ const Music = loadLazy(() => import("@/pages/music"));
 const Projects = loadLazy(() => import("@/pages/projects"));
 const Articles = loadLazy(() => import("@/pages/articles"));
 
-// determine basename based on environment
-const basename = import.meta.env.MODE === "production" ? "/simpleplain" : "/";
-
 export default function App() {
     return (
         <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-            <Router basename={basename}>
+            <Router>
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<About />} />
