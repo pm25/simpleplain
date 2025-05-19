@@ -47,7 +47,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     return (
         <Sidebar collapsible="icon" {...props}>
             <SidebarHeader>
-                <SidebarMenuButton tooltip="Toggle Sidebar" className="w-8 h-8" asChild>
+                <SidebarMenuButton
+                    tooltip="Toggle Sidebar"
+                    className="w-8 h-8 cursor-pointer"
+                    asChild
+                >
                     <SidebarTrigger />
                 </SidebarMenuButton>
 

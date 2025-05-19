@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 export const DarkModeToggleButton = React.forwardRef<
     React.ComponentRef<typeof Button>,
     React.ComponentProps<typeof Button>
->(({ className, onClick, ...props }, ref) => {
+>(({ className, ...props }, ref) => {
     const { theme, setTheme } = useTheme();
 
     const toggleTheme = () => {
@@ -24,7 +24,7 @@ export const DarkModeToggleButton = React.forwardRef<
                 ref={ref}
                 variant="ghost"
                 size="icon"
-                className={cn("", className)}
+                className={cn("cursor-pointer", className)}
                 onClick={toggleTheme}
                 {...props}
             >
