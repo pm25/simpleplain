@@ -1,11 +1,32 @@
-import { Button } from "@/components/ui/button";
+import { HashRouter as Router, Routes, Route } from "react-router";
 
-function App() {
+import Layout from "@/layout";
+import { loadLazy } from "@/lib/loadComponent";
+import { ThemeProvider } from "@/components/theme-provider";
+
+const About = loadLazy(() => import("@/pages/about"));
+const Movies = loadLazy(() => import("@/pages/movies"));
+const Music = loadLazy(() => import("@/pages/music"));
+const Projects = loadLazy(() => import("@/pages/projects"));
+const Articles = loadLazy(() => import("@/pages/articles"));
+
+// determine basename based on environment
+const basename = import.meta.env.MODE === "production" ? "/simpleplain" : "/";
+
+export default function App() {
     return (
-        <div className="flex flex-col items-center justify-center min-h-svh">
-            <Button>Click me</Button>
-        </div>
+        <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+            <Router basename={basename}>
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<About />} />
+                        <Route path="movies" element={<Movies />} />
+                        <Route path="music" element={<Music />} />
+                        <Route path="projects" element={<Projects />} />
+                        <Route path="articles" element={<Articles />} />
+                    </Route>
+                </Routes>
+            </Router>
+        </ThemeProvider>
     );
 }
-
-export default App;
