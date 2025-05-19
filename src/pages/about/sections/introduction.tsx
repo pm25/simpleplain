@@ -88,7 +88,10 @@ function Profile() {
                             >
                                 <Tooltip>
                                     <TooltipTrigger>
-                                        <item.icon className="w-8 h-8" aria-label={item.name} />
+                                        <item.icon
+                                            className="w-8 h-8 cursor-pointer"
+                                            aria-label={item.name}
+                                        />
                                     </TooltipTrigger>
                                     <TooltipContent>
                                         <p>{item.name}</p>

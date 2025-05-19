@@ -19,9 +19,9 @@ export default function Experience() {
     return (
         <div className="flex flex-row items-center gap-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="rounded-lg">
+                <Card className="rounded-lg gap-2">
                     <CardHeader>
-                        <CardTitle className="flex flex-row justify-center items-center gap-2">
+                        <CardTitle className="flex flex-row justify-center items-center gap-2 text-xl">
                             <FaGraduationCap />
                             Education
                         </CardTitle>
@@ -37,9 +37,9 @@ export default function Experience() {
                     </CardContent>
                 </Card>
 
-                <Card className="rounded-lg">
+                <Card className="rounded-lg gap-2">
                     <CardHeader>
-                        <CardTitle className="flex flex-row justify-center items-center gap-2">
+                        <CardTitle className="flex flex-row justify-center items-center gap-2 text-xl">
                             <FaBriefcase />
                             Work Experiences
                         </CardTitle>
