@@ -1,13 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const postsDir = path.join(__dirname, "..", "src", "data", "posts");
-const outputPath = path.join(__dirname, "..", "src", "data", "posts.json");
+const postsDir = path.join(process.cwd(), "public", "articles");
+const outputPath = path.join(process.cwd(), "src", "data", "posts.json");
 
 function getSlug(filename) {
   return filename.replace(/\.md$/, "");
@@ -25,7 +21,8 @@ function generatePostsJson() {
 
     return {
       slug,
-      path: `./src/data/posts/${filename}`,
+      path: path.relative(process.cwd(), path.join(postsDir, filename)),
+      url: `/articles/${filename}`,
       ...data, // Spread all frontmatter attributes here
     };
   });

@@ -1,7 +1,8 @@
 [
   {
     "slug": "template",
-    "path": "./src/data/posts/template.md",
+    "path": "public/articles/template.md",
+    "url": "/articles/template.md",
     "title": "Your Post Title",
     "date": "2025-05-20T14:30:00",
     "lastEdited": "2025-05-20T16:15:00",
@@ -14,7 +15,8 @@
   },
   {
     "slug": "deep-learning-with-keras",
-    "path": "./src/data/posts/deep-learning-with-keras.md",
+    "path": "public/articles/deep-learning-with-keras.md",
+    "url": "/articles/deep-learning-with-keras.md",
     "title": "Deep Learning with Keras",
     "date": "2019-09-04",
     "lastEdited": "2025-05-20T16:15:00",

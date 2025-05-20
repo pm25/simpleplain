@@ -9,6 +9,7 @@ const Movies = loadLazy(() => import("@/pages/movies"));
 const Music = loadLazy(() => import("@/pages/music"));
 const Projects = loadLazy(() => import("@/pages/projects"));
 const Articles = loadLazy(() => import("@/pages/articles"));
+const ArticlePage = loadLazy(() => import("@/pages/articles/page"));
 
 export default function App() {
     return (
@@ -21,6 +22,7 @@ export default function App() {
                         <Route path="music" element={<Music />} />
                         <Route path="projects" element={<Projects />} />
                         <Route path="articles" element={<Articles />} />
+                        <Route path="/articles/:slug" element={<ArticlePage />} />
                     </Route>
                 </Routes>
             </Router>

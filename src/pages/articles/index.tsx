@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { FaNewspaper } from "react-icons/fa6";
+import { Link } from "react-router";
 
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -37,8 +38,8 @@ export default function Articles() {
 
 function ArticleCard({ post }: { post: (typeof postsData)[number] }) {
     return (
-        <a
-            href={`/posts/${post.slug}`}
+        <Link
+            to={`/articles/${post.slug}`}
             aria-label={`Read full article: ${post.title}`}
             className="block"
         >
@@ -68,6 +69,6 @@ function ArticleCard({ post }: { post: (typeof postsData)[number] }) {
                     </div>
                 </div>
             </Card>
-        </a>
+        </Link>
     );
 }
