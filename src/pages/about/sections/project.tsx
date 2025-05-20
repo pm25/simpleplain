@@ -1,43 +1,17 @@
-import { useState, useEffect } from "react";
 import { FaDiagramProject, FaGithub, FaGlobe, FaRegStar } from "react-icons/fa6";
 
 import { Card } from "@/components/ui/card";
+import repoData from "@/data/repos.json";
 
+// uses the repository name as defined in data/repos.json (matches the GitHub repository name)
 const projects = [
-    {
-        name: "SimplePlain",
-        github: "pm25/simpleplain",
-    },
-    {
-        name: "SimplePlus Beamer Theme",
-        image: "https://raw.githubusercontent.com/PM25/simpleplus-beamerTheme/master/preview/slide-1.webp",
-        github: "pm25/simpleplus-beamertheme",
-    },
-    {
-        name: "SimpleDarkBlue Beamer Theme",
-        image: "https://raw.githubusercontent.com/pm25/simpledarkblue-beamertheme/master/preview/slide-1.webp",
-        github: "pm25/simpledarkBlue-beamertheme",
-    },
-    {
-        name: "Semi-Supervised Regression",
-        image: "https://pm25.github.io/Research-Figures/rankup/figures/rankup-illustration.png",
-        github: "pm25/semi-supervised-regression",
-    },
-    {
-        name: "Title",
-        github: "pm25/personal-website-template",
-    },
-    {
-        name: "Title",
-        github: "pm25/personal-website-template",
-    },
+    "simpleplain",
+    "SimplePlus-BeamerTheme",
+    "SimpleDarkBlue-BeamerTheme",
+    "Semi-Supervised-Regression",
+    "simpleplain",
+    "simpleplain",
 ];
-
-interface ProjectProp {
-    name: string;
-    image?: string;
-    github: string;
-}
 
 export default function Project() {
     return (
@@ -56,54 +30,31 @@ export default function Project() {
     );
 }
 
-function ProjectCard({ project }: { project: ProjectProp }) {
-    const [starCount, setStarCount] = useState<number | null>(null);
-    const [description, setDescription] = useState<string | null>(null);
-    const [topics, setTopics] = useState<string[]>([]);
-    const [language, setLanguage] = useState<string | null>(null);
-    const [homepage, setHomepage] = useState<string | null>(null);
-
-    useEffect(() => {
-        async function fetchProjectDetails() {
-            if (project.github) {
-                try {
-                    const res = await fetch(`https://api.github.com/repos/${project.github}`);
-                    if (!res.ok) {
-                        throw new Error("GitHub API request failed");
-                    }
-                    const data = await res.json();
-                    setStarCount(data.stargazers_count);
-                    setDescription(data.description);
-                    setTopics(data.topics || []);
-                    setLanguage(data.language);
-                    setHomepage(data.homepage || null);
-                } catch (err) {
-                    console.error("Error fetching project details:", err);
-                    setStarCount(null);
-                    setDescription(null);
-                    setTopics([]);
-                    setLanguage(null);
-                    setHomepage(null);
-                }
-            }
-        }
-
-        fetchProjectDetails();
-    }, [project.github]);
+function ProjectCard({ project }: { project: string }) {
+    const data = repoData[project];
+    if (!data) {
+        return (
+            <Card className="rounded-lg overflow-hidden">
+                <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-muted">
+                    <span className="text-xl font-semibold opacity-80">Project not found</span>
+                </div>
+            </Card>
+        );
+    }
 
     return (
         <Card className="rounded-lg overflow-hidden">
             <div className="aspect-video w-full overflow-hidden">
-                {project.image ? (
+                {data.preview_image ? (
                     <img
-                        src={project.image}
-                        alt={project.name || "Project image"}
+                        src={data.preview_image}
+                        alt={data.name || "Project image"}
                         className="w-full h-full object-contain"
                     />
                 ) : (
                     <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-muted">
                         <span className="text-xl font-semibold opacity-80">
-                            {project.name || "Unnamed Project"}
+                            {data.name || "Unnamed Project"}
                         </span>
                         <span className="text-sm text-muted-foreground">Image not available</span>
                     </div>
@@ -112,13 +63,13 @@ function ProjectCard({ project }: { project: ProjectProp }) {
             <hr className="border-t" />
 
             <div className="flex flex-col py-3 px-4 gap-y-2">
-                <div className="text-lg font-semibold line-clamp-2">{project.name}</div>
+                <div className="text-lg font-semibold line-clamp-2">{data.display_name}</div>
                 <p className="text-sm text-muted-foreground line-clamp-2">
-                    {description || "Details unavailable"}
+                    {data.description || "Details unavailable"}
                 </p>
-                {topics.length > 0 && (
+                {data.topics.length > 0 && (
                     <div className="flex flex-wrap gap-2">
-                        {topics.map((topic, idx) => (
+                        {data.topics.map((topic, idx) => (
                             <span key={idx} className="bg-muted text-sm px-2 py-1 rounded-md">
                                 {topic}
                             </span>
@@ -129,27 +80,27 @@ function ProjectCard({ project }: { project: ProjectProp }) {
                 <div className="flex flex-row items-center justify-between text-muted-foreground mt-2">
                     <div className="flex items-center gap-2">
                         <div className="text-sm text-muted-foreground">
-                            <p>Language: {language || "Unknown"}</p>
+                            <p>Language: {data.language || "Unknown"}</p>
                         </div>
 
-                        {starCount !== null && (
+                        {data.stargazers_count !== null && (
                             <a
-                                href={`https://github.com/${project.github}/stargazers`}
+                                href={`${data.html_url}/stargazers`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Stargazers"
                                 className="flex items-center gap-1 text-sm text-yellow-600 hover:text-yellow-500"
                             >
                                 <FaRegStar className="w-4 h-4 fill-current" />
-                                <span>{starCount}</span>
+                                <span>{data.stargazers_count}</span>
                             </a>
                         )}
                     </div>
 
                     <div className="flex items-center gap-2">
-                        {project.github && (
+                        {data.html_url && (
                             <a
-                                href={`https://github.com/${project.github}`}
+                                href={data.html_url}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="GitHub repository"
@@ -158,9 +109,9 @@ function ProjectCard({ project }: { project: ProjectProp }) {
                                 <FaGithub className="w-6 h-6" />
                             </a>
                         )}
-                        {homepage && (
+                        {data.homepage && (
                             <a
-                                href={homepage}
+                                href={data.homepage}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Project website"
