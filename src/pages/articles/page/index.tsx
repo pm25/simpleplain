@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import fm from "front-matter";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 export default function ArticlePage() {
     const { slug } = useParams<{ slug: string }>();
@@ -44,7 +45,9 @@ export default function ArticlePage() {
     return (
         <article className="prose dark:prose-invert max-w-none px-4">
             <div className="text-4xl">{articleTitle}</div>
-            <ReactMarkdown>{htmlContent}</ReactMarkdown>
+            <ReactMarkdown rehypePlugins={[rehypeRaw]} skipHtml={false}>
+                {htmlContent}
+            </ReactMarkdown>
         </article>
     );
 }
