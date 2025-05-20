@@ -14,8 +14,8 @@
     "homepage": "https://pm25.github.io/simpleplain",
     "html_url": "https://github.com/pm25/simpleplain",
     "created_at": "2024-12-20T10:05:02Z",
-    "updated_at": "2025-05-20T03:47:25Z",
-    "pushed_at": "2025-05-20T03:47:21Z",
+    "updated_at": "2025-05-20T04:02:19Z",
+    "pushed_at": "2025-05-20T04:02:15Z",
     "preview_image": "",
     "show": true
   },
@@ -141,7 +141,7 @@
     "created_at": "2021-12-14T08:33:39Z",
     "updated_at": "2025-05-17T12:43:54Z",
     "pushed_at": "2025-01-12T22:50:46Z",
-    "preview_image": "https://raw.githubusercontent.com/PM25/simpleplus-beamerTheme/master/preview/slide-1.webp",
+    "preview_image": "https://raw.githubusercontent.com/pm25/simpleplus-beamerTheme/master/preview/slide-1.webp",
     "show": true
   },
   "NTU-Computer-Vision-2021-Fall": {
@@ -328,29 +328,35 @@
     "display_name": "",
     "description": null,
     "stargazers_count": 1,
-    "topics": [],
+    "topics": [
+      "d3js",
+      "data-visualization"
+    ],
     "language": "JavaScript",
-    "homepage": "https://pm25.github.io/Data-Visualization---Affect-of-Coronavirus-on-Air-Transportation/",
+    "homepage": "https://pm25.github.io/DataVisualization-Affect-of-Coronavirus-on-Air-Transportation/",
     "html_url": "https://github.com/pm25/DataVisualization-Affect-of-Coronavirus-on-Air-Transportation",
     "created_at": "2020-05-13T07:22:04Z",
-    "updated_at": "2022-09-15T13:38:44Z",
+    "updated_at": "2025-05-20T04:14:57Z",
     "pushed_at": "2022-09-15T13:38:39Z",
     "preview_image": "",
     "show": true
   },
   "Simulation-of-Life": {
     "name": "Simulation-of-Life",
-    "display_name": "",
+    "display_name": "Simulation of Life",
     "description": "一個小型生態圈的遊戲",
     "stargazers_count": 1,
-    "topics": [],
+    "topics": [
+      "game",
+      "python"
+    ],
     "language": "Python",
     "homepage": "",
     "html_url": "https://github.com/pm25/Simulation-of-Life",
     "created_at": "2020-04-21T09:57:17Z",
-    "updated_at": "2022-01-15T08:50:17Z",
+    "updated_at": "2025-05-20T04:09:39Z",
     "pushed_at": "2020-06-09T04:33:43Z",
-    "preview_image": "",
+    "preview_image": "https://raw.githubusercontent.com/pm25/Simulation-of-Life/master/images/preview.jpg",
     "show": true
   },
   "Visualization---Taiwan-Population": {
