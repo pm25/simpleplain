@@ -6,7 +6,7 @@ dotenv.config();
 
 const username = process.env.GITHUB_USERNAME;
 const token = process.env.GITHUB_TOKEN;
-const outputPath = path.join(process.cwd(), "data", "repos.json");
+const outputPath = path.join(process.cwd(), "src", "data", "repos.json");
 
 async function fetchAllRepos() {
   let page = 1;
@@ -29,10 +29,9 @@ async function fetchAllRepos() {
     }
 
     const repos = await res.json();
-
     allRepos.push(...repos);
 
-    if (repos.length < perPage) break; // No more pages
+    if (repos.length < perPage) break;
     page++;
   }
 
@@ -41,25 +40,42 @@ async function fetchAllRepos() {
 
 async function fetchRepos() {
   try {
+    // Load existing preview data (if available)
+    let existingData = {};
+    if (fs.existsSync(outputPath)) {
+      const raw = fs.readFileSync(outputPath, "utf-8");
+      const parsed = JSON.parse(raw);
+      for (const repo of parsed) {
+        if (repo.name) {
+          existingData[repo.name] = repo;
+        }
+      }
+    }
+
     const data = await fetchAllRepos();
 
-    const filtered = data
+    const merged = data
       .filter((repo) => !repo.fork && !repo.private)
-      .map((repo) => ({
-        name: repo.name,
-        description: repo.description,
-        stargazers_count: repo.stargazers_count,
-        topics: repo.topics,
-        language: repo.language,
-        homepage: repo.homepage,
-        html_url: repo.html_url,
-        created_at: repo.created_at,
-        updated_at: repo.updated_at,
-      }))
+      .map((repo) => {
+        const existing = existingData[repo.name] || {};
+        return {
+          name: repo.name,
+          display_name: existing.display_name || "", // preserve or initialize
+          description: repo.description,
+          stargazers_count: repo.stargazers_count,
+          topics: repo.topics,
+          language: repo.language,
+          homepage: repo.homepage,
+          html_url: repo.html_url,
+          created_at: repo.created_at,
+          updated_at: repo.updated_at,
+          preview_image: existing.preview_image || "", // preserve or initialize
+        };
+      })
       .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
     fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-    fs.writeFileSync(outputPath, JSON.stringify(filtered, null, 2));
+    fs.writeFileSync(outputPath, JSON.stringify(merged, null, 2));
     console.log(`✅ Repos written to ${outputPath}`);
   } catch (error) {
     console.error("❌ Failed to fetch repos:", error);
