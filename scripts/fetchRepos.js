@@ -69,7 +69,7 @@ async function fetchRepos() {
           updated_at: repo.updated_at,
           pushed_at: repo.pushed_at,
           preview_image: existing.preview_image || "",
-          show: existing.show || true,
+          show: existing.show !== undefined ? existing.show : true,
         };
       });
 

@@ -50,7 +50,7 @@ function ProjectCard({ project_name }: { project_name: keyof typeof repoData }) 
                     <img
                         src={data.preview_image}
                         alt={data.name || "Project image"}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                     />
                 ) : (
                     <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-muted">
