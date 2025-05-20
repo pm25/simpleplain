@@ -72,7 +72,7 @@ function Profile() {
             <div className="flex flex-col items-center gap-y-2">
                 <p className="text-3xl font-semibold text-foreground">{user.name}</p>
                 <p className="text-lg font-medium text-muted-foreground">{user.headline}</p>
-                <p className="flex flex-row items-center gap-1 text-base font-medium text-foreground">
+                <p className="flex flex-row items-center gap-2 text-base font-medium text-foreground opacity-80">
                     <FaRegEnvelope className="w-4 h-4" />
                     {user.email}
                 </p>
@@ -89,11 +89,11 @@ function Profile() {
                                 <Tooltip>
                                     <TooltipTrigger>
                                         <item.icon
-                                            className="w-8 h-8 cursor-pointer"
+                                            className="w-8 h-8 cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-100"
                                             aria-label={item.name}
                                         />
                                     </TooltipTrigger>
-                                    <TooltipContent>
+                                    <TooltipContent side="bottom">
                                         <p>{item.name}</p>
                                     </TooltipContent>
                                 </Tooltip>
