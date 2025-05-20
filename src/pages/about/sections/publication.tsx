@@ -1,45 +1,6 @@
 import { FaUsers, FaBook, FaRegCalendar } from "react-icons/fa6";
 
-const user = {
-    author_name: "Pin-Yen Huang",
-    publications: [
-        {
-            title: "RankUp: Boosting Semi-Supervised Regression with an Auxiliary Ranking Classifier",
-            authors: "Pin-Yen Huang, Szu-Wei Fu, Yu Tsao",
-            year: 2024,
-            booktitle: "38th Conference on Neural Information Processing Systems (NeurIPS 2024)",
-            link: "https://arxiv.org/abs/2410.22124",
-        },
-        {
-            title: "An Enhanced Mondrian Anonymization Model based on Self-Organizing Map",
-            authors: "Peter Shaojui Wang, Pin-Yen Huang, Yu-An Tsai, Raylin Tso",
-            year: 2020,
-            booktitle: "15th Asia Joint Conference on Information Security (AsiaJCIS 2020)",
-            link: "https://ieeexplore.ieee.org/abstract/document/9194139",
-        },
-        {
-            title: "Title",
-            authors: "Author",
-            year: "year",
-            booktitle: "Booktitle",
-            link: "https://example.com",
-        },
-        {
-            title: "Title",
-            authors: "Author",
-            year: "year",
-            booktitle: "Booktitle",
-            link: "https://example.com",
-        },
-        {
-            title: "Title",
-            authors: "Author",
-            year: "year",
-            booktitle: "Booktitle",
-            link: "https://example.com",
-        },
-    ],
-};
+import pubData from "@/data/publications.json";
 
 export default function Publication() {
     return (
@@ -50,7 +11,7 @@ export default function Publication() {
             </div>
 
             <div className="space-y-3 px-6 lg:px-12">
-                {user.publications.map((pub, index) => (
+                {pubData.publications.map((pub, index) => (
                     <div key={index} className="space-y-0.5">
                         <a
                             href={pub.link}
@@ -68,7 +29,7 @@ export default function Publication() {
                                     <span
                                         key={i}
                                         className={
-                                            author === user.author_name ? "font-semibold" : ""
+                                            author === pubData.author_name ? "font-semibold" : ""
                                         }
                                     >
                                         {author}
