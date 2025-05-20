@@ -67,7 +67,9 @@ async function fetchRepos() {
           html_url: repo.html_url,
           created_at: repo.created_at,
           updated_at: repo.updated_at,
+          pushed_at: repo.pushed_at,
           preview_image: existing.preview_image || "",
+          show: existing.show || true,
         };
       });
 

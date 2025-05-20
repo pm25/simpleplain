@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import repoData from "@/data/repos.json";
 
 // uses the repository name as defined in data/repos.json (matches the GitHub repository name)
-const projects = [
+const projects_name = [
     "simpleplain",
     "pm25.github.io",
     "SimplePlus-BeamerTheme",
@@ -22,16 +22,16 @@ export default function Project() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-6">
-                {projects.map((project, index) => (
-                    <ProjectCard key={index} project={project} />
+                {projects_name.map((project_name, index) => (
+                    <ProjectCard key={index} project_name={project_name} />
                 ))}
             </div>
         </div>
     );
 }
 
-function ProjectCard({ project }: { project: keyof typeof repoData }) {
-    const data = repoData[project];
+function ProjectCard({ project_name }: { project_name: keyof typeof repoData }) {
+    const data = repoData[project_name];
 
     if (!data) {
         return (
