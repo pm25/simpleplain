@@ -5,6 +5,8 @@ lastEdited: "2025-05-20T21:00:00"
 summary: "A simple introduction to deep learning with practical examples using the Keras Python package."
 tags: ["deep-learning", "keras"]
 coverImage: null
+author: "Pin-Yen Huang"
+draft: false
 ---
 
 # Deep Learning with Keras
