@@ -43,11 +43,12 @@ export default function ArticlePage() {
     if (error) return <p>{error}</p>;
 
     return (
-        <article className="prose dark:prose-invert max-w-none px-4">
-            <div className="text-4xl">{articleTitle}</div>
-            <ReactMarkdown rehypePlugins={[rehypeRaw]} skipHtml={false}>
-                {htmlContent}
-            </ReactMarkdown>
-        </article>
+        <div className="flex justify-center">
+            <div className="prose dark:prose-invert max-w-6xl w-full bg-muted rounded-lg overflow-hidden p-12 gap-0 border shadow-sm">
+                <ReactMarkdown rehypePlugins={[rehypeRaw]} skipHtml={false}>
+                    {htmlContent}
+                </ReactMarkdown>
+            </div>
+        </div>
     );
 }
