@@ -44,23 +44,21 @@ async function fetchRepos() {
     let existingData = {};
     if (fs.existsSync(outputPath)) {
       const raw = fs.readFileSync(outputPath, "utf-8");
-      const parsed = JSON.parse(raw);
-      for (const repo of parsed) {
-        if (repo.name) {
-          existingData[repo.name] = repo;
-        }
-      }
+      existingData = JSON.parse(raw);
     }
 
     const data = await fetchAllRepos();
 
-    const merged = data
+    const merged = {};
+
+    data
       .filter((repo) => !repo.fork && !repo.private)
-      .map((repo) => {
+      .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+      .forEach((repo) => {
         const existing = existingData[repo.name] || {};
-        return {
+        merged[repo.name] = {
           name: repo.name,
-          display_name: existing.display_name || "", // preserve or initialize
+          display_name: existing.display_name || "",
           description: repo.description,
           stargazers_count: repo.stargazers_count,
           topics: repo.topics,
@@ -69,10 +67,9 @@ async function fetchRepos() {
           html_url: repo.html_url,
           created_at: repo.created_at,
           updated_at: repo.updated_at,
-          preview_image: existing.preview_image || "", // preserve or initialize
+          preview_image: existing.preview_image || "",
         };
-      })
-      .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+      });
 
     fs.mkdirSync(path.dirname(outputPath), { recursive: true });
     fs.writeFileSync(outputPath, JSON.stringify(merged, null, 2));

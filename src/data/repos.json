@@ -1,5 +1,5 @@
-[
-  {
+{
+  "simpleplain": {
     "name": "simpleplain",
     "display_name": "SimplePlain",
     "description": "🍞 SimplePlain - A minimal and elegant template for creating a personal website",
@@ -14,10 +14,10 @@
     "homepage": "https://pm25.github.io/simpleplain",
     "html_url": "https://github.com/pm25/simpleplain",
     "created_at": "2024-12-20T10:05:02Z",
-    "updated_at": "2025-05-20T00:19:30Z",
+    "updated_at": "2025-05-20T00:53:59Z",
     "preview_image": ""
   },
-  {
+  "Semi-Supervised-Regression": {
     "name": "Semi-Supervised-Regression",
     "display_name": "Semi-Supervised Regression",
     "description": "🎋 NeurIPS 2024: Official repository for the paper 'RankUp: Boosting Semi-Supervised Regression with an Auxiliary Ranking Classifier'",
@@ -34,7 +34,7 @@
     "updated_at": "2025-05-13T18:46:45Z",
     "preview_image": "https://pm25.github.io/research-figures/rankup/figures/rankup-illustration.png"
   },
-  {
+  "Regression-Datasets": {
     "name": "Regression-Datasets",
     "display_name": "",
     "description": "🎛️ A collection of diverse regression datasets, featuring PyTorch-like dataset classes that automatically download and load datasets.",
@@ -51,7 +51,7 @@
     "updated_at": "2025-02-07T09:42:52Z",
     "preview_image": ""
   },
-  {
+  "Research-Figures": {
     "name": "Research-Figures",
     "display_name": "",
     "description": null,
@@ -64,7 +64,7 @@
     "updated_at": "2024-10-27T10:18:18Z",
     "preview_image": ""
   },
-  {
+  "MOS-Datasets": {
     "name": "MOS-Datasets",
     "display_name": "",
     "description": null,
@@ -77,7 +77,7 @@
     "updated_at": "2024-08-16T22:56:59Z",
     "preview_image": ""
   },
-  {
+  "Deep-Learning-Projects": {
     "name": "Deep-Learning-Projects",
     "display_name": "",
     "description": "⚓ Examples of deep learning projects using Pytorch.",
@@ -96,7 +96,7 @@
     "updated_at": "2023-03-15T08:40:04Z",
     "preview_image": ""
   },
-  {
+  "PM25": {
     "name": "PM25",
     "display_name": "",
     "description": null,
@@ -109,7 +109,7 @@
     "updated_at": "2024-12-25T00:32:07Z",
     "preview_image": ""
   },
-  {
+  "SimplePlus-BeamerTheme": {
     "name": "SimplePlus-BeamerTheme",
     "display_name": "SimplePlus Beamer Theme",
     "description": "🍃 SimplePlus - A minimalist and clean LaTeX Beamer theme.",
@@ -128,7 +128,7 @@
     "updated_at": "2025-05-17T12:43:54Z",
     "preview_image": "https://raw.githubusercontent.com/PM25/simpleplus-beamerTheme/master/preview/slide-1.webp"
   },
-  {
+  "NTU-Computer-Vision-2021-Fall": {
     "name": "NTU-Computer-Vision-2021-Fall",
     "display_name": "",
     "description": null,
@@ -141,7 +141,7 @@
     "updated_at": "2021-12-09T12:58:59Z",
     "preview_image": ""
   },
-  {
+  "Information-Retrieval-with-Contrastive-Learning": {
     "name": "Information-Retrieval-with-Contrastive-Learning",
     "display_name": "",
     "description": null,
@@ -154,7 +154,7 @@
     "updated_at": "2021-10-22T03:16:59Z",
     "preview_image": ""
   },
-  {
+  "Medical-Question-Answering-and-Decision-Making-AIdea-Competition": {
     "name": "Medical-Question-Answering-and-Decision-Making-AIdea-Competition",
     "display_name": "",
     "description": null,
@@ -167,7 +167,7 @@
     "updated_at": "2021-06-17T11:56:02Z",
     "preview_image": ""
   },
-  {
+  "General-Beamer-Theme": {
     "name": "General-Beamer-Theme",
     "display_name": "",
     "description": "A General Purpose Latex Beamer Theme.",
@@ -184,7 +184,7 @@
     "updated_at": "2025-05-14T10:50:05Z",
     "preview_image": ""
   },
-  {
+  "my-articles": {
     "name": "my-articles",
     "display_name": "",
     "description": null,
@@ -197,7 +197,7 @@
     "updated_at": "2021-12-23T17:44:57Z",
     "preview_image": ""
   },
-  {
+  "SimpleDarkBlue-BeamerTheme": {
     "name": "SimpleDarkBlue-BeamerTheme",
     "display_name": "SimpleDarkBlue Beamer Theme",
     "description": "🫐 SimpleDarkBlue - A simple and clear LaTeX Beamer theme.",
@@ -216,7 +216,7 @@
     "updated_at": "2025-04-04T06:58:12Z",
     "preview_image": "https://raw.githubusercontent.com/pm25/simpledarkblue-beamertheme/master/preview/slide-1.webp"
   },
-  {
+  "react-components": {
     "name": "react-components",
     "display_name": "",
     "description": null,
@@ -229,7 +229,7 @@
     "updated_at": "2023-03-22T12:24:04Z",
     "preview_image": ""
   },
-  {
+  "Kaggle-Hotel-Revenue-Prediction": {
     "name": "Kaggle-Hotel-Revenue-Prediction",
     "display_name": "",
     "description": null,
@@ -242,7 +242,7 @@
     "updated_at": "2021-02-07T07:10:22Z",
     "preview_image": ""
   },
-  {
+  "Fake-News-Keywords-Highlight": {
     "name": "Fake-News-Keywords-Highlight",
     "display_name": "",
     "description": null,
@@ -255,7 +255,7 @@
     "updated_at": "2021-01-17T14:04:16Z",
     "preview_image": ""
   },
-  {
+  "ZeroJudge": {
     "name": "ZeroJudge",
     "display_name": "",
     "description": null,
@@ -268,7 +268,7 @@
     "updated_at": "2020-07-27T03:24:56Z",
     "preview_image": ""
   },
-  {
+  "Flappy-Bird": {
     "name": "Flappy-Bird",
     "display_name": "",
     "description": "Flappy Bird clone, developed with JavaScript.",
@@ -285,7 +285,7 @@
     "updated_at": "2022-09-10T06:18:26Z",
     "preview_image": ""
   },
-  {
+  "DataVisualization-Affect-of-Coronavirus-on-Air-Transportation": {
     "name": "DataVisualization-Affect-of-Coronavirus-on-Air-Transportation",
     "display_name": "",
     "description": null,
@@ -298,7 +298,7 @@
     "updated_at": "2022-09-15T13:38:44Z",
     "preview_image": ""
   },
-  {
+  "Simulation-of-Life": {
     "name": "Simulation-of-Life",
     "display_name": "",
     "description": "一個小型生態圈的遊戲",
@@ -311,7 +311,7 @@
     "updated_at": "2022-01-15T08:50:17Z",
     "preview_image": ""
   },
-  {
+  "Visualization---Taiwan-Population": {
     "name": "Visualization---Taiwan-Population",
     "display_name": "",
     "description": null,
@@ -324,7 +324,7 @@
     "updated_at": "2020-06-10T05:31:11Z",
     "preview_image": ""
   },
-  {
+  "YouBike-Station-Finder": {
     "name": "YouBike-Station-Finder",
     "display_name": "",
     "description": "🚲 Display and visualize real-time information for Taipei YouBikes.",
@@ -346,7 +346,7 @@
     "updated_at": "2023-03-15T08:28:13Z",
     "preview_image": ""
   },
-  {
+  "NCCU-Gourmet-Line-BOT": {
     "name": "NCCU-Gourmet-Line-BOT",
     "display_name": "",
     "description": "A Line BOT that assist user finding Gourmet around NCCU.",
@@ -359,7 +359,7 @@
     "updated_at": "2023-12-29T03:59:42Z",
     "preview_image": ""
   },
-  {
+  "SOM-K-Anonymity": {
     "name": "SOM-K-Anonymity",
     "display_name": "",
     "description": "Trying to boost the training speed of K-Anonymity by using SOM.",
@@ -372,7 +372,7 @@
     "updated_at": "2020-04-18T12:10:49Z",
     "preview_image": ""
   },
-  {
+  "Deep_Learning_Tutorial": {
     "name": "Deep_Learning_Tutorial",
     "display_name": "",
     "description": "Demonstrate basic Deep Learning with Keras.",
@@ -385,7 +385,7 @@
     "updated_at": "2021-05-22T04:47:38Z",
     "preview_image": ""
   },
-  {
+  "Object_Detection": {
     "name": "Object_Detection",
     "display_name": "",
     "description": "Single Object Detection by using ResNet",
@@ -398,7 +398,7 @@
     "updated_at": "2019-12-09T12:11:31Z",
     "preview_image": ""
   },
-  {
+  "Wumpus-World": {
     "name": "Wumpus-World",
     "display_name": "",
     "description": "Homework for AI course",
@@ -411,7 +411,7 @@
     "updated_at": "2019-01-07T03:24:16Z",
     "preview_image": ""
   },
-  {
+  "Classic-Synchronization-Problems": {
     "name": "Classic-Synchronization-Problems",
     "display_name": "",
     "description": "This is the final project of Operating Systems course",
@@ -424,7 +424,7 @@
     "updated_at": "2023-03-15T08:43:08Z",
     "preview_image": ""
   },
-  {
+  "LeetCode": {
     "name": "LeetCode",
     "display_name": "",
     "description": "My record for solving LeetCode problems",
@@ -437,7 +437,7 @@
     "updated_at": "2022-08-19T14:44:13Z",
     "preview_image": ""
   },
-  {
+  "8Queens-Genetic-Algorithm": {
     "name": "8Queens-Genetic-Algorithm",
     "display_name": "",
     "description": "Visualization of N-Queens problem with Genetic Algorithm",
@@ -450,7 +450,7 @@
     "updated_at": "2020-05-20T06:23:41Z",
     "preview_image": ""
   },
-  {
+  "pm25.github.io": {
     "name": "pm25.github.io",
     "display_name": "",
     "description": "✨ PlusMore - My personal website containing information about me, featuring my projects and blog posts.",
@@ -470,7 +470,7 @@
     "updated_at": "2025-01-14T01:41:21Z",
     "preview_image": ""
   },
-  {
+  "sicp_exercises": {
     "name": "sicp_exercises",
     "display_name": "",
     "description": "my record for solving SICP exercises",
@@ -483,7 +483,7 @@
     "updated_at": "2018-05-21T14:26:02Z",
     "preview_image": ""
   },
-  {
+  "uva": {
     "name": "uva",
     "display_name": "",
     "description": "my record for solving UVa problems",
@@ -496,4 +496,4 @@
     "updated_at": "2018-09-05T11:35:15Z",
     "preview_image": ""
   }
-]
+}
