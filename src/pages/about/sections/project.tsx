@@ -101,17 +101,6 @@ function ProjectCard({ project_name }: { project_name: keyof typeof repoData }) 
                     </div>
 
                     <div className="flex items-center gap-2">
-                        {data.html_url && (
-                            <a
-                                href={data.html_url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="GitHub repository"
-                                className="hover:text-foreground"
-                            >
-                                <FaGithub className="w-6 h-6" />
-                            </a>
-                        )}
                         {data.homepage && (
                             <a
                                 href={data.homepage}
@@ -121,6 +110,17 @@ function ProjectCard({ project_name }: { project_name: keyof typeof repoData }) 
                                 className="hover:text-foreground"
                             >
                                 <FaGlobe className="w-6 h-6" />
+                            </a>
+                        )}
+                        {data.html_url && (
+                            <a
+                                href={data.html_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub repository"
+                                className="hover:text-foreground"
+                            >
+                                <FaGithub className="w-6 h-6" />
                             </a>
                         )}
                     </div>
