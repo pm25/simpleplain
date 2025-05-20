@@ -6,10 +6,10 @@ import repoData from "@/data/repos.json";
 // uses the repository name as defined in data/repos.json (matches the GitHub repository name)
 const projects = [
     "simpleplain",
+    "pm25.github.io",
     "SimplePlus-BeamerTheme",
     "SimpleDarkBlue-BeamerTheme",
     "Semi-Supervised-Regression",
-    "simpleplain",
     "simpleplain",
 ] as (keyof typeof repoData)[];
 
@@ -64,7 +64,9 @@ function ProjectCard({ project }: { project: keyof typeof repoData }) {
             <hr className="border-t" />
 
             <div className="flex flex-col py-3 px-4 gap-y-2">
-                <div className="text-lg font-semibold line-clamp-2">{data.display_name}</div>
+                <div className="text-lg font-semibold line-clamp-2">
+                    {data.display_name || data.name}
+                </div>
                 <p className="text-sm text-muted-foreground line-clamp-2">
                     {data.description || "Details unavailable"}
                 </p>
