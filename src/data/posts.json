@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "template",
+    "path": "./src/data/posts/template.md",
+    "title": "Your Post Title",
+    "date": "2025-05-20T14:30:00",
+    "lastEdited": "2025-05-20T16:15:00",
+    "summary": "A one-sentence summary of the post for previews or meta description.",
+    "tags": [
+      "tag1",
+      "tag2"
+    ],
+    "coverImage": "/images/cover.jpg"
+  },
+  {
+    "slug": "deep-learning-with-keras",
+    "path": "./src/data/posts/deep-learning-with-keras.md",
+    "title": "Deep Learning with Keras",
+    "date": "2019-09-04",
+    "lastEdited": "2025-05-20T16:15:00",
+    "summary": "A simple introduction to deep learning with practical examples using the Keras Python package.",
+    "tags": [
+      "deep-learning",
+      "keras"
+    ],
+    "coverImage": null
+  }
+]

@@ -1,19 +1,73 @@
 import { useEffect } from "react";
+import { FaNewspaper } from "react-icons/fa6";
+
+import { Card } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import postsData from "@/data/posts.json";
 
 export default function Articles() {
     useEffect(() => {
         document.title = "Articles - SimplePlain";
     }, []);
 
+    const sortedPosts = [...postsData].sort((a, b) => {
+        if (!a.date) return 1;
+        if (!b.date) return -1;
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
+
     return (
-        <div>
-            <span className="text-2xl">Articles</span>
-            <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-                <div className="aspect-video rounded-xl bg-muted/50" />
-                <div className="aspect-video rounded-xl bg-muted/50" />
-                <div className="aspect-video rounded-xl bg-muted/50" />
+        <div className="flex flex-1 flex-col items-center gap-10">
+            <div className="w-full max-w-6xl space-y-10">
+                <div className="flex flex-row justify-center items-center gap-4 text-4xl font-bold">
+                    <FaNewspaper />
+                    Articles
+                </div>
+                <Separator />
+
+                <div className="grid grid-cols-1 gap-4 px-6">
+                    {sortedPosts.map((post) => (
+                        <ArticleCard key={post.slug} post={post} />
+                    ))}
+                </div>
             </div>
-            {/* <div className="min-h-screen flex-1 rounded-xl bg-muted/50 md:min-h-min" /> */}
         </div>
+    );
+}
+
+function ArticleCard({ post }: { post: (typeof postsData)[number] }) {
+    return (
+        <Card className="rounded-lg overflow-hidden px-8 py-4">
+            <div className="flex flex-col gap-4">
+                <h2 className="text-xl font-semibold">{post.title}</h2>
+                <p className="text-base text-muted-foreground line-clamp-3">
+                    {post.summary || "No summary available."}
+                </p>
+
+                {post.tags && post.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-2">
+                        {post.tags.map((tag: string) => (
+                            <span
+                                key={tag}
+                                className="bg-muted px-3 py-1 rounded-md text-sm font-medium"
+                            >
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                )}
+
+                <div className="flex justify-between items-center text-sm text-muted-foreground mt-auto pt-2">
+                    <time dateTime={post.date}>{new Date(post.date).toLocaleDateString()}</time>
+                    <a
+                        href={`/posts/${post.slug}`}
+                        className="text-primary hover:underline"
+                        aria-label={`Read full article: ${post.title}`}
+                    >
+                        Read More →
+                    </a>
+                </div>
+            </div>
+        </Card>
     );
 }

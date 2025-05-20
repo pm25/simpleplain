@@ -52,10 +52,10 @@ function ProjectCard({ project_name }: { project_name: keyof typeof repoData }) 
                         />
                     ) : (
                         <div className="flex flex-col items-center justify-center w-full h-full">
-                            <span className="text-sm font-semibold opacity-80 text-center">
+                            <span className="text-base font-semibold opacity-80 text-center">
                                 {data.name || "Unnamed Project"}
                             </span>
-                            <span className="text-xs text-muted-foreground text-center">
+                            <span className="text-sm text-muted-foreground text-center">
                                 Image not available
                             </span>
                         </div>

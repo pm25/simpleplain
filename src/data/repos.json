@@ -14,8 +14,8 @@
     "homepage": "https://pm25.github.io/simpleplain",
     "html_url": "https://github.com/pm25/simpleplain",
     "created_at": "2024-12-20T10:05:02Z",
-    "updated_at": "2025-05-20T04:02:19Z",
-    "pushed_at": "2025-05-20T04:02:15Z",
+    "updated_at": "2025-05-20T04:16:04Z",
+    "pushed_at": "2025-05-20T04:16:01Z",
     "preview_image": "",
     "show": true
   },
@@ -108,20 +108,20 @@
     "preview_image": "",
     "show": true
   },
-  "PM25": {
-    "name": "PM25",
+  "pm25": {
+    "name": "pm25",
     "display_name": "",
     "description": null,
     "stargazers_count": 0,
     "topics": [],
     "language": null,
     "homepage": null,
-    "html_url": "https://github.com/pm25/PM25",
+    "html_url": "https://github.com/pm25/pm25",
     "created_at": "2022-01-09T18:15:03Z",
-    "updated_at": "2024-12-25T00:32:07Z",
+    "updated_at": "2025-05-20T07:52:20Z",
     "pushed_at": "2024-12-25T00:32:03Z",
     "preview_image": "",
-    "show": false
+    "show": true
   },
   "SimplePlus-BeamerTheme": {
     "name": "SimplePlus-BeamerTheme",
