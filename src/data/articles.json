@@ -11,7 +11,9 @@
       "tag1",
       "tag2"
     ],
-    "coverImage": "/images/cover.jpg"
+    "coverImage": "/images/cover.jpg",
+    "author": "Pin-Yen Huang",
+    "draft": true
   },
   {
     "slug": "deep-learning-with-keras",
@@ -19,12 +21,14 @@
     "url": "/articles/deep-learning-with-keras.md",
     "title": "Deep Learning with Keras",
     "date": "2019-09-04",
-    "lastEdited": "2025-05-20T16:15:00",
+    "lastEdited": "2025-05-20T21:00:00",
     "summary": "A simple introduction to deep learning with practical examples using the Keras Python package.",
     "tags": [
       "deep-learning",
       "keras"
     ],
-    "coverImage": null
+    "coverImage": null,
+    "author": "Pin-Yen Huang",
+    "draft": false
   }
 ]

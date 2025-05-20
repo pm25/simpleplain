@@ -6,13 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "prebuild": "npm-run-all --parallel generate:posts fetch:repos",
+    "prebuild": "npm-run-all --parallel generate:articles fetch:repos",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "fetch:repos": "node scripts/fetchRepos.js",
-    "generate:posts": "node scripts/generatePostsJson.js"
+    "generate:articles": "node scripts/generateArticlesJson.js"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.9",

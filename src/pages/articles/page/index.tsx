@@ -7,7 +7,6 @@ import rehypeRaw from "rehype-raw";
 export default function ArticlePage() {
     const { slug } = useParams<{ slug: string }>();
     const [htmlContent, setHtmlContent] = useState<string>("");
-    const [articleTitle, setArticleTitle] = useState<string>("Untitled");
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -22,13 +21,12 @@ export default function ArticlePage() {
 
                 const rawContent = await res.text();
 
-                const { attributes, body } = fm(rawContent) as {
+                const { body } = fm(rawContent) as {
                     attributes: { title?: string };
                     body: string;
                 };
 
                 setHtmlContent(body);
-                setArticleTitle(attributes.title || "Untitled");
             } catch (e) {
                 setError("Failed to load article: " + (e instanceof Error ? e.message : String(e)));
             } finally {

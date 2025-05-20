@@ -4,14 +4,14 @@ import { Link } from "react-router";
 
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import postsData from "@/data/posts.json";
+import articlesData from "@/data/articles.json";
 
 export default function Articles() {
     useEffect(() => {
         document.title = "Articles - SimplePlain";
     }, []);
 
-    const sortedPosts = [...postsData].sort((a, b) => {
+    const sortedArticles = [...articlesData].sort((a, b) => {
         if (!a.date) return 1;
         if (!b.date) return -1;
         return new Date(b.date).getTime() - new Date(a.date).getTime();
@@ -27,8 +27,8 @@ export default function Articles() {
                 <Separator />
 
                 <div className="grid grid-cols-1 gap-4 px-6">
-                    {sortedPosts.map((post) => (
-                        <ArticleCard key={post.slug} post={post} />
+                    {sortedArticles.map((article) => (
+                        <ArticleCard key={article.slug} article={article} />
                     ))}
                 </div>
             </div>
@@ -36,23 +36,23 @@ export default function Articles() {
     );
 }
 
-function ArticleCard({ post }: { post: (typeof postsData)[number] }) {
+function ArticleCard({ article }: { article: (typeof articlesData)[number] }) {
     return (
         <Link
-            to={`/articles/${post.slug}`}
-            aria-label={`Read full article: ${post.title}`}
+            to={`/articles/${article.slug}`}
+            aria-label={`Read full article: ${article.title}`}
             className="block"
         >
             <Card className="rounded-lg overflow-hidden px-8 py-4 cursor-pointer hover:shadow-[0_0_6px_1px_rgba(59,130,246,0.4)] transition-shadow duration-50">
                 <div className="flex flex-col gap-4">
-                    <h2 className="text-xl font-semibold">{post.title}</h2>
+                    <h2 className="text-xl font-semibold">{article.title}</h2>
                     <p className="text-base text-muted-foreground line-clamp-3">
-                        {post.summary || "No summary available."}
+                        {article.summary || "No summary available."}
                     </p>
 
-                    {post.tags && post.tags.length > 0 && (
+                    {article.tags && article.tags.length > 0 && (
                         <div className="flex flex-wrap gap-2 mt-2">
-                            {post.tags.map((tag: string) => (
+                            {article.tags.map((tag: string) => (
                                 <span
                                     key={tag}
                                     className="bg-muted px-3 py-1 rounded-md text-sm font-medium"
@@ -64,7 +64,9 @@ function ArticleCard({ post }: { post: (typeof postsData)[number] }) {
                     )}
 
                     <div className="flex justify-between items-center text-sm text-muted-foreground mt-auto pt-2">
-                        <time dateTime={post.date}>{new Date(post.date).toLocaleDateString()}</time>
+                        <time dateTime={article.date}>
+                            {new Date(article.date).toLocaleDateString()}
+                        </time>
                         <span className="text-primary underline">Read More →</span>
                     </div>
                 </div>

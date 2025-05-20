@@ -6,7 +6,6 @@ summary: "A one-sentence summary of the post for previews or meta description."
 tags: ["tag1", "tag2"] # optional
 coverImage: "/images/cover.jpg" # optional
 author: "Pin-Yen Huang"
-category: "Tech Notes"
 draft: true
 ---
 
