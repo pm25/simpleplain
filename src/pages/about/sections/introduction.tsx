@@ -89,7 +89,7 @@ function Profile() {
                                 <Tooltip>
                                     <TooltipTrigger>
                                         <item.icon
-                                            className="w-8 h-8 cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-100"
+                                            className="w-8 h-8 cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-50"
                                             aria-label={item.name}
                                         />
                                     </TooltipTrigger>

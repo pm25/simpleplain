@@ -58,7 +58,7 @@ export default function Publication() {
                             rel="noopener noreferrer"
                             className="text-base sm:text-lg font-semibold leading-tight hover:underline"
                         >
-                            {pub.title}
+                            [{index + 1}] {pub.title}
                         </a>
 
                         <span className="text-sm sm:text-base grid grid-cols-[auto_1fr] items-center gap-2 text-muted-foreground">
