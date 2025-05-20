@@ -11,7 +11,7 @@ const projects = [
     "Semi-Supervised-Regression",
     "simpleplain",
     "simpleplain",
-];
+] as (keyof typeof repoData)[];
 
 export default function Project() {
     return (
@@ -30,8 +30,9 @@ export default function Project() {
     );
 }
 
-function ProjectCard({ project }: { project: string }) {
+function ProjectCard({ project }: { project: keyof typeof repoData }) {
     const data = repoData[project];
+
     if (!data) {
         return (
             <Card className="rounded-lg overflow-hidden">
