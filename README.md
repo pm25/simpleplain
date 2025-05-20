@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/pm25/simpleplain">
-    <img src="public/logo192.png" alt="Logo" width="80" height="80">
+    <img src="public/full_logo.png" alt="Logo" width="320" height="320">
   </a>
 
   <h3 align="center">SimplePlain Website Template</h3>
@@ -70,6 +70,7 @@ I plan to continue adding features and improvements based on user needs. Feel fr
 This project is primarily built with the following frameworks and libraries. Any additional tools or plugins are listed in the acknowledgments section.
 
 -   [![React][React.js]][React-url]
+-   [![Vite][Vite]][Vite-url]
 -   [![Tailwind CSS][Tailwind.css]][Tailwind-url]
 -   [![Typescript][Typescript]][Typescript-url]
 -   [![shadcn/ui][shadcn.ui]][shadcn-url]
@@ -199,3 +200,5 @@ I am deeply grateful for the following tools and resources that contributed to t
 [Tailwind-url]: https://tailwindcss.com
 [Typescript]: https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white
 [Typescript-url]: https://www.typescriptlang.org
+[Vite]: https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white
+[Vite-url]: https://vite.dev
