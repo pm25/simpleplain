@@ -2,19 +2,7 @@ import { useState } from "react";
 import { MdCoPresent } from "react-icons/md";
 import { FaRegCalendar } from "react-icons/fa6";
 
-const talks = [
-    {
-        title: "Cost Learning Network for Imbalanced Classification",
-        location: "Taiwanese Association for Artificial Intelligence (TAAI)",
-        date: "Dec 4, 2020",
-    },
-    {
-        title: "Deep Learning with Keras",
-        location: "University of Illinois Urbana-Champaign (UIUC), Prof. Stephen Boppart's Group",
-        date: "Sep 4, 2019",
-        image: "https://pm25.github.io/static/media/2019-9-4-workshop.b5d2675f.webp",
-    },
-];
+import talksData from "@/data/talks.json";
 
 export default function Talk() {
     const [selectedTalk, setSelectedTalk] = useState<number | null>(null);
@@ -31,7 +19,7 @@ export default function Talk() {
             </div>
 
             <div className="px-6">
-                {talks.map((talk, index) => (
+                {talksData.map((talk, index) => (
                     <div
                         key={index}
                         className={`flex flex-col gap-4 py-2 px-4 rounded-md ${
