@@ -1,19 +1,8 @@
 import { FaGraduationCap, FaBriefcase } from "react-icons/fa6";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-const user = {
-    education: [
-        { degree: "Ph.D. in Computer Science", school: "XYZ University", years: "2020 - Present" },
-        { degree: "M.S. in Data Science", school: "ABC University", years: "2018 - 2020" },
-        { degree: "B.S. in Computer Engineering", school: "LMN University", years: "2014 - 2018" },
-    ],
-    work: [
-        { title: "Research Assistant", company: "XYZ University", years: "2020 - Present" },
-        { title: "Software Engineer", company: "ABC Tech", years: "2018 - 2020" },
-        { title: "Intern", company: "LMN Corp", years: "2017 - 2018" },
-    ],
-};
+import eduData from "@/data/education.json";
+import workData from "@/data/work.json";
 
 export default function Experience() {
     return (
@@ -28,7 +17,7 @@ export default function Experience() {
                     </CardHeader>
                     <CardContent>
                         <ul className="list-disc pl-6 space-y-1">
-                            {user.education.map((edu, index) => (
+                            {eduData.map((edu, index) => (
                                 <li key={index}>
                                     <strong>{edu.degree}</strong> - {edu.school} ({edu.years})
                                 </li>
@@ -46,7 +35,7 @@ export default function Experience() {
                     </CardHeader>
                     <CardContent>
                         <ul className="list-disc pl-6 space-y-1">
-                            {user.work.map((job, index) => (
+                            {workData.map((job, index) => (
                                 <li key={index}>
                                     <strong>{job.title}</strong> - {job.company} ({job.years})
                                 </li>
