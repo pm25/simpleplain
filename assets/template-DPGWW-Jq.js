@@ -1,4 +1,4 @@
----
+const n=`---
 title: "Your Post Title"
 date: "2025-05-20T14:30:00"
 lastEdited: "2025-05-20T16:15:00"
@@ -21,13 +21,14 @@ Start your content here. You can use:
 
 -   Bullet points
 -   **Bold** or _italic_ text
--   `inline code`
+-   \`inline code\`
 
 ## Section 2
 
 You can also add:
 
-```js
+\`\`\`js
 // code blocks
 console.log("Hello, world!");
-```
+\`\`\`
+`;export{n as default};
