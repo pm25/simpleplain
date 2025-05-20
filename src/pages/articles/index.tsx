@@ -37,37 +37,37 @@ export default function Articles() {
 
 function ArticleCard({ post }: { post: (typeof postsData)[number] }) {
     return (
-        <Card className="rounded-lg overflow-hidden px-8 py-4">
-            <div className="flex flex-col gap-4">
-                <h2 className="text-xl font-semibold">{post.title}</h2>
-                <p className="text-base text-muted-foreground line-clamp-3">
-                    {post.summary || "No summary available."}
-                </p>
+        <a
+            href={`/posts/${post.slug}`}
+            aria-label={`Read full article: ${post.title}`}
+            className="block"
+        >
+            <Card className="rounded-lg overflow-hidden px-8 py-4 cursor-pointer hover:shadow-[0_0_6px_1px_rgba(59,130,246,0.4)] transition-shadow duration-50">
+                <div className="flex flex-col gap-4">
+                    <h2 className="text-xl font-semibold">{post.title}</h2>
+                    <p className="text-base text-muted-foreground line-clamp-3">
+                        {post.summary || "No summary available."}
+                    </p>
 
-                {post.tags && post.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-2">
-                        {post.tags.map((tag: string) => (
-                            <span
-                                key={tag}
-                                className="bg-muted px-3 py-1 rounded-md text-sm font-medium"
-                            >
-                                {tag}
-                            </span>
-                        ))}
+                    {post.tags && post.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mt-2">
+                            {post.tags.map((tag: string) => (
+                                <span
+                                    key={tag}
+                                    className="bg-muted px-3 py-1 rounded-md text-sm font-medium"
+                                >
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    )}
+
+                    <div className="flex justify-between items-center text-sm text-muted-foreground mt-auto pt-2">
+                        <time dateTime={post.date}>{new Date(post.date).toLocaleDateString()}</time>
+                        <span className="text-primary underline">Read More →</span>
                     </div>
-                )}
-
-                <div className="flex justify-between items-center text-sm text-muted-foreground mt-auto pt-2">
-                    <time dateTime={post.date}>{new Date(post.date).toLocaleDateString()}</time>
-                    <a
-                        href={`/posts/${post.slug}`}
-                        className="text-primary hover:underline"
-                        aria-label={`Read full article: ${post.title}`}
-                    >
-                        Read More →
-                    </a>
                 </div>
-            </div>
-        </Card>
+            </Card>
+        </a>
     );
 }
