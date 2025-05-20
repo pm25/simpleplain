@@ -1,0 +1,431 @@
+[
+  {
+    "name": "simpleplain",
+    "description": "🍞 SimplePlain - A minimal and elegant template for creating a personal website",
+    "stargazers_count": 0,
+    "topics": [
+      "personal-website-template",
+      "react",
+      "shadcn-ui",
+      "tailwindcss"
+    ],
+    "language": "TypeScript",
+    "homepage": "https://pm25.github.io/simpleplain",
+    "html_url": "https://github.com/pm25/simpleplain",
+    "created_at": "2024-12-20T10:05:02Z",
+    "updated_at": "2025-05-19T23:46:55Z"
+  },
+  {
+    "name": "Semi-Supervised-Regression",
+    "description": "🎋 NeurIPS 2024: Official repository for the paper 'RankUp: Boosting Semi-Supervised Regression with an Auxiliary Ranking Classifier'",
+    "stargazers_count": 9,
+    "topics": [
+      "pytorch",
+      "regression",
+      "semi-supervised-learning"
+    ],
+    "language": "Python",
+    "homepage": "",
+    "html_url": "https://github.com/pm25/Semi-Supervised-Regression",
+    "created_at": "2024-10-22T21:47:31Z",
+    "updated_at": "2025-05-13T18:46:45Z"
+  },
+  {
+    "name": "Regression-Datasets",
+    "description": "🎛️ A collection of diverse regression datasets, featuring PyTorch-like dataset classes that automatically download and load datasets.",
+    "stargazers_count": 0,
+    "topics": [
+      "datasets",
+      "pytorch",
+      "regression"
+    ],
+    "language": "Python",
+    "homepage": "https://pypi.org/project/regsets",
+    "html_url": "https://github.com/pm25/Regression-Datasets",
+    "created_at": "2024-10-15T05:56:02Z",
+    "updated_at": "2025-02-07T09:42:52Z"
+  },
+  {
+    "name": "Research-Figures",
+    "description": null,
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "HTML",
+    "homepage": "",
+    "html_url": "https://github.com/pm25/Research-Figures",
+    "created_at": "2024-10-05T07:59:17Z",
+    "updated_at": "2024-10-27T10:18:18Z"
+  },
+  {
+    "name": "MOS-Datasets",
+    "description": null,
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "Python",
+    "homepage": null,
+    "html_url": "https://github.com/pm25/MOS-Datasets",
+    "created_at": "2024-05-07T08:36:17Z",
+    "updated_at": "2024-08-16T22:56:59Z"
+  },
+  {
+    "name": "Deep-Learning-Projects",
+    "description": "⚓ Examples of deep learning projects using Pytorch.",
+    "stargazers_count": 0,
+    "topics": [
+      "deep-learning",
+      "example-project",
+      "machine-learning",
+      "pytorch",
+      "tutorial"
+    ],
+    "language": "Python",
+    "homepage": "",
+    "html_url": "https://github.com/pm25/Deep-Learning-Projects",
+    "created_at": "2023-02-07T06:37:03Z",
+    "updated_at": "2023-03-15T08:40:04Z"
+  },
+  {
+    "name": "PM25",
+    "description": null,
+    "stargazers_count": 0,
+    "topics": [],
+    "language": null,
+    "homepage": null,
+    "html_url": "https://github.com/pm25/PM25",
+    "created_at": "2022-01-09T18:15:03Z",
+    "updated_at": "2024-12-25T00:32:07Z"
+  },
+  {
+    "name": "SimplePlus-BeamerTheme",
+    "description": "🍃 SimplePlus - A minimalist and clean LaTeX Beamer theme.",
+    "stargazers_count": 204,
+    "topics": [
+      "beamer-template",
+      "beamer-theme",
+      "latex",
+      "latex-template",
+      "presentation"
+    ],
+    "language": "TeX",
+    "homepage": "",
+    "html_url": "https://github.com/pm25/SimplePlus-BeamerTheme",
+    "created_at": "2021-12-14T08:33:39Z",
+    "updated_at": "2025-05-17T12:43:54Z"
+  },
+  {
+    "name": "NTU-Computer-Vision-2021-Fall",
+    "description": null,
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "Python",
+    "homepage": null,
+    "html_url": "https://github.com/pm25/NTU-Computer-Vision-2021-Fall",
+    "created_at": "2021-09-30T11:14:00Z",
+    "updated_at": "2021-12-09T12:58:59Z"
+  },
+  {
+    "name": "Information-Retrieval-with-Contrastive-Learning",
+    "description": null,
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "Python",
+    "homepage": null,
+    "html_url": "https://github.com/pm25/Information-Retrieval-with-Contrastive-Learning",
+    "created_at": "2021-06-15T03:19:20Z",
+    "updated_at": "2021-10-22T03:16:59Z"
+  },
+  {
+    "name": "Medical-Question-Answering-and-Decision-Making-AIdea-Competition",
+    "description": null,
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "Python",
+    "homepage": null,
+    "html_url": "https://github.com/pm25/Medical-Question-Answering-and-Decision-Making-AIdea-Competition",
+    "created_at": "2021-05-29T10:09:22Z",
+    "updated_at": "2021-06-17T11:56:02Z"
+  },
+  {
+    "name": "General-Beamer-Theme",
+    "description": "A General Purpose Latex Beamer Theme.",
+    "stargazers_count": 7,
+    "topics": [
+      "beamer-template",
+      "beamer-theme",
+      "latex"
+    ],
+    "language": "TeX",
+    "homepage": "",
+    "html_url": "https://github.com/pm25/General-Beamer-Theme",
+    "created_at": "2021-03-14T07:53:44Z",
+    "updated_at": "2025-05-14T10:50:05Z"
+  },
+  {
+    "name": "my-articles",
+    "description": null,
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "Python",
+    "homepage": "",
+    "html_url": "https://github.com/pm25/my-articles",
+    "created_at": "2021-01-23T14:07:17Z",
+    "updated_at": "2021-12-23T17:44:57Z"
+  },
+  {
+    "name": "SimpleDarkBlue-BeamerTheme",
+    "description": "🫐 SimpleDarkBlue - A simple and clear LaTeX Beamer theme.",
+    "stargazers_count": 72,
+    "topics": [
+      "beamer-template",
+      "beamer-theme",
+      "latex",
+      "latex-template",
+      "presentation"
+    ],
+    "language": "TeX",
+    "homepage": "",
+    "html_url": "https://github.com/pm25/SimpleDarkBlue-BeamerTheme",
+    "created_at": "2021-01-12T00:59:09Z",
+    "updated_at": "2025-04-04T06:58:12Z"
+  },
+  {
+    "name": "react-components",
+    "description": null,
+    "stargazers_count": 1,
+    "topics": [],
+    "language": "JavaScript",
+    "homepage": null,
+    "html_url": "https://github.com/pm25/react-components",
+    "created_at": "2021-01-10T04:44:50Z",
+    "updated_at": "2023-03-22T12:24:04Z"
+  },
+  {
+    "name": "Kaggle-Hotel-Revenue-Prediction",
+    "description": null,
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "Jupyter Notebook",
+    "homepage": null,
+    "html_url": "https://github.com/pm25/Kaggle-Hotel-Revenue-Prediction",
+    "created_at": "2020-12-16T04:02:10Z",
+    "updated_at": "2021-02-07T07:10:22Z"
+  },
+  {
+    "name": "Fake-News-Keywords-Highlight",
+    "description": null,
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "Python",
+    "homepage": null,
+    "html_url": "https://github.com/pm25/Fake-News-Keywords-Highlight",
+    "created_at": "2020-10-26T08:19:38Z",
+    "updated_at": "2021-01-17T14:04:16Z"
+  },
+  {
+    "name": "ZeroJudge",
+    "description": null,
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "Python",
+    "homepage": null,
+    "html_url": "https://github.com/pm25/ZeroJudge",
+    "created_at": "2020-07-21T02:39:12Z",
+    "updated_at": "2020-07-27T03:24:56Z"
+  },
+  {
+    "name": "Flappy-Bird",
+    "description": "Flappy Bird clone, developed with JavaScript.",
+    "stargazers_count": 2,
+    "topics": [
+      "game",
+      "javascript",
+      "website"
+    ],
+    "language": "JavaScript",
+    "homepage": "https://pm25.github.io/Flappy-Bird",
+    "html_url": "https://github.com/pm25/Flappy-Bird",
+    "created_at": "2020-05-19T03:41:18Z",
+    "updated_at": "2022-09-10T06:18:26Z"
+  },
+  {
+    "name": "DataVisualization-Affect-of-Coronavirus-on-Air-Transportation",
+    "description": null,
+    "stargazers_count": 1,
+    "topics": [],
+    "language": "JavaScript",
+    "homepage": "https://pm25.github.io/Data-Visualization---Affect-of-Coronavirus-on-Air-Transportation/",
+    "html_url": "https://github.com/pm25/DataVisualization-Affect-of-Coronavirus-on-Air-Transportation",
+    "created_at": "2020-05-13T07:22:04Z",
+    "updated_at": "2022-09-15T13:38:44Z"
+  },
+  {
+    "name": "Simulation-of-Life",
+    "description": "一個小型生態圈的遊戲",
+    "stargazers_count": 1,
+    "topics": [],
+    "language": "Python",
+    "homepage": "",
+    "html_url": "https://github.com/pm25/Simulation-of-Life",
+    "created_at": "2020-04-21T09:57:17Z",
+    "updated_at": "2022-01-15T08:50:17Z"
+  },
+  {
+    "name": "Visualization---Taiwan-Population",
+    "description": null,
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "JavaScript",
+    "homepage": "https://pm25.github.io/Visualization---Taiwan-Population/",
+    "html_url": "https://github.com/pm25/Visualization---Taiwan-Population",
+    "created_at": "2020-04-18T07:22:47Z",
+    "updated_at": "2020-06-10T05:31:11Z"
+  },
+  {
+    "name": "YouBike-Station-Finder",
+    "description": "🚲 Display and visualize real-time information for Taipei YouBikes.",
+    "stargazers_count": 1,
+    "topics": [
+      "css3",
+      "d3js",
+      "data-visualization",
+      "html5",
+      "javascript",
+      "visualization",
+      "website",
+      "youbike"
+    ],
+    "language": "JavaScript",
+    "homepage": "https://pm25.github.io/YouBike-Station-Finder/",
+    "html_url": "https://github.com/pm25/YouBike-Station-Finder",
+    "created_at": "2020-04-11T13:43:53Z",
+    "updated_at": "2023-03-15T08:28:13Z"
+  },
+  {
+    "name": "NCCU-Gourmet-Line-BOT",
+    "description": "A Line BOT that assist user finding Gourmet around NCCU.",
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "Python",
+    "homepage": "https://pm25.github.io/NCCU-Gourmet-Line-BOT/",
+    "html_url": "https://github.com/pm25/NCCU-Gourmet-Line-BOT",
+    "created_at": "2020-01-27T14:02:39Z",
+    "updated_at": "2023-12-29T03:59:42Z"
+  },
+  {
+    "name": "SOM-K-Anonymity",
+    "description": "Trying to boost the training speed of K-Anonymity by using SOM.",
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "Jupyter Notebook",
+    "homepage": "",
+    "html_url": "https://github.com/pm25/SOM-K-Anonymity",
+    "created_at": "2019-12-09T10:49:58Z",
+    "updated_at": "2020-04-18T12:10:49Z"
+  },
+  {
+    "name": "Deep_Learning_Tutorial",
+    "description": "Demonstrate basic Deep Learning with Keras.",
+    "stargazers_count": 2,
+    "topics": [],
+    "language": "Jupyter Notebook",
+    "homepage": null,
+    "html_url": "https://github.com/pm25/Deep_Learning_Tutorial",
+    "created_at": "2019-08-29T03:56:07Z",
+    "updated_at": "2021-05-22T04:47:38Z"
+  },
+  {
+    "name": "Object_Detection",
+    "description": "Single Object Detection by using ResNet",
+    "stargazers_count": 1,
+    "topics": [],
+    "language": "Jupyter Notebook",
+    "homepage": "",
+    "html_url": "https://github.com/pm25/Object_Detection",
+    "created_at": "2019-04-12T14:08:28Z",
+    "updated_at": "2019-12-09T12:11:31Z"
+  },
+  {
+    "name": "Wumpus-World",
+    "description": "Homework for AI course",
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "CLIPS",
+    "homepage": null,
+    "html_url": "https://github.com/pm25/Wumpus-World",
+    "created_at": "2019-01-07T03:19:28Z",
+    "updated_at": "2019-01-07T03:24:16Z"
+  },
+  {
+    "name": "Classic-Synchronization-Problems",
+    "description": "This is the final project of Operating Systems course",
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "C++",
+    "homepage": "",
+    "html_url": "https://github.com/pm25/Classic-Synchronization-Problems",
+    "created_at": "2018-10-21T06:48:41Z",
+    "updated_at": "2023-03-15T08:43:08Z"
+  },
+  {
+    "name": "LeetCode",
+    "description": "My record for solving LeetCode problems",
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "C++",
+    "homepage": null,
+    "html_url": "https://github.com/pm25/LeetCode",
+    "created_at": "2018-10-20T12:57:17Z",
+    "updated_at": "2022-08-19T14:44:13Z"
+  },
+  {
+    "name": "8Queens-Genetic-Algorithm",
+    "description": "Visualization of N-Queens problem with Genetic Algorithm",
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "Python",
+    "homepage": "https://pm25.github.io/8Queens-Genetic-Algorithm/",
+    "html_url": "https://github.com/pm25/8Queens-Genetic-Algorithm",
+    "created_at": "2018-10-10T14:51:16Z",
+    "updated_at": "2020-05-20T06:23:41Z"
+  },
+  {
+    "name": "pm25.github.io",
+    "description": "✨ PlusMore - My personal website containing information about me, featuring my projects and blog posts.",
+    "stargazers_count": 3,
+    "topics": [
+      "blog",
+      "css3",
+      "html5",
+      "javascript",
+      "personal-website",
+      "react"
+    ],
+    "language": "JavaScript",
+    "homepage": "https://pm25.github.io/",
+    "html_url": "https://github.com/pm25/pm25.github.io",
+    "created_at": "2018-05-24T14:51:50Z",
+    "updated_at": "2025-01-14T01:41:21Z"
+  },
+  {
+    "name": "sicp_exercises",
+    "description": "my record for solving SICP exercises",
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "Scheme",
+    "homepage": null,
+    "html_url": "https://github.com/pm25/sicp_exercises",
+    "created_at": "2018-05-07T18:22:59Z",
+    "updated_at": "2018-05-21T14:26:02Z"
+  },
+  {
+    "name": "uva",
+    "description": "my record for solving UVa problems",
+    "stargazers_count": 0,
+    "topics": [],
+    "language": "C++",
+    "homepage": null,
+    "html_url": "https://github.com/pm25/uva",
+    "created_at": "2018-04-15T09:34:35Z",
+    "updated_at": "2018-09-05T11:35:15Z"
+  }
+]
