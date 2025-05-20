@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const articlesDir = path.join(process.cwd(), "public", "articles");
+const articlesDir = path.join(process.cwd(), "src", "data", "articles");
 const outputPath = path.join(process.cwd(), "src", "data", "articles.json");
 
 function getSlug(filename) {
