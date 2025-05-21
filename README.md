@@ -50,7 +50,7 @@ author: Pin-Yen Huang
 
 Having a personal website is essential in today's world—it’s a great way to showcase your portfolio, share your experiences, and highlight your projects so others can get to know you better. However, building a personal website from scratch can be time-consuming, especially for those without web development experience.
 
-🍞SimplePlain was originally created for my own personal website, but I realized it’s also useful for quick personal website setup. That’s why I’m sharing it, hoping it can benefit others. It’s designed to be easy to set up while maintaining flexibility for customization. Whether you're just getting started or looking for a solid foundation to build upon, SimplePlain is a great choice. It’s user-friendly for both experienced web developers and beginners alike.
+🥪 SimplePlain was originally created for my own personal website, but I realized it’s also useful for quick personal website setup. That’s why I’m sharing it, hoping it can benefit others. It’s designed to be easy to set up while maintaining flexibility for customization. Whether you're just getting started or looking for a solid foundation to build upon, SimplePlain is a great choice. It’s user-friendly for both experienced web developers and beginners alike.
 
 If you find this template helpful, feel free to leave a ⭐ to support the project!
 
@@ -68,7 +68,7 @@ This project is primarily built using the following frameworks and libraries:
 
 ## Preview
 
-See how 🍞SimplePlain looks in both light and dark themes:
+See how 🥪 SimplePlain looks in both light and dark themes:
 
 ### ☀️ Light Mode
 
