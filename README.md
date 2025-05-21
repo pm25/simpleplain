@@ -33,7 +33,6 @@
     <li><a href="#preview">Preview</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -137,25 +136,30 @@ git remote -v # Confirm the changes
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+To customize the website with your own information, update the data files located in [src/data](src/data). The site will automatically reflect your changes.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+For example, in [src/data/profile.ts](src/data/profile.ts), you can update your personal information:
 
-<p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
+```ts
+export const UserInfo = {
+    name: "Pin-Yen Huang",
+    profile_url: "https://avatars.githubusercontent.com/u/33774054?v=4",
+    headline: "CLLab • National Taiwan University",
+    // ...other fields
+}
+```
 
-<!-- ROADMAP -->
+You can also customize the following files:
 
-## Roadmap
+* [src/data/profile.ts](src/data/profile.ts)
+* [src/data/education.ts](src/data/education.ts)
+* [src/data/work.ts](src/data/work.ts)
+* [src/data/publications.ts](src/data/publications.ts)
+* [src/data/talks.ts](src/data/talks.ts)
 
--   [x] Add Changelog
--   [x] Add back to top links
--   [ ] Add Additional Templates w/ Examples
--   [ ] Add "components" document to easily copy & paste sections of the readme
--   [ ] Multi-language Support
-    -   [ ] Chinese
-    -   [ ] Spanish
+To add articles, simply place your files inside the [./src/data/articles](./src/data/articles) folder. The site will automatically include them whenever you deploy.
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+
 
 <p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
 
