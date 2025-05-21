@@ -62,8 +62,6 @@ Having a personal website is essential in today's world—it’s a great way to 
 
 If you find this template helpful, please consider leaving a ⭐ to support the project!
 
-<p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
-
 ### Built With
 
 This project is primarily built using the following frameworks and libraries:
@@ -94,40 +92,61 @@ See how 🍞SimplePlain looks in both light and dark themes:
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Follow these steps to set up and run the project locally, and deploy it to GitHub Pages.
 
-### Prerequisites
+### ✅ Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+Make sure you have [Node.js](https://nodejs.org/) and npm installed. You can update npm to the latest version using:
 
--   npm
-    ```sh
-    npm install npm@latest -g
-    ```
+```sh
+npm install npm@latest -g
+```
 
-### Installation
+### 🛠️ Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+1. **Clone the repository**
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-    ```sh
-    git clone https://github.com/github_username/repo_name.git
-    ```
-3. Install NPM packages
-    ```sh
-    npm install
-    ```
-4. Enter your API in `config.js`
-    ```js
-    const API_KEY = "ENTER YOUR API";
-    ```
-5. Change git remote url to avoid accidental pushes to base project
-    ```sh
-    git remote set-url origin github_username/repo_name
-    git remote -v # confirm the changes
-    ```
+```sh
+git clone https://github.com/pm25/simpleplain.git
+cd simpleplain
+```
+
+2. **Install dependencies**
+
+```sh
+npm install
+```
+
+3. **Start the development server**
+
+```sh
+npm run dev
+```
+
+This will start the Vite development server. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+### 🚀 Deployment
+
+To publish the site to GitHub Pages:
+
+```sh
+npm run deploy
+```
+
+Make sure the `homepage` field is correctly set in your `package.json`, like this:
+
+```json
+"homepage": "https://<your-username>.github.io/<your-repo>"
+```
+
+### 💡 Notes
+
+* If you’re forking or cloning this repo as a template, it’s recommended to update the git remote:
+
+```sh
+git remote set-url origin https://github.com/<your-username>/<your-repo>.git
+git remote -v # Confirm the changes
+```
 
 <p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
 
