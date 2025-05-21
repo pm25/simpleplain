@@ -49,6 +49,7 @@ function ProjectCard({ project_name }: { project_name: keyof typeof repoData }) 
                             src={data.preview_image}
                             alt={data.name || "Project image"}
                             className="w-full h-full object-cover"
+                            style={{ overflowClipMargin: "unset" }}
                         />
                     ) : (
                         <div className="flex flex-col items-center justify-center w-full h-full">
