@@ -35,6 +35,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#preview">Preview</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -43,7 +44,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#preview">Preview</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -54,21 +54,19 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+## About The Template
 
-[![SimplePlain Screenshot][simpleplain-screenshot]](https://pm25.github.io/simpleplain)
+Having a personal website is essential in today's world—it’s a great way to showcase your portfolio, share your experiences, and highlight your projects so others can get to know you better. However, building a personal website from scratch can be time-consuming, especially for those without web development experience.
 
-While there are many fantastic personal website templates available online, I couldn’t find one that perfectly matched my needs. So, I decided to create one myself! I believe SimplePlain can also benefit others who are looking to build their personal websites, which is why I’ve made it open-source.
+🍞SimplePlain was originally created for my own personal website, but I realized it’s also useful for quick personal website setup. That’s why I’m sharing it, hoping it can benefit others. It’s designed to be easy to set up while maintaining flexibility for customization. Whether you're just getting started or looking for a solid foundation to build upon, SimplePlain is a great choice. It’s user-friendly for both experienced web developers and beginners alike.
 
-SimplePlain is designed to help you easily showcase your portfolio or personal projects. It’s simple and minimalistic, yet flexible enough to fit your style and needs.
+If you find this template helpful, please consider leaving a ⭐ to support the project!
 
-I plan to continue adding features and improvements based on user needs. Feel free to suggest changes, contribute, or open issues. Thank you to everyone who has helped improve and expand this template!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
 
 ### Built With
 
-This project is primarily built with the following frameworks and libraries. Any additional tools or plugins are listed in the acknowledgments section.
+This project is primarily built using the following frameworks and libraries:
 
 -   [![React][React.js]][React-url]
 -   [![Vite][Vite]][Vite-url]
@@ -76,7 +74,21 @@ This project is primarily built with the following frameworks and libraries. Any
 -   [![Typescript][Typescript]][Typescript-url]
 -   [![shadcn/ui][shadcn.ui]][shadcn-url]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
+
+## Preview
+
+See how 🍞SimplePlain looks in both light and dark themes:
+
+### Light Mode
+
+![Light Mode][screenshot-light]
+
+### Dark Mode
+
+![Dark Mode][screenshot-dark]
+
+<p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
 
 <!-- GETTING STARTED -->
 
@@ -117,7 +129,7 @@ _Below is an example of how you can instruct your audience on installing and set
     git remote -v # confirm the changes
     ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
 
 <!-- USAGE EXAMPLES -->
 
@@ -126,20 +138,6 @@ _Below is an example of how you can instruct your audience on installing and set
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Preview
-
-See how **SimplePlain** looks in both light and dark themes:
-
-### Light Mode
-
-![Light Mode][screenshot-light]
-
-### Dark Mode
-
-![Dark Mode][screenshot-dark]
 
 <p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
 
@@ -157,7 +155,7 @@ See how **SimplePlain** looks in both light and dark themes:
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
 
 <!-- CONTRIBUTING -->
 
@@ -180,7 +178,7 @@ Don't forget to give the project a star! Thanks again!
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
 
 <!-- CONTACT -->
 
@@ -190,7 +188,7 @@ Pin-Yen Huang - [pyhuang97@gmail.com](mailto:pyhuang97@gmail.com)
 
 Project Link: [https://github.com/pm25/simpleplain](https://github.com/pm25/simpleplain)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
 
 <!-- ACKNOWLEDGMENTS -->
 
@@ -201,12 +199,11 @@ I am deeply grateful for the following tools and resources that contributed to t
 -   [React Icons](https://react-icons.github.io/react-icons)
 -   [Best README Template](https://github.com/othneildrew/Best-README-Template)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[simpleplain-screenshot]: images/screenshot.png
 [screenshot-light]: preview/light-mode.webp
 [screenshot-dark]: preview/dark-mode.webp
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
