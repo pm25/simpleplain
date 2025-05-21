@@ -33,23 +33,32 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
 
     return (
         <Card className="rounded-lg overflow-hidden gap-0 py-0">
-            <div className="aspect-3/2 w-full overflow-hidden">
-                {repoData.preview_image ? (
-                    <img
-                        src={repoData.preview_image}
-                        alt={repoData.name || "Project image"}
-                        className="w-full h-full object-cover"
-                        style={{ overflowClipMargin: "unset" }}
-                    />
-                ) : (
-                    <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-muted">
-                        <span className="text-xl font-semibold opacity-80">
-                            {repoData.name || "Unnamed Project"}
-                        </span>
-                        <span className="text-sm text-muted-foreground">Image not available</span>
-                    </div>
-                )}
-            </div>
+            <a
+                href={repoData.html_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block transition duration-100 hover:scale-105"
+            >
+                <div className="aspect-3/2 w-full overflow-hidden">
+                    {repoData.preview_image ? (
+                        <img
+                            src={repoData.preview_image}
+                            alt={repoData.name || "Project image"}
+                            className="w-full h-full object-cover"
+                            style={{ overflowClipMargin: "unset" }}
+                        />
+                    ) : (
+                        <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-muted">
+                            <span className="text-xl font-semibold opacity-80">
+                                {repoData.name || "Unnamed Project"}
+                            </span>
+                            <span className="text-sm text-muted-foreground">
+                                Image not available
+                            </span>
+                        </div>
+                    )}
+                </div>
+            </a>
             <hr className="border-t" />
 
             <div className="flex flex-col py-3 px-4 gap-y-2">
