@@ -85,7 +85,7 @@
     "updated_at": "2024-08-16T22:56:59Z",
     "pushed_at": "2024-05-13T16:23:38Z",
     "preview_image": "",
-    "show": true
+    "show": false
   },
   "Deep-Learning-Projects": {
     "name": "Deep-Learning-Projects",
@@ -106,7 +106,7 @@
     "updated_at": "2023-03-15T08:40:04Z",
     "pushed_at": "2023-03-15T06:14:37Z",
     "preview_image": "",
-    "show": true
+    "show": false
   },
   "pm25": {
     "name": "pm25",
@@ -121,7 +121,7 @@
     "updated_at": "2025-05-20T07:52:20Z",
     "pushed_at": "2024-12-25T00:32:03Z",
     "preview_image": "",
-    "show": true
+    "show": false
   },
   "SimplePlus-BeamerTheme": {
     "name": "SimplePlus-BeamerTheme",
@@ -157,7 +157,7 @@
     "updated_at": "2021-12-09T12:58:59Z",
     "pushed_at": "2021-12-09T12:58:57Z",
     "preview_image": "",
-    "show": true
+    "show": false
   },
   "Information-Retrieval-with-Contrastive-Learning": {
     "name": "Information-Retrieval-with-Contrastive-Learning",
@@ -206,7 +206,7 @@
     "updated_at": "2025-05-14T10:50:05Z",
     "pushed_at": "2021-03-21T17:12:14Z",
     "preview_image": "",
-    "show": true
+    "show": false
   },
   "my-articles": {
     "name": "my-articles",
@@ -287,7 +287,7 @@
     "updated_at": "2021-01-17T14:04:16Z",
     "pushed_at": "2021-01-04T07:06:47Z",
     "preview_image": "",
-    "show": true
+    "show": false
   },
   "ZeroJudge": {
     "name": "ZeroJudge",
