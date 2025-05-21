@@ -1,5 +1,6 @@
 <!--
 origin repo: https://github.com/pm25/simpleplain
+author: Pin-Yen Huang
 -->
 
 <a id="readme-top"></a>
