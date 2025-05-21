@@ -40,31 +40,33 @@ function ProjectCard({ project_name }: { project_name: keyof typeof repoData }) 
     const data = repoData[project_name];
 
     return (
-        <Card className="rounded-lg overflow-hidden">
-            <div className="flex flex-row px-6 gap-4">
+        <Card className="rounded-lg overflow-hidden gap-0 py-0">
+            <div className="flex flex-row gap-4">
                 {/* Thumbnail Section */}
-                <div className="rounded w-72 h-48 bg-muted flex-shrink-0 overflow-hidden">
-                    {data.preview_image ? (
-                        <img
-                            src={data.preview_image}
-                            alt={data.name || "Project image"}
-                            className="w-full h-full object-cover"
-                            style={{ overflowClipMargin: "unset" }}
-                        />
-                    ) : (
-                        <div className="flex flex-col items-center justify-center w-full h-full">
-                            <span className="text-base font-semibold opacity-80 text-center">
-                                {data.name || "Unnamed Project"}
-                            </span>
-                            <span className="text-sm text-muted-foreground text-center">
-                                Image not available
-                            </span>
-                        </div>
-                    )}
-                </div>
+                <a href={data.html_url} target="_blank" rel="noopener noreferrer" className="block">
+                    <div className="aspect-3/2 w-72 flex-shrink-0 overflow-hidden">
+                        {data.preview_image ? (
+                            <img
+                                src={data.preview_image}
+                                alt={data.name || "Project image"}
+                                className="w-full h-full object-cover"
+                                style={{ overflowClipMargin: "unset" }}
+                            />
+                        ) : (
+                            <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-muted">
+                                <span className="text-base font-semibold opacity-80">
+                                    {data.name || "Unnamed Project"}
+                                </span>
+                                <span className="text-sm text-muted-foreground">
+                                    Image not available
+                                </span>
+                            </div>
+                        )}
+                    </div>
+                </a>
 
                 {/* Info Section */}
-                <div className="flex flex-col p-2 gap-y-2 flex-1 h-[12rem]">
+                <div className="flex flex-col p-4 gap-y-2 flex-1 h-[12rem]">
                     <div className="text-lg font-semibold line-clamp-2">
                         {data.display_name || data.name}
                     </div>
