@@ -7,10 +7,10 @@
     <img src="public/full_logo.png" alt="Logo" width="320" height="320">
   </a>
 
-  <h3 align="center">SimplePlain Website Template</h3>
+  <h3 align="center">SimplePlain - A Personal Website Template</h3>
 
   <p align="center">
-    Effortlessly build your personal website with <strong>SimplePlain</strong>! This template is crafted for simplicity and customization, making it the perfect choice for showcasing your portfolio.
+    Build your personal website effortlessly with <strong>SimplePlain</strong>!  This template is designed for easy customization and is perfect for showcasing your portfolio — whether you're a researcher, engineer, or student.
     <br />
     <br />
     <a href="https://pm25.github.io/simpleplain">🌐 Live Demo</a>
@@ -43,6 +43,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#preview">Preview</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -128,6 +129,20 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Preview
+
+See how **SimplePlain** looks in both light and dark themes:
+
+### Light Mode
+
+![Light Mode][screenshot-light]
+
+### Dark Mode
+
+![Dark Mode][screenshot-dark]
+
+<p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
+
 <!-- ROADMAP -->
 
 ## Roadmap
@@ -192,6 +207,8 @@ I am deeply grateful for the following tools and resources that contributed to t
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [simpleplain-screenshot]: images/screenshot.png
+[screenshot-light]: preview/light-mode.webp
+[screenshot-dark]: preview/dark-mode.webp
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://react.dev
 [shadcn.ui]: https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcn/ui&logoColor=white
