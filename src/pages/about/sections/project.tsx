@@ -32,8 +32,8 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
     }
 
     return (
-        <Card className="rounded-lg overflow-hidden">
-            <div className="aspect-video w-full overflow-hidden">
+        <Card className="rounded-lg overflow-hidden gap-0 py-0">
+            <div className="aspect-3/2 w-full overflow-hidden">
                 {repoData.preview_image ? (
                     <img
                         src={repoData.preview_image}
