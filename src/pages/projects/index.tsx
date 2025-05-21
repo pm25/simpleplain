@@ -59,10 +59,10 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
                             />
                         ) : (
                             <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-muted">
-                                <span className="text-base font-semibold opacity-80">
+                                <span className="text-base font-semibold opacity-80 text-center">
                                     {repoData.name || "Unnamed Project"}
                                 </span>
-                                <span className="text-sm text-muted-foreground">
+                                <span className="text-sm text-muted-foreground text-center">
                                     Image not available
                                 </span>
                             </div>

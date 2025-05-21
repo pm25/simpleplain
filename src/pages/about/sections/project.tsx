@@ -43,10 +43,10 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
                         />
                     ) : (
                         <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-muted">
-                            <span className="text-lg font-semibold opacity-80">
+                            <span className="text-lg font-semibold opacity-80 text-center">
                                 {repoData.name || "Unnamed Project"}
                             </span>
-                            <span className="text-sm text-muted-foreground">
+                            <span className="text-sm text-muted-foreground text-center">
                                 Image not available
                             </span>
                         </div>
