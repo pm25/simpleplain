@@ -136,9 +136,9 @@ git remote -v # Confirm the changes
 
 ## Usage
 
-To customize the website with your own information, update the data files located in [src/data](src/data). The site will automatically reflect your changes.
+To customize the website with your own information, update the data files located in [src/data](src/data). The website will automatically reflect your changes.
 
-For example, in [src/data/profile.ts](src/data/profile.ts), you can update your personal information:
+For example, in [src/data/profile.ts](src/data/profile.ts), you can update the personal information with your owns:
 
 ```ts
 export const UserInfo = {
@@ -157,7 +157,7 @@ You can also customize the following files:
 * [src/data/publications.ts](src/data/publications.ts)
 * [src/data/talks.ts](src/data/talks.ts)
 
-To add articles, simply place your files inside the [./src/data/articles](./src/data/articles) folder. The site will automatically include them whenever you deploy.
+To add articles, simply place your files inside the [src/data/articles](src/data/articles) folder. The site will automatically include them whenever you deploy.
 
 
 
