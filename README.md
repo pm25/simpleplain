@@ -9,7 +9,7 @@ author: Pin-Yen Huang
 <br />
 <div align="center">
   <a href="https://github.com/pm25/simpleplain">
-    <img src="public/full_logo.png" alt="Logo" width="320" height="320">
+    <img src="public/full_logo.png" alt="Logo" width="360">
   </a>
 
   <h3 align="center">SimplePlain - A Personal Website Template</h3>
@@ -127,7 +127,7 @@ npm run deploy
 
 ### 💡 Notes
 
-* If you’re forking or cloning this repo as a template, it’s recommended to update the git remote:
+-   If you’re forking or cloning this repo as a template, it’s recommended to update the git remote:
 
 ```sh
 git remote set-url origin https://github.com/<your-username>/<your-repo>.git
@@ -150,20 +150,18 @@ export const UserInfo = {
     profile_url: "https://avatars.githubusercontent.com/u/33774054?v=4",
     headline: "CLLab • National Taiwan University",
     // ...other fields
-}
+};
 ```
 
 You can also customize the following files:
 
-* [src/data/profile.ts](src/data/profile.ts)
-* [src/data/education.ts](src/data/education.ts)
-* [src/data/work.ts](src/data/work.ts)
-* [src/data/publications.ts](src/data/publications.ts)
-* [src/data/talks.ts](src/data/talks.ts)
+-   [src/data/profile.ts](src/data/profile.ts)
+-   [src/data/education.ts](src/data/education.ts)
+-   [src/data/work.ts](src/data/work.ts)
+-   [src/data/publications.ts](src/data/publications.ts)
+-   [src/data/talks.ts](src/data/talks.ts)
 
 To add articles, simply place your markdown files inside the [src/data/articles](src/data/articles) folder. The site will automatically include them whenever you deploy.
-
-
 
 <p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
 
