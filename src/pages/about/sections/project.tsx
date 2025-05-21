@@ -33,19 +33,13 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
 
     return (
         <Card className="rounded-lg overflow-hidden gap-0 py-0">
-            <a
-                href={repoData.html_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block transition duration-100 hover:scale-105"
-            >
+            <a href={repoData.html_url} target="_blank" rel="noopener noreferrer" className="block">
                 <div className="aspect-3/2 w-full overflow-hidden">
                     {repoData.preview_image ? (
                         <img
                             src={repoData.preview_image}
                             alt={repoData.name || "Project image"}
-                            className="w-full h-full object-cover"
-                            style={{ overflowClipMargin: "unset" }}
+                            className="w-full h-full object-cover transition-transform duration-200 hover:scale-105"
                         />
                     ) : (
                         <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-muted">
@@ -59,6 +53,7 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
                     )}
                 </div>
             </a>
+
             <hr className="border-t" />
 
             <div className="flex flex-col py-3 px-4 gap-y-2">
