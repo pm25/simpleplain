@@ -122,12 +122,6 @@ To publish the site to GitHub Pages:
 npm run deploy
 ```
 
-Make sure the `homepage` field is correctly set in your `package.json`, like this:
-
-```json
-"homepage": "https://<your-username>.github.io/<your-repo>"
-```
-
 ### 💡 Notes
 
 * If you’re forking or cloning this repo as a template, it’s recommended to update the git remote:
