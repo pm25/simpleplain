@@ -157,7 +157,7 @@ You can also customize the following files:
 * [src/data/publications.ts](src/data/publications.ts)
 * [src/data/talks.ts](src/data/talks.ts)
 
-To add articles, simply place your files inside the [src/data/articles](src/data/articles) folder. The site will automatically include them whenever you deploy.
+To add articles, simply place your markdown files inside the [src/data/articles](src/data/articles) folder. The site will automatically include them whenever you deploy.
 
 
 
