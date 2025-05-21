@@ -1,6 +1,6 @@
 import { FaUsers, FaBook, FaRegCalendar } from "react-icons/fa6";
 
-import pubData from "@/data/publications.json";
+import { PubData } from "@/data/publications";
 
 export default function Publication() {
     return (
@@ -11,7 +11,7 @@ export default function Publication() {
             </div>
 
             <div className="space-y-3 px-6 lg:px-12">
-                {pubData.publications.map((pub, index) => (
+                {PubData.publications.map((pub, index) => (
                     <div key={index} className="space-y-0.5">
                         <a
                             href={pub.link}
@@ -29,7 +29,7 @@ export default function Publication() {
                                     <span
                                         key={i}
                                         className={
-                                            author === pubData.author_name ? "font-semibold" : ""
+                                            author === PubData.author_name ? "font-semibold" : ""
                                         }
                                     >
                                         {author}
