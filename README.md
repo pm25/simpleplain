@@ -171,7 +171,7 @@ To add articles, simply place your markdown files inside the [src/data/articles]
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more information.
 
 <p align="right"><a href="#readme-top">⬆️ Back to top</a></p>
 
