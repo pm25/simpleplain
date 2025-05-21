@@ -1,8 +1,8 @@
 import { FaGraduationCap, FaBriefcase } from "react-icons/fa6";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import eduData from "@/data/education.json";
-import workData from "@/data/work.json";
+import { EduData } from "@/data/education";
+import { WorkData } from "@/data/work";
 
 export default function Experience() {
     return (
@@ -17,7 +17,7 @@ export default function Experience() {
                     </CardHeader>
                     <CardContent>
                         <ul className="list-disc pl-6 space-y-1">
-                            {eduData.map((edu, index) => (
+                            {EduData.map((edu, index) => (
                                 <li key={index}>
                                     <strong>{edu.degree}</strong> - {edu.school} ({edu.years})
                                 </li>
@@ -35,7 +35,7 @@ export default function Experience() {
                     </CardHeader>
                     <CardContent>
                         <ul className="list-disc pl-6 space-y-1">
-                            {workData.map((job, index) => (
+                            {WorkData.map((job, index) => (
                                 <li key={index}>
                                     <strong>{job.title}</strong> - {job.company} ({job.years})
                                 </li>
