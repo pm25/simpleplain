@@ -2,7 +2,7 @@
   "simpleplain": {
     "name": "simpleplain",
     "display_name": "SimplePlain",
-    "description": "🍞 SimplePlain - A minimal and elegant template for creating a personal website",
+    "description": "🥪 SimplePlain - A minimal and elegant template for creating a personal website",
     "stargazers_count": 0,
     "topics": [
       "personal-website-template",
@@ -14,8 +14,8 @@
     "homepage": "https://pm25.github.io/simpleplain",
     "html_url": "https://github.com/pm25/simpleplain",
     "created_at": "2024-12-20T10:05:02Z",
-    "updated_at": "2025-05-21T08:33:39Z",
-    "pushed_at": "2025-05-21T08:34:00Z",
+    "updated_at": "2025-05-22T00:56:06Z",
+    "pushed_at": "2025-05-22T00:56:18Z",
     "preview_image": "https://raw.githubusercontent.com/pm25/simpleplain/refs/heads/main/public/full_logo.png",
     "show": true
   },
@@ -127,7 +127,7 @@
     "name": "SimplePlus-BeamerTheme",
     "display_name": "SimplePlus Beamer Theme",
     "description": "🍃 SimplePlus - A minimalist and clean LaTeX Beamer theme.",
-    "stargazers_count": 204,
+    "stargazers_count": 205,
     "topics": [
       "beamer-template",
       "beamer-theme",
@@ -139,7 +139,7 @@
     "homepage": "",
     "html_url": "https://github.com/pm25/SimplePlus-BeamerTheme",
     "created_at": "2021-12-14T08:33:39Z",
-    "updated_at": "2025-05-17T12:43:54Z",
+    "updated_at": "2025-05-22T01:44:05Z",
     "pushed_at": "2025-01-12T22:50:46Z",
     "preview_image": "https://raw.githubusercontent.com/pm25/simpleplus-beamerTheme/master/preview/slide-1.webp",
     "show": true
@@ -359,17 +359,17 @@
     "preview_image": "https://raw.githubusercontent.com/pm25/Simulation-of-Life/master/images/preview.jpg",
     "show": true
   },
-  "Visualization---Taiwan-Population": {
-    "name": "Visualization---Taiwan-Population",
+  "Data-Visualization-Taiwan-Population": {
+    "name": "Data-Visualization-Taiwan-Population",
     "display_name": "",
     "description": null,
     "stargazers_count": 0,
     "topics": [],
     "language": "JavaScript",
-    "homepage": "https://pm25.github.io/Visualization---Taiwan-Population/",
-    "html_url": "https://github.com/pm25/Visualization---Taiwan-Population",
+    "homepage": "https://pm25.github.io/Data-Visualization-Taiwan-Population/",
+    "html_url": "https://github.com/pm25/Data-Visualization-Taiwan-Population",
     "created_at": "2020-04-18T07:22:47Z",
-    "updated_at": "2020-06-10T05:31:11Z",
+    "updated_at": "2025-05-22T00:01:43Z",
     "pushed_at": "2020-04-21T13:51:10Z",
     "preview_image": "",
     "show": true
