@@ -19,7 +19,7 @@ export default function Projects() {
                 </div>
                 <Separator />
 
-                <div className="flex flex-col w-full gap-4 px-6">
+                <div className="grid grid-cols-1 w-full gap-4 px-6">
                     {(Object.keys(AllRepoData) as (keyof typeof AllRepoData)[])
                         .filter((project_name) => AllRepoData[project_name].show === true)
                         .sort(
@@ -40,7 +40,7 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
     const repoData = AllRepoData[project_name];
 
     return (
-        <Card className="rounded-lg overflow-hidden gap-0 py-0 w-full max-w-md md:max-w-full mx-auto md:mx-0">
+        <Card className="rounded-lg overflow-hidden gap-0 py-0 w-full">
             <div className="flex flex-col lg:flex-row gap-4">
                 {/* Thumbnail Section */}
                 <a
@@ -49,7 +49,7 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
                     rel="noopener noreferrer"
                     className="block"
                 >
-                    <div className="aspect-3/2 w-full md:h-48 flex-shrink-0 overflow-hidden">
+                    <div className="aspect-3/2 w-full max-h-72 lg:h-48 flex-shrink-0 overflow-hidden">
                         {repoData.preview_image ? (
                             <img
                                 src={repoData.preview_image}
@@ -71,7 +71,7 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
                 </a>
 
                 {/* Info Section */}
-                <div className="flex flex-col p-4 gap-y-2 flex-1 h-auto md:h-48">
+                <div className="flex flex-col p-4 gap-y-2 flex-1 h-auto lg:h-48">
                     <div className="text-lg font-semibold line-clamp-2">
                         {repoData.display_name || repoData.name}
                     </div>
