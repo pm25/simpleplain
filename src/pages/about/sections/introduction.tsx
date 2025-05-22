@@ -59,12 +59,17 @@ function Profile() {
 
 function Biography() {
     return (
-        <div className="min-w-64 max-w-prose w-full px-4 sm:px-0">
+        <div className="prose dark:prose-invert min-w-64 max-w-prose w-full px-4 sm:px-0">
             <div className="text-2xl font-semibold mb-2">About Me</div>
-            <div
-                className="text-justify hyphens-auto break-words"
-                dangerouslySetInnerHTML={{ __html: UserInfo.biography }}
-            />
+            {UserInfo.biography ? (
+                <div
+                    className="text-justify hyphens-auto break-words"
+                    dangerouslySetInnerHTML={{ __html: UserInfo.biography }}
+                    aria-label="User biography"
+                />
+            ) : (
+                <p className="text-gray-500 italic">No biography available.</p>
+            )}
         </div>
     );
 }

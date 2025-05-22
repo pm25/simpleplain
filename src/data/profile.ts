@@ -43,6 +43,6 @@ export const UserInfo = {
     biography: `
         Hi! I'm [Your Name], a [Your Title] passionate about [field or topic]. I'm currently working as [current role] at [organization or context], where I [briefly describe your work or mission]. With a background in [academic or professional background], I've developed a strong interest in [key interests or specialties], and have worked on projects like <i>[example project]</i> and <i>[another example]</i>, all centered around [what ties them together or your broader goal].
         <div class="my-2"></div>
-        Outside of work, I enjoy [hobbies or personal interests], which keep me grounded and spark new ideas. Thanks for visiting! Feel free to <a href="[contact link or email]">get in touch</a> if you'd like to connect.
+        Outside of work, I enjoy [hobbies or personal interests], which keep me grounded and spark new ideas. Thanks for visiting! Feel free to <a href="[contact link or email]" target="_blank" rel="noopener noreferrer">get in touch</a> if you'd like to connect.
     `
 }
