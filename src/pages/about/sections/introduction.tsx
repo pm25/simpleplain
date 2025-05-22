@@ -61,7 +61,10 @@ function Biography() {
     return (
         <div className="min-w-64 max-w-prose w-full px-4 sm:px-0">
             <div className="text-2xl font-semibold mb-2">About Me</div>
-            <p className="text-justify hyphens-auto break-words">{UserInfo.biography}</p>
+            <div
+                className="text-justify hyphens-auto break-words"
+                dangerouslySetInnerHTML={{ __html: UserInfo.biography }}
+            />
         </div>
     );
 }
