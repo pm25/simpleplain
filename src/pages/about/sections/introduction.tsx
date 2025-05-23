@@ -59,11 +59,11 @@ function Profile() {
 
 function Biography() {
     return (
-        <div className="prose dark:prose-invert min-w-64 max-w-prose w-full px-4 sm:px-0">
+        <div className="min-w-64 max-w-prose w-full px-4 sm:px-0">
             <div className="text-2xl font-semibold mb-2">About Me</div>
             {UserInfo.biography ? (
                 <div
-                    className="text-justify hyphens-auto break-words"
+                    className="prose dark:prose-invert text-justify text-base/6"
                     dangerouslySetInnerHTML={{ __html: UserInfo.biography }}
                     aria-label="User biography"
                 />
