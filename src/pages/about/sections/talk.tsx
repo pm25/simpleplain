@@ -13,12 +13,12 @@ export default function Talk() {
 
     return (
         <div className="w-full max-w-5xl space-y-6">
-            <div className="flex flex-row justify-center items-center gap-2 text-2xl font-semibold">
+            <div className="flex flex-row justify-center items-center gap-2 text-plus font-semibold">
                 <MdCoPresent />
                 Presentations / Talks
             </div>
 
-            <div className="px-6 py-2">
+            <div className="px-6">
                 {TalksData.map((talk, index) => (
                     <div
                         key={index}

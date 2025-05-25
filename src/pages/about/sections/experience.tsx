@@ -10,7 +10,7 @@ export default function Experience() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card className="rounded-lg gap-2">
                     <CardHeader>
-                        <CardTitle className="flex flex-row justify-center items-center gap-2 text-2xl">
+                        <CardTitle className="flex flex-row justify-center items-center gap-2 text-plus">
                             <FaGraduationCap />
                             Education
                         </CardTitle>
@@ -35,7 +35,7 @@ export default function Experience() {
 
                 <Card className="rounded-lg gap-2">
                     <CardHeader>
-                        <CardTitle className="flex flex-row justify-center items-center gap-2 text-2xl mb-2">
+                        <CardTitle className="flex flex-row justify-center items-center gap-2 text-plus mb-2">
                             <FaBriefcase />
                             Work Experiences
                         </CardTitle>

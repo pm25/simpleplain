@@ -5,12 +5,12 @@ import { PubData } from "@/data/publications";
 export default function Publication() {
     return (
         <div className="w-full max-w-5xl space-y-6">
-            <div className="flex flex-row justify-center items-center gap-2 text-2xl font-semibold">
+            <div className="flex flex-row justify-center items-center gap-2 text-plus font-semibold">
                 <FaBook />
                 Publications
             </div>
 
-            <div className="space-y-3 px-6 py-2 lg:px-12">
+            <div className="space-y-3 px-6 lg:px-12">
                 {PubData.publications.map((pub, index) => (
                     <div key={index} className="space-y-0.5">
                         <a
