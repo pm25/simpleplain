@@ -11,7 +11,7 @@ export default function Project() {
                 Projects
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-6 py-2">
                 {FeaturedRepoData.map((repoData, index) => (
                     <ProjectCard key={index} repoData={repoData} />
                 ))}
@@ -58,7 +58,7 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
             <hr className="border-t" />
 
             <div className="flex flex-col py-3 px-4 gap-y-2">
-                <div className="text-lg font-semibold line-clamp-2">
+                <div className="text-base font-semibold line-clamp-2">
                     {repoData.display_name || repoData.name}
                 </div>
                 <p className="text-sm text-muted-foreground line-clamp-2">
@@ -67,7 +67,7 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
                 {repoData.topics.length > 0 && (
                     <div className="flex flex-wrap gap-2">
                         {repoData.topics.map((topic, idx) => (
-                            <span key={idx} className="bg-muted text-sm px-2 py-1 rounded-md">
+                            <span key={idx} className="text-sm bg-muted px-2 py-0.5 rounded-sm">
                                 {topic}
                             </span>
                         ))}

@@ -10,7 +10,7 @@ import {
 export const UserInfo = {
     name: "Pin-Yen Huang",
     profile_url: "https://avatars.githubusercontent.com/u/33774054?v=4",
-    headline: "CLLab • National Taiwan University",
+    headline: "Student @ National Taiwan University",
     email: "pyhuang97@gmail.com",
     links: [
         {

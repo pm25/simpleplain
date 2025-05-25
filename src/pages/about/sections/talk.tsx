@@ -18,7 +18,7 @@ export default function Talk() {
                 Presentations / Talks
             </div>
 
-            <div className="px-6">
+            <div className="px-6 py-2">
                 {TalksData.map((talk, index) => (
                     <div
                         key={index}
@@ -36,7 +36,7 @@ export default function Talk() {
                             />
                         )}
                         <div className="flex flex-col gap-0.5">
-                            <div className="text-lg font-semibold">{talk.title}</div>
+                            <div className="text-base font-semibold">{talk.title}</div>
                             <div className="flex flex-row justify-between text-sm text-muted-foreground">
                                 <p className="line-clamp-2">{talk.location}</p>
                                 <p className="flex flex-row gap-1 items-center">

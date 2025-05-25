@@ -21,8 +21,8 @@ function Profile() {
                 className="w-60 h-auto rounded-lg object-cover"
             />
             <div className="flex flex-col items-center gap-y-2">
-                <p className="text-3xl font-semibold text-foreground">{UserInfo.name}</p>
-                <p className="text-lg font-medium text-muted-foreground">{UserInfo.headline}</p>
+                <p className="text-2xl font-semibold text-foreground">{UserInfo.name}</p>
+                <p className="text-base font-medium text-muted-foreground">{UserInfo.headline}</p>
                 <p className="flex flex-row items-center gap-2 text-base font-medium text-foreground opacity-80">
                     <FaRegEnvelope className="w-4 h-4" />
                     {UserInfo.email}
