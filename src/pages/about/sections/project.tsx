@@ -41,6 +41,7 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
                             alt={repoData.name || "Project image"}
                             className="w-full h-full object-cover"
                             style={{ overflowClipMargin: "unset" }}
+                            loading="lazy"
                         />
                     ) : (
                         <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-muted">
