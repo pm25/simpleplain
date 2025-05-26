@@ -14,8 +14,8 @@
     "homepage": "https://pm25.github.io/simpleplain",
     "html_url": "https://github.com/pm25/simpleplain",
     "created_at": "2024-12-20T10:05:02Z",
-    "updated_at": "2025-05-22T00:56:06Z",
-    "pushed_at": "2025-05-22T00:56:18Z",
+    "updated_at": "2025-05-26T21:35:20Z",
+    "pushed_at": "2025-05-26T21:35:16Z",
     "preview_image": "https://raw.githubusercontent.com/pm25/simpleplain/refs/heads/main/public/full_logo.png",
     "show": true
   },
@@ -227,7 +227,7 @@
     "name": "SimpleDarkBlue-BeamerTheme",
     "display_name": "SimpleDarkBlue Beamer Theme",
     "description": "🫐 SimpleDarkBlue - A simple and clear LaTeX Beamer theme.",
-    "stargazers_count": 72,
+    "stargazers_count": 73,
     "topics": [
       "beamer-template",
       "beamer-theme",
@@ -239,7 +239,7 @@
     "homepage": "",
     "html_url": "https://github.com/pm25/SimpleDarkBlue-BeamerTheme",
     "created_at": "2021-01-12T00:59:09Z",
-    "updated_at": "2025-04-04T06:58:12Z",
+    "updated_at": "2025-05-24T09:32:20Z",
     "pushed_at": "2025-01-14T08:50:14Z",
     "preview_image": "https://raw.githubusercontent.com/pm25/simpledarkblue-beamertheme/master/preview/slide-1.webp",
     "show": true
@@ -524,19 +524,19 @@
     "description": "✨ PlusMore - My personal website containing information about me, featuring my projects and blog posts.",
     "stargazers_count": 3,
     "topics": [
-      "blog",
-      "css3",
-      "html5",
-      "javascript",
       "personal-website",
-      "react"
+      "react",
+      "shadcn-ui",
+      "tailwindcss",
+      "typescript",
+      "vite"
     ],
-    "language": "JavaScript",
+    "language": "TypeScript",
     "homepage": "https://pm25.github.io/",
     "html_url": "https://github.com/pm25/pm25.github.io",
     "created_at": "2018-05-24T14:51:50Z",
-    "updated_at": "2025-01-14T01:41:21Z",
-    "pushed_at": "2023-08-30T00:25:42Z",
+    "updated_at": "2025-05-22T10:02:53Z",
+    "pushed_at": "2025-05-22T10:02:50Z",
     "preview_image": "",
     "show": true
   },
