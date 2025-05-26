@@ -7,21 +7,21 @@ import { WorkData } from "@/data/work";
 export default function Experience() {
     return (
         <div className="flex flex-row items-center gap-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="rounded-lg gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+                <Card className="rounded-lg gap-4 px-2">
                     <CardHeader>
                         <CardTitle className="flex flex-row justify-center items-center gap-2 text-plus">
                             <FaGraduationCap />
                             Education
                         </CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-4 py-2">
+                    <CardContent className="space-y-4">
                         {EduData.map((edu, index) => (
                             <div key={index} className="flex items-center gap-4">
                                 <img
                                     src={edu.logo}
                                     alt={`${edu.school} logo`}
-                                    className="w-12 h-12 object-contain rounded mx-1"
+                                    className="w-12 h-12 object-contain rounded"
                                 />
                                 <div>
                                     <div className="font-semibold">{edu.school}</div>
@@ -33,20 +33,20 @@ export default function Experience() {
                     </CardContent>
                 </Card>
 
-                <Card className="rounded-lg gap-2">
+                <Card className="rounded-lg gap-4 px-2">
                     <CardHeader>
                         <CardTitle className="flex flex-row justify-center items-center gap-2 text-plus">
                             <FaBriefcase />
                             Work Experiences
                         </CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-4 py-2">
+                    <CardContent className="space-y-4">
                         {WorkData.map((job, index) => (
                             <div key={index} className="flex items-center gap-4">
                                 <img
                                     src={job.logo}
                                     alt={`${job.company} logo`}
-                                    className="w-12 h-12 object-contain rounded mx-1"
+                                    className="w-12 h-12 object-contain rounded"
                                 />
                                 <div>
                                     <div className="font-semibold">{job.company}</div>
