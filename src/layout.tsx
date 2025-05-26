@@ -3,6 +3,7 @@ import { Outlet } from "react-router";
 import { AppSidebar } from "@/components/app-sidebar";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
+import { Toaster } from "@/components/ui/sonner";
 
 export default function Layout() {
     return (
@@ -28,6 +29,8 @@ export default function Layout() {
                         </a>
                     </Button>
                 </footer>
+
+                <Toaster />
             </SidebarInset>
         </SidebarProvider>
     );
