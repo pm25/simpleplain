@@ -1,5 +1,24 @@
+import uiucLogo from "./images/uiuc_logo.png";
+import googleLogo from "./images/google_logo.svg";
+import nvidiaLogo from "./images/nvidia_logo.webp";
+
 export const WorkData = [
-    { title: "Research Assistant", company: "XYZ University", years: "2020 - Present" },
-    { title: "Software Engineer", company: "ABC Tech", years: "2018 - 2020" },
-    { title: "Intern", company: "LMN Corp", years: "2017 - 2018" },
+  {
+    title: "Software Engineer",
+    company: "Nvidia",
+    years: "2022 - Present",
+    logo: nvidiaLogo,
+  },
+  {
+    title: "Software Engineering Intern",
+    company: "Google",
+    years: "2020 - 2022",
+    logo: googleLogo,
+  },
+  {
+    title: "Research Assistant",
+    company: "University of Illinois Urbana-Champaign",
+    years: "Jul 2019 - Sep 2019",
+    logo: uiucLogo,
+  },
 ];

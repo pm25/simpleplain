@@ -21,7 +21,7 @@ export default function Experience() {
                                 <img
                                     src={edu.logo}
                                     alt={`${edu.school} logo`}
-                                    className="w-12 h-12 object-contain"
+                                    className="w-12 h-12 object-contain rounded mx-1"
                                 />
                                 <div>
                                     <div className="font-semibold">{edu.school}</div>
@@ -35,19 +35,26 @@ export default function Experience() {
 
                 <Card className="rounded-lg gap-2">
                     <CardHeader>
-                        <CardTitle className="flex flex-row justify-center items-center gap-2 text-plus mb-2">
+                        <CardTitle className="flex flex-row justify-center items-center gap-2 text-plus">
                             <FaBriefcase />
                             Work Experiences
                         </CardTitle>
                     </CardHeader>
-                    <CardContent>
-                        <ul className="list-disc pl-6 space-y-1">
-                            {WorkData.map((job, index) => (
-                                <li key={index}>
-                                    <strong>{job.title}</strong> - {job.company} ({job.years})
-                                </li>
-                            ))}
-                        </ul>
+                    <CardContent className="space-y-4 py-2">
+                        {WorkData.map((job, index) => (
+                            <div key={index} className="flex items-center gap-4">
+                                <img
+                                    src={job.logo}
+                                    alt={`${job.company} logo`}
+                                    className="w-12 h-12 object-contain rounded mx-1"
+                                />
+                                <div>
+                                    <div className="font-semibold">{job.company}</div>
+                                    <div className="text-sm text-muted-foreground">{job.years}</div>
+                                    <div className="text-sm">{job.title}</div>
+                                </div>
+                            </div>
+                        ))}
                     </CardContent>
                 </Card>
             </div>
