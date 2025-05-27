@@ -32,8 +32,8 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
     }
 
     return (
-        <Card className="rounded-lg overflow-hidden gap-0 py-0 w-full">
-            <div className="flex flex-col">
+        <Card className="rounded-lg overflow-hidden gap-0 py-0 w-full flex flex-col h-full">
+            <div className="flex flex-col flex-grow">
                 <a
                     href={repoData.html_url}
                     target="_blank"
@@ -64,7 +64,7 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
 
                 <hr className="border-t" />
 
-                <div className="flex flex-col py-3 px-4 gap-y-2">
+                <div className="flex flex-col flex-grow py-3 px-4 gap-y-2">
                     <div className="text-base font-semibold line-clamp-2">
                         {repoData.html_url ? (
                             <a
