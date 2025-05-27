@@ -32,104 +32,108 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
     }
 
     return (
-        <Card className="rounded-lg overflow-hidden gap-0 py-0">
-            <a href={repoData.html_url} target="_blank" rel="noopener noreferrer" className="block">
-                <div className="aspect-3/2 w-full overflow-hidden">
-                    {repoData.preview_image ? (
-                        <img
-                            src={repoData.preview_image}
-                            alt={repoData.name || "Project image"}
-                            className="w-full h-full object-cover"
-                            style={{ overflowClipMargin: "unset" }}
-                            loading="lazy"
-                        />
-                    ) : (
-                        <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-muted">
-                            <span className="text-lg font-semibold opacity-80 text-center">
-                                {repoData.name || "Unnamed Project"}
-                            </span>
-                            <span className="text-sm text-muted-foreground text-center">
-                                Image not available
-                            </span>
-                        </div>
-                    )}
-                </div>
-            </a>
-
-            <hr className="border-t" />
-
-            <div className="flex flex-col py-3 px-4 gap-y-2">
-                <div className="text-base font-semibold line-clamp-2">
-                    {repoData.html_url ? (
-                        <a
-                            href={repoData.html_url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="GitHub repository"
-                            className="cursor-pointer hover:underline underline-offset-4"
-                        >
-                            {repoData.display_name || repoData.name}
-                        </a>
-                    ) : (
-                        repoData.display_name || repoData.name
-                    )}
-                </div>
-                <p className="text-sm text-muted-foreground line-clamp-2">
-                    {repoData.description || "Details unavailable"}
-                </p>
-                {repoData.topics.length > 0 && (
-                    <div className="flex flex-wrap gap-2">
-                        {repoData.topics.map((topic, idx) => (
-                            <span key={idx} className="text-sm bg-muted px-2 py-0.5 rounded-sm">
-                                {topic}
-                            </span>
-                        ))}
-                    </div>
-                )}
-
-                <div className="flex flex-row items-center justify-between text-muted-foreground mt-2">
-                    <div className="flex items-center gap-2">
-                        <div className="text-sm text-muted-foreground">
-                            <p>Language: {repoData.language || "Unknown"}</p>
-                        </div>
-
-                        {repoData.stargazers_count !== null && (
-                            <a
-                                href={`${repoData.html_url}/stargazers`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Stargazers"
-                                className="flex items-center gap-1 text-sm text-yellow-600 hover:text-yellow-500"
-                            >
-                                <FaRegStar className="w-4 h-4 fill-current" />
-                                <span>{repoData.stargazers_count}</span>
-                            </a>
+        <Card className="rounded-lg overflow-hidden gap-0 py-0 w-full">
+            <div className="flex flex-col">
+                <a
+                    href={repoData.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                >
+                    <div className="aspect-3/2 w-full overflow-hidden">
+                        {repoData.preview_image ? (
+                            <img
+                                src={repoData.preview_image}
+                                alt={repoData.name || "Project image"}
+                                className="w-full h-full object-cover"
+                                style={{ overflowClipMargin: "unset" }}
+                                loading="lazy"
+                            />
+                        ) : (
+                            <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-muted">
+                                <span className="text-lg font-semibold opacity-80 text-center">
+                                    {repoData.name || "Unnamed Project"}
+                                </span>
+                                <span className="text-sm text-muted-foreground text-center">
+                                    Image not available
+                                </span>
+                            </div>
                         )}
                     </div>
+                </a>
 
-                    <div className="flex items-center gap-2">
-                        {repoData.homepage && (
-                            <a
-                                href={repoData.homepage}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Project website"
-                                className="hover:text-foreground"
-                            >
-                                <FaGlobe className="w-6 h-6" />
-                            </a>
-                        )}
-                        {repoData.html_url && (
+                <hr className="border-t" />
+
+                <div className="flex flex-col py-3 px-4 gap-y-2">
+                    <div className="text-base font-semibold line-clamp-2">
+                        {repoData.html_url ? (
                             <a
                                 href={repoData.html_url}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="GitHub repository"
-                                className="hover:text-foreground"
+                                className="cursor-pointer hover:underline underline-offset-4"
                             >
-                                <FaGithub className="w-6 h-6" />
+                                {repoData.display_name || repoData.name}
                             </a>
+                        ) : (
+                            repoData.display_name || repoData.name
                         )}
+                    </div>
+                    <p className="text-sm text-muted-foreground line-clamp-2">
+                        {repoData.description || "Details unavailable"}
+                    </p>
+                    {repoData.topics.length > 0 && (
+                        <div className="flex flex-wrap gap-2">
+                            {repoData.topics.map((topic, idx) => (
+                                <span key={idx} className="bg-muted text-sm px-2 py-0.5 rounded-sm">
+                                    {topic}
+                                </span>
+                            ))}
+                        </div>
+                    )}
+
+                    <div className="flex flex-row items-center justify-between text-muted-foreground mt-auto pt-2">
+                        <div className="flex items-center gap-2">
+                            <p className="text-sm">Language: {repoData.language || "Unknown"}</p>
+                            {repoData.stargazers_count !== null && (
+                                <a
+                                    href={`${repoData.html_url}/stargazers`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Stargazers"
+                                    className="flex items-center gap-1 text-sm text-yellow-600 hover:text-yellow-500"
+                                >
+                                    <FaRegStar className="w-4 h-4" />
+                                    <span>{repoData.stargazers_count}</span>
+                                </a>
+                            )}
+                        </div>
+
+                        <div className="flex items-center gap-2">
+                            {repoData.homepage && (
+                                <a
+                                    href={repoData.homepage}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Project homepage"
+                                    className="hover:text-foreground"
+                                >
+                                    <FaGlobe className="w-6 h-6" />
+                                </a>
+                            )}
+                            {repoData.html_url && (
+                                <a
+                                    href={repoData.html_url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="GitHub repository"
+                                    className="hover:text-foreground"
+                                >
+                                    <FaGithub className="w-6 h-6" />
+                                </a>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -41,25 +41,25 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
 
     return (
         <Card className="rounded-lg overflow-hidden gap-0 py-0 w-full">
-            <div className="flex flex-col lg:flex-row gap-4">
-                {/* Thumbnail Section */}
+            <div className="flex flex-col lg:flex-row">
                 <a
                     href={repoData.html_url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block"
                 >
-                    <div className="aspect-3/2 w-full max-h-72 lg:h-48 flex-shrink-0 overflow-hidden">
+                    <div className="aspect-3/2 w-full max-h-72 lg:h-48 overflow-hidden">
                         {repoData.preview_image ? (
                             <img
                                 src={repoData.preview_image}
                                 alt={repoData.name || "Project image"}
                                 className="w-full h-full object-cover"
                                 style={{ overflowClipMargin: "unset" }}
+                                loading="lazy"
                             />
                         ) : (
                             <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-muted">
-                                <span className="text-base font-semibold opacity-80 text-center">
+                                <span className="text-lg font-semibold opacity-80 text-center">
                                     {repoData.name || "Unnamed Project"}
                                 </span>
                                 <span className="text-sm text-muted-foreground text-center">
@@ -70,8 +70,9 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
                     </div>
                 </a>
 
-                {/* Info Section */}
-                <div className="flex flex-col p-4 gap-y-2 flex-1 h-auto lg:h-48">
+                <hr className="border-t" />
+
+                <div className="flex flex-col lg:ml-4 p-4 gap-y-2 flex-1 h-auto lg:h-48">
                     <div className="text-lg font-semibold line-clamp-2">
                         {repoData.html_url ? (
                             <a
@@ -93,7 +94,7 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
                     {repoData.topics.length > 0 && (
                         <div className="flex flex-wrap gap-2">
                             {repoData.topics.map((topic, idx) => (
-                                <span key={idx} className="bg-muted text-sm px-2 py-1 rounded-md">
+                                <span key={idx} className="bg-muted text-sm px-2 py-1 rounded-sm">
                                     {topic}
                                 </span>
                             ))}
@@ -108,6 +109,7 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
                                     href={`${repoData.html_url}/stargazers`}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label="Stargazers"
                                     className="flex items-center gap-1 text-sm text-yellow-600 hover:text-yellow-500"
                                 >
                                     <FaRegStar className="w-4 h-4" />
@@ -122,6 +124,7 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
                                     href={repoData.homepage}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label="Project homepage"
                                     className="hover:text-foreground"
                                 >
                                     <FaGlobe className="w-6 h-6" />
@@ -132,6 +135,7 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
                                     href={repoData.html_url}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label="GitHub repository"
                                     className="hover:text-foreground"
                                 >
                                     <FaGithub className="w-6 h-6" />

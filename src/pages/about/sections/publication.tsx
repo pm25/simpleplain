@@ -17,7 +17,7 @@ export default function Publication() {
                             href={pub.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-base font-semibold leading-tight hover:underline"
+                            className="text-base font-semibold leading-tight hover:underline underline-offset-4"
                         >
                             {pub.title}
                         </a>
