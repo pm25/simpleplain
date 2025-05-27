@@ -60,7 +60,19 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
 
             <div className="flex flex-col py-3 px-4 gap-y-2">
                 <div className="text-base font-semibold line-clamp-2">
-                    {repoData.display_name || repoData.name}
+                    {repoData.html_url ? (
+                        <a
+                            href={repoData.html_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub repository"
+                            className="cursor-pointer hover:underline underline-offset-4"
+                        >
+                            {repoData.display_name || repoData.name}
+                        </a>
+                    ) : (
+                        repoData.display_name || repoData.name
+                    )}
                 </div>
                 <p className="text-sm text-muted-foreground line-clamp-2">
                     {repoData.description || "Details unavailable"}
