@@ -19,7 +19,7 @@ export default function Projects() {
                 </div>
                 <Separator />
 
-                <div className="grid grid-cols-1 w-full gap-4 px-6">
+                <div className="grid grid-cols-1 w-full gap-4 px-2 sm:px-6">
                     {(Object.keys(AllRepoData) as (keyof typeof AllRepoData)[])
                         .filter((project_name) => AllRepoData[project_name].show === true)
                         .sort(
