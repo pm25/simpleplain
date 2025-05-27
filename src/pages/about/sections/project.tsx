@@ -11,7 +11,7 @@ export default function Project() {
                 Projects
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-2 sm:px-6">
                 {FeaturedRepoData.map((repoData, index) => (
                     <ProjectCard key={index} repoData={repoData} />
                 ))}

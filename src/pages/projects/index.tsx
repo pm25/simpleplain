@@ -72,7 +72,7 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
 
                 <hr className="border-t" />
 
-                <div className="flex flex-col lg:ml-4 p-4 gap-y-2 flex-1 h-auto lg:h-48">
+                <div className="flex flex-col lg:ml-2 p-4 gap-y-2 flex-1 h-auto lg:h-48">
                     <div className="text-lg font-semibold line-clamp-2">
                         {repoData.html_url ? (
                             <a

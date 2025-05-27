@@ -7,7 +7,7 @@ import { WorkData } from "@/data/work";
 export default function Experience() {
     return (
         <div className="w-full max-w-5xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-2 sm:px-6">
                 <Card className="rounded-lg gap-4 px-2 max-h-96 overflow-scroll hidden-scrollbar">
                     <CardHeader>
                         <CardTitle className="flex flex-row justify-center items-center gap-2 text-plus">

@@ -10,9 +10,9 @@ export default function Publication() {
                 Publications
             </div>
 
-            <div className="space-y-3 px-6 lg:px-12">
+            <div className="px-2 sm:px-6">
                 {PubData.publications.map((pub, index) => (
-                    <div key={index} className="space-y-0.5">
+                    <div key={index} className="space-y-0.5 py-2 px-4">
                         <a
                             href={pub.link}
                             target="_blank"

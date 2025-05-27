@@ -18,7 +18,7 @@ export default function Talk() {
                 Presentations / Talks
             </div>
 
-            <div className="px-6">
+            <div className="px-2 sm:px-6">
                 {TalksData.map((talk, index) => (
                     <div
                         key={index}
