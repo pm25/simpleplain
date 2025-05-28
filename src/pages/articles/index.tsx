@@ -1,15 +1,13 @@
-import { useEffect } from "react";
 import { FaNewspaper } from "react-icons/fa6";
 import { Link } from "react-router";
+import { usePageTitle } from "@/hooks/use-pagetitle";
 
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import articlesData from "@/data/articles.json";
 
 export default function Articles() {
-    useEffect(() => {
-        document.title = "Articles - SimplePlain";
-    }, []);
+    usePageTitle("Articles");
 
     const sortedArticles = [...articlesData].sort((a, b) => {
         if (!a.date) return 1;

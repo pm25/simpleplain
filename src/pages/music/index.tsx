@@ -1,9 +1,7 @@
-import { useEffect } from "react";
+import { usePageTitle } from "@/hooks/use-pagetitle";
 
 export default function Music() {
-    useEffect(() => {
-        document.title = "About Me - SimplePlain";
-    }, []);
+    usePageTitle("Music");
 
     return (
         <div>

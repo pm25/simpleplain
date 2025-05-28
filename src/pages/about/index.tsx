@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import { Separator } from "@/components/ui/separator";
+import { usePageTitle } from "@/hooks/use-pagetitle";
 
 import Introduction from "./sections/introduction";
 import Experience from "./sections/experience";
@@ -8,9 +8,7 @@ import Project from "./sections/project";
 import Talk from "./sections/talk";
 
 export default function About() {
-    useEffect(() => {
-        document.title = "About Me - SimplePlain";
-    }, []);
+    usePageTitle("About Me");
 
     return (
         <div className="flex flex-1 flex-col items-center gap-12">

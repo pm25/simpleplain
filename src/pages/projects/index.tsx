@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaHammer, FaGithub, FaGlobe, FaRegStar } from "react-icons/fa6";
+import { usePageTitle } from "@/hooks/use-pagetitle";
 
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -8,9 +9,7 @@ import AllRepoData from "@/data/repos.json";
 export default function Projects() {
     const [sortBy, setSortBy] = useState<"stars" | "updated" | "created">("updated");
 
-    useEffect(() => {
-        document.title = "Projects - SimplePlain";
-    }, []);
+    usePageTitle("Projects");
 
     const sortedProjects = (Object.keys(AllRepoData) as (keyof typeof AllRepoData)[])
         .filter((project_name) => AllRepoData[project_name].show === true)
