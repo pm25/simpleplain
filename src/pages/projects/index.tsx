@@ -2,11 +2,19 @@ import { useState } from "react";
 import { FaHammer, FaGithub, FaGlobe, FaRegStar } from "react-icons/fa6";
 import { usePageTitle } from "@/hooks/use-pagetitle";
 
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import AllRepoData from "@/data/repos.json";
 
 export default function Projects() {
+    type SortByType = "stars" | "updated" | "created";
     const [sortBy, setSortBy] = useState<"stars" | "updated" | "created">("updated");
 
     usePageTitle("Projects");
@@ -34,22 +42,21 @@ export default function Projects() {
                     Projects
                 </div>
 
-                <div className="relative">
-                    <div className="absolute -top-10 right-2 sm:right-6 flex items-center gap-2">
-                        <label className="text-sm">Sort by:</label>
-                        <select
-                            value={sortBy}
-                            onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-                            className="text-sm px-2 py-1 border rounded-md bg-background"
-                        >
-                            <option value="updated">Last Updated</option>
-                            <option value="created">Created Time</option>
-                            <option value="stars">Star Count</option>
-                        </select>
-                    </div>
-
-                    <Separator />
+                <div className="flex justify-end items-center gap-2 px-2 sm:px-6 mb-0 relative -top-4">
+                    <label>Sort by:</label>
+                    <Select value={sortBy} onValueChange={(val: SortByType) => setSortBy(val)}>
+                        <SelectTrigger className="w-[160px] cursor-pointer">
+                            <SelectValue placeholder="Sort by" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectItem value="updated">🕒 Last Updated</SelectItem>
+                            <SelectItem value="created">📅 Created Time</SelectItem>
+                            <SelectItem value="stars">⭐ Star Count</SelectItem>
+                        </SelectContent>
+                    </Select>
                 </div>
+
+                <Separator />
 
                 <div className="grid grid-cols-1 w-full gap-4 px-2 sm:px-6">
                     {sortedProjects.map((project_name) => (
