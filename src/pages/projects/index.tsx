@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FaHammer, FaGithub, FaGlobe, FaRegStar } from "react-icons/fa6";
 
 import { Card } from "@/components/ui/card";
@@ -6,9 +6,26 @@ import { Separator } from "@/components/ui/separator";
 import AllRepoData from "@/data/repos.json";
 
 export default function Projects() {
+    const [sortBy, setSortBy] = useState<"stars" | "updated" | "created">("updated");
+
     useEffect(() => {
         document.title = "Projects - SimplePlain";
     }, []);
+
+    const sortedProjects = (Object.keys(AllRepoData) as (keyof typeof AllRepoData)[])
+        .filter((project_name) => AllRepoData[project_name].show === true)
+        .sort((a, b) => {
+            const aData = AllRepoData[a];
+            const bData = AllRepoData[b];
+
+            if (sortBy === "stars") {
+                return (bData.stargazers_count ?? 0) - (aData.stargazers_count ?? 0);
+            } else if (sortBy === "created") {
+                return new Date(bData.created_at).getTime() - new Date(aData.created_at).getTime();
+            } else {
+                return new Date(bData.pushed_at).getTime() - new Date(aData.pushed_at).getTime();
+            }
+        });
 
     return (
         <div className="flex flex-1 flex-col items-center gap-10">
@@ -17,19 +34,28 @@ export default function Projects() {
                     <FaHammer />
                     Projects
                 </div>
-                <Separator />
+
+                <div className="relative">
+                    <div className="absolute -top-10 right-2 sm:right-6 flex items-center gap-2">
+                        <label className="text-sm">Sort by:</label>
+                        <select
+                            value={sortBy}
+                            onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
+                            className="text-sm px-2 py-1 border rounded-md bg-background"
+                        >
+                            <option value="updated">Last Updated</option>
+                            <option value="created">Created Time</option>
+                            <option value="stars">Star Count</option>
+                        </select>
+                    </div>
+
+                    <Separator />
+                </div>
 
                 <div className="grid grid-cols-1 w-full gap-4 px-2 sm:px-6">
-                    {(Object.keys(AllRepoData) as (keyof typeof AllRepoData)[])
-                        .filter((project_name) => AllRepoData[project_name].show === true)
-                        .sort(
-                            (a, b) =>
-                                new Date(AllRepoData[b].pushed_at).getTime() -
-                                new Date(AllRepoData[a].pushed_at).getTime()
-                        )
-                        .map((project_name) => (
-                            <ProjectCard key={project_name} project_name={project_name} />
-                        ))}
+                    {sortedProjects.map((project_name) => (
+                        <ProjectCard key={project_name} project_name={project_name} />
+                    ))}
                 </div>
             </div>
         </div>
