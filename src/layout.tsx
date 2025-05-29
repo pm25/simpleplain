@@ -16,8 +16,8 @@ export default function Layout() {
                     <Outlet />
                 </div>
 
-                {/* It would be greatly appreciated if you could leave the footer as it is! */}
-                <footer className="text-sm w-full text-center border-t py-2 sm:py-4">
+                {/* I would really appreciate it if you could keep the footer as it is to preserve attribution. Thank you! */}
+                <footer className="text-sm w-full text-center border-t py-4">
                     Created by
                     <Button variant="link" className="px-1">
                         <a
