@@ -9,7 +9,7 @@ author: Pin-Yen Huang
 <br />
 <div align="center">
   <a href="https://github.com/pm25/simpleplain">
-    <img src="public/full_logo.png" alt="Logo" width="360">
+    <img src="public/full_logo.png" alt="Logo" width="640">
   </a>
 
   <h3 align="center">SimplePlain - A Personal Website Template</h3>
