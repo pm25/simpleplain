@@ -62,7 +62,7 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
                     </div>
                 </a>
 
-                <hr className="border-t" />
+                <div className="w-full border-t" />
 
                 <div className="flex flex-col flex-grow py-3 px-4 gap-y-2">
                     <div className="text-base font-semibold line-clamp-2">

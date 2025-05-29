@@ -186,7 +186,8 @@ function ProjectCard({
                     </div>
                 </a>
 
-                <hr className="border-t" />
+                <div className="w-full border-t block lg:hidden" />
+                <div className="h-full border-l hidden lg:block" />
 
                 <div className="flex flex-col lg:ml-2 p-4 gap-y-2 flex-1 lg:h-60">
                     <div className="text-lg font-semibold line-clamp-2">
