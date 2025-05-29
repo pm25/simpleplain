@@ -10,6 +10,7 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import AllRepoData from "@/data/repos.json";
 
@@ -66,7 +67,11 @@ export default function Projects() {
 
                 <div className="grid grid-cols-1 w-full gap-4 px-2 sm:px-6">
                     {filteredProjects.map((projectName) => (
-                        <ProjectCard key={projectName} project_name={projectName} />
+                        <ProjectCard
+                            key={projectName}
+                            project_name={projectName}
+                            setTopicFilter={setTopicFilter}
+                        />
                     ))}
                 </div>
             </div>
@@ -97,6 +102,17 @@ function TopicFilter({
                     ))}
                 </SelectContent>
             </Select>
+
+            {topicFilter !== "all" && (
+                <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setTopicFilter("all")}
+                    className="px-2 text-sm cursor-pointer text-muted-foreground"
+                >
+                    Clear filter ✕
+                </Button>
+            )}
         </div>
     );
 }
@@ -125,7 +141,13 @@ function SortSelector({
     );
 }
 
-function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData }) {
+function ProjectCard({
+    project_name,
+    setTopicFilter,
+}: {
+    project_name: keyof typeof AllRepoData;
+    setTopicFilter: (val: string) => void;
+}) {
     const repo = AllRepoData[project_name];
     const {
         html_url,
@@ -190,9 +212,15 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
                     {topics.length > 0 && (
                         <div className="flex flex-wrap gap-2">
                             {topics.map((topic, idx) => (
-                                <span key={idx} className="bg-muted text-sm px-2 py-1 rounded-sm">
+                                <Button
+                                    key={idx}
+                                    variant="secondary"
+                                    size="sm"
+                                    onClick={() => setTopicFilter(topic)}
+                                    className="rounded-sm cursor-pointer px-2 py-1 text-sm"
+                                >
                                     {topic}
-                                </span>
+                                </Button>
                             ))}
                         </div>
                     )}
