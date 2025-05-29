@@ -13,14 +13,29 @@ import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import AllRepoData from "@/data/repos.json";
 
+type SortByType = "stars" | "updated" | "created";
+
+const allTopics = Array.from(
+    new Set(
+        Object.values(AllRepoData)
+            .filter((repo) => repo.show)
+            .flatMap((repo) => repo.topics ?? [])
+    )
+).sort();
+
 export default function Projects() {
-    type SortByType = "stars" | "updated" | "created";
-    const [sortBy, setSortBy] = useState<"stars" | "updated" | "created">("updated");
+    const [sortBy, setSortBy] = useState<SortByType>("updated");
+    const [topicFilter, setTopicFilter] = useState("all");
 
     usePageTitle("Projects");
 
-    const sortedProjects = (Object.keys(AllRepoData) as (keyof typeof AllRepoData)[])
-        .filter((project_name) => AllRepoData[project_name].show === true)
+    const filteredProjects = (Object.keys(AllRepoData) as (keyof typeof AllRepoData)[])
+        .filter((project_name) => {
+            const project = AllRepoData[project_name];
+            const topics = (project.topics ?? []) as string[];
+            const matchesTopic = topicFilter === "all" || topics.includes(topicFilter);
+            return project.show === true && matchesTopic;
+        })
         .sort((a, b) => {
             const aData = AllRepoData[a];
             const bData = AllRepoData[b];
@@ -42,25 +57,16 @@ export default function Projects() {
                     Projects
                 </div>
 
-                <div className="flex justify-end items-center gap-2 px-2 sm:px-6 mb-0 relative -top-4">
-                    <label>Sort by:</label>
-                    <Select value={sortBy} onValueChange={(val: SortByType) => setSortBy(val)}>
-                        <SelectTrigger className="w-[160px] cursor-pointer">
-                            <SelectValue placeholder="Sort by" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem value="updated">🕒 Last Updated</SelectItem>
-                            <SelectItem value="created">📅 Created Time</SelectItem>
-                            <SelectItem value="stars">⭐ Star Count</SelectItem>
-                        </SelectContent>
-                    </Select>
+                <div className="flex justify-between flex-wrap gap-2 items-center mx-2 sm:mx-6 my-1 relative -top-2">
+                    <TopicFilter topicFilter={topicFilter} setTopicFilter={setTopicFilter} />
+                    <SortSelector sortBy={sortBy} setSortBy={setSortBy} />
                 </div>
 
                 <Separator />
 
                 <div className="grid grid-cols-1 w-full gap-4 px-2 sm:px-6">
-                    {sortedProjects.map((project_name) => (
-                        <ProjectCard key={project_name} project_name={project_name} />
+                    {filteredProjects.map((projectName) => (
+                        <ProjectCard key={projectName} project_name={projectName} />
                     ))}
                 </div>
             </div>
@@ -68,31 +74,87 @@ export default function Projects() {
     );
 }
 
+function TopicFilter({
+    topicFilter,
+    setTopicFilter,
+}: {
+    topicFilter: string;
+    setTopicFilter: (val: string) => void;
+}) {
+    return (
+        <div className="flex items-center gap-2">
+            <label>Filter by topic:</label>
+            <Select value={topicFilter} onValueChange={setTopicFilter}>
+                <SelectTrigger className="w-[180px] cursor-pointer">
+                    <SelectValue placeholder="Topic" />
+                </SelectTrigger>
+                <SelectContent>
+                    <SelectItem value="all">📂 All Topics</SelectItem>
+                    {allTopics.map((topic) => (
+                        <SelectItem key={topic} value={topic}>
+                            {topic}
+                        </SelectItem>
+                    ))}
+                </SelectContent>
+            </Select>
+        </div>
+    );
+}
+
+function SortSelector({
+    sortBy,
+    setSortBy,
+}: {
+    sortBy: SortByType;
+    setSortBy: (val: SortByType) => void;
+}) {
+    return (
+        <div className="flex items-center gap-2">
+            <label>Sort by:</label>
+            <Select value={sortBy} onValueChange={setSortBy}>
+                <SelectTrigger className="w-[160px] cursor-pointer">
+                    <SelectValue placeholder="Sort by" />
+                </SelectTrigger>
+                <SelectContent>
+                    <SelectItem value="updated">🕒 Last Updated</SelectItem>
+                    <SelectItem value="created">📅 Created Time</SelectItem>
+                    <SelectItem value="stars">⭐ Star Count</SelectItem>
+                </SelectContent>
+            </Select>
+        </div>
+    );
+}
+
 function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData }) {
-    const repoData = AllRepoData[project_name];
+    const repo = AllRepoData[project_name];
+    const {
+        html_url,
+        preview_image,
+        display_name,
+        name,
+        description,
+        topics = [],
+        language,
+        stargazers_count,
+        homepage,
+    } = repo;
 
     return (
         <Card className="rounded-lg overflow-hidden gap-0 py-0 w-full">
             <div className="flex flex-col lg:flex-row">
-                <a
-                    href={repoData.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block"
-                >
+                <a href={html_url} target="_blank" rel="noopener noreferrer" className="block">
                     <div className="aspect-3/2 w-full max-h-72 lg:h-48 overflow-hidden">
-                        {repoData.preview_image ? (
+                        {preview_image ? (
                             <img
-                                src={repoData.preview_image}
-                                alt={repoData.name || "Project image"}
+                                src={preview_image}
+                                alt={name || "Project image"}
                                 className="w-full h-full object-cover"
-                                style={{ overflowClipMargin: "unset" }}
                                 loading="lazy"
                             />
                         ) : (
                             <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-muted">
                                 <span className="text-lg font-semibold opacity-80 text-center">
-                                    {repoData.name || "Unnamed Project"}
+                                    {name || "Unnamed Project"}
                                 </span>
                                 <span className="text-sm text-muted-foreground text-center">
                                     Image not available
@@ -104,28 +166,30 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
 
                 <hr className="border-t" />
 
-                <div className="flex flex-col lg:ml-2 p-4 gap-y-2 flex-1 h-auto lg:h-48">
+                <div className="flex flex-col lg:ml-2 p-4 gap-y-2 flex-1 lg:h-48">
                     <div className="text-lg font-semibold line-clamp-2">
-                        {repoData.html_url ? (
+                        {html_url ? (
                             <a
-                                href={repoData.html_url}
+                                href={html_url}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="GitHub repository"
-                                className="cursor-pointer hover:underline underline-offset-4"
+                                className="hover:underline underline-offset-4"
                             >
-                                {repoData.display_name || repoData.name}
+                                {display_name || name}
                             </a>
                         ) : (
-                            repoData.display_name || repoData.name
+                            display_name || name
                         )}
                     </div>
+
                     <p className="text-sm text-muted-foreground line-clamp-2">
-                        {repoData.description || "Details unavailable"}
+                        {description || "Details unavailable"}
                     </p>
-                    {repoData.topics.length > 0 && (
+
+                    {topics.length > 0 && (
                         <div className="flex flex-wrap gap-2">
-                            {repoData.topics.map((topic, idx) => (
+                            {topics.map((topic, idx) => (
                                 <span key={idx} className="bg-muted text-sm px-2 py-1 rounded-sm">
                                     {topic}
                                 </span>
@@ -134,26 +198,26 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
                     )}
 
                     <div className="flex flex-row items-center justify-between text-muted-foreground mt-auto pt-2">
-                        <div className="flex items-center gap-2">
-                            <p className="text-sm">Language: {repoData.language || "Unknown"}</p>
-                            {repoData.stargazers_count !== null && (
+                        <div className="flex items-center gap-2 text-sm">
+                            <p>Language: {language || "Unknown"}</p>
+                            {stargazers_count !== null && (
                                 <a
-                                    href={`${repoData.html_url}/stargazers`}
+                                    href={`${html_url}/stargazers`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label="Stargazers"
-                                    className="flex items-center gap-1 text-sm text-yellow-600 hover:text-yellow-500"
+                                    className="flex items-center gap-1 text-yellow-600 hover:text-yellow-500"
                                 >
                                     <FaRegStar className="w-4 h-4" />
-                                    <span>{repoData.stargazers_count}</span>
+                                    <span>{stargazers_count}</span>
                                 </a>
                             )}
                         </div>
 
                         <div className="flex items-center gap-2">
-                            {repoData.homepage && (
+                            {homepage && (
                                 <a
-                                    href={repoData.homepage}
+                                    href={homepage}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label="Project homepage"
@@ -162,9 +226,9 @@ function ProjectCard({ project_name }: { project_name: keyof typeof AllRepoData 
                                     <FaGlobe className="w-6 h-6" />
                                 </a>
                             )}
-                            {repoData.html_url && (
+                            {html_url && (
                                 <a
-                                    href={repoData.html_url}
+                                    href={html_url}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label="GitHub repository"
