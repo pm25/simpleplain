@@ -84,7 +84,7 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
                         {repoData.description || "Details unavailable"}
                     </p>
                     {repoData.topics.length > 0 && (
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5">
                             {repoData.topics.map((topic, idx) => (
                                 <span key={idx} className="bg-muted text-sm px-2 py-0.5 rounded-sm">
                                     {topic}

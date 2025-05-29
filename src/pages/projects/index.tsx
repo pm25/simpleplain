@@ -12,6 +12,7 @@ import {
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import AllRepoData from "@/data/repos.json";
 
 type SortByType = "stars" | "updated" | "created";
@@ -165,7 +166,7 @@ function ProjectCard({
         <Card className="rounded-lg overflow-hidden gap-0 py-0 w-full">
             <div className="flex flex-col lg:flex-row">
                 <a href={html_url} target="_blank" rel="noopener noreferrer" className="block">
-                    <div className="aspect-3/2 w-full max-h-72 lg:max-w-80 lg:h-60 overflow-hidden">
+                    <div className="aspect-3/2 w-full max-h-72 lg:max-w-78 lg:h-52 overflow-hidden">
                         {preview_image ? (
                             <img
                                 src={preview_image}
@@ -189,44 +190,48 @@ function ProjectCard({
                 <div className="w-full border-t block lg:hidden" />
                 <div className="h-full border-l hidden lg:block" />
 
-                <div className="flex flex-col lg:ml-2 p-4 gap-y-2 flex-1 lg:h-60">
-                    <div className="text-lg font-semibold line-clamp-2">
-                        {html_url ? (
-                            <a
-                                href={html_url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="GitHub repository"
-                                className="hover:underline underline-offset-4"
-                            >
-                                {display_name || name}
-                            </a>
-                        ) : (
-                            display_name || name
-                        )}
-                    </div>
+                <div className="flex flex-col p-4 lg:py-2.5 lg:px-5 flex-1 lg:h-52">
+                    <ScrollArea className="flex-1 min-h-0">
+                        <div className="flex flex-col gap-y-2">
+                            <div className="text-lg font-semibold">
+                                {html_url ? (
+                                    <a
+                                        href={html_url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="GitHub repository"
+                                        className="hover:underline underline-offset-4"
+                                    >
+                                        {display_name || name}
+                                    </a>
+                                ) : (
+                                    display_name || name
+                                )}
+                            </div>
 
-                    <p className="text-sm text-muted-foreground line-clamp-2">
-                        {description || "Details unavailable"}
-                    </p>
+                            <p className="text-sm text-muted-foreground">
+                                {description || "Details unavailable"}
+                            </p>
 
-                    {topics.length > 0 && (
-                        <div className="flex flex-wrap gap-2">
-                            {topics.map((topic, idx) => (
-                                <Button
-                                    key={idx}
-                                    variant="secondary"
-                                    size="sm"
-                                    onClick={() => setTopicFilter(topic)}
-                                    className="rounded-sm cursor-pointer font-normal px-2 py-1 text-sm"
-                                >
-                                    {topic}
-                                </Button>
-                            ))}
+                            {topics.length > 0 && (
+                                <div className="flex flex-wrap gap-1.5">
+                                    {topics.map((topic, idx) => (
+                                        <Button
+                                            key={idx}
+                                            variant="secondary"
+                                            size="sm"
+                                            onClick={() => setTopicFilter(topic)}
+                                            className="rounded-sm cursor-pointer font-normal px-2 text-sm"
+                                        >
+                                            {topic}
+                                        </Button>
+                                    ))}
+                                </div>
+                            )}
                         </div>
-                    )}
+                    </ScrollArea>
 
-                    <div className="flex flex-row items-center justify-between text-muted-foreground mt-auto pt-2">
+                    <div className="flex flex-row items-center justify-between text-muted-foreground pt-2">
                         <div className="flex items-center gap-2 text-sm">
                             <p>Language: {language || "Unknown"}</p>
                             {stargazers_count !== null && (
