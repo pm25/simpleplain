@@ -10,14 +10,16 @@
       "shadcn-ui",
       "tailwindcss",
       "typescript",
-      "vite"
+      "vite",
+      "website",
+      "website-template"
     ],
     "language": "TypeScript",
     "homepage": "https://pm25.github.io/simpleplain/",
     "html_url": "https://github.com/pm25/simpleplain",
     "created_at": "2024-12-20T10:05:02Z",
-    "updated_at": "2025-05-28T08:59:24Z",
-    "pushed_at": "2025-05-28T09:27:28Z",
+    "updated_at": "2025-05-29T07:51:10Z",
+    "pushed_at": "2025-05-29T08:06:02Z",
     "preview_image": "https://raw.githubusercontent.com/pm25/simpleplain/refs/heads/main/public/full_logo.png",
     "show": true
   },
