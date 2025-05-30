@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { FaDiagramProject, FaGithub, FaGlobe, FaRegStar } from "react-icons/fa6";
+import { FaDiagramProject, FaGithub, FaGlobe, FaRegStar, FaArrowRight } from "react-icons/fa6";
 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -17,6 +17,22 @@ export default function Project() {
                 {FeaturedRepoData.map((repoData, index) => (
                     <ProjectCard key={index} repoData={repoData} />
                 ))}
+            </div>
+
+            <div className="relative w-full px-2 sm:px-6">
+                <div className="absolute right-0">
+                    <Button
+                        asChild
+                        variant="ghost"
+                        size="sm"
+                        className="gap-1 text-muted-foreground"
+                    >
+                        <Link to="/projects">
+                            View all
+                            <FaArrowRight className="w-4 h-4" />
+                        </Link>
+                    </Button>
+                </div>
             </div>
         </div>
     );
