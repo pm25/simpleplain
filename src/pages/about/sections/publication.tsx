@@ -1,7 +1,16 @@
 import { Link } from "react-router";
-import { FaUsers, FaBook, FaRegCalendar, FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight, FaBook, FaUsers } from "react-icons/fa6";
 
 import { Button } from "@/components/ui/button";
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from "@/components/ui/table";
+
 import { PubData } from "@/data/publications";
 
 export default function Publication() {
@@ -12,52 +21,60 @@ export default function Publication() {
                 Publications
             </div>
 
-            <div className="px-2 sm:px-6">
-                {PubData.publications.map((pub, index) => (
-                    <a
-                        href={pub.link}
-                        key={index}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cursor-pointer"
-                    >
-                        <div className="space-y-0.5 py-2 px-4 hover:bg-muted rounded-md">
-                            <div className="text-base font-semibold leading-tight">{pub.title}</div>
+            <div className="px-2 sm:px-6 overflow-hidden">
+                <Table className="table-fixed w-full">
+                    <TableHeader>
+                        <TableRow>
+                            <TableHead className="w-[calc(100%-50px)]">Publication</TableHead>
+                            <TableHead className="w-[50px] text-right">Year</TableHead>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                        {PubData.publications.map((pub, index) => (
+                            <TableRow
+                                key={index}
+                                className="cursor-pointer"
+                                onClick={() => window.open(pub.link, "_blank")}
+                            >
+                                <TableCell className="pr-4 break-words whitespace-normal space-y-0.5">
+                                    <div className="text-base font-semibold">{pub.title}</div>
 
-                            <span className="text-sm sm:text-base grid grid-cols-[auto_1fr] items-center gap-2 text-muted-foreground">
-                                <FaUsers />
-                                <span className="truncate">
-                                    {pub.authors.split(", ").map((author, i) => (
-                                        <span
-                                            key={i}
-                                            className={
-                                                author === PubData.author_name
-                                                    ? "font-semibold"
-                                                    : ""
-                                            }
-                                        >
-                                            {author}
-                                            {i < pub.authors.split(", ").length - 1 && ", "}
+                                    <div className="flex items-center text-sm text-muted-foreground gap-2">
+                                        <FaUsers className="shrink-0" />
+                                        <span>
+                                            {pub.authors.split(", ").map((author, i) => (
+                                                <span
+                                                    key={i}
+                                                    className={
+                                                        author === PubData.author_name
+                                                            ? "font-semibold"
+                                                            : ""
+                                                    }
+                                                >
+                                                    {author}
+                                                    {i < pub.authors.split(", ").length - 1 && ", "}
+                                                </span>
+                                            ))}
                                         </span>
-                                    ))}
-                                </span>
-                            </span>
+                                    </div>
 
-                            <div className="text-sm sm:text-base grid grid-cols-[auto_1fr_auto] items-center gap-2 text-muted-foreground leading-tight">
-                                <FaBook />
-                                <div className="line-clamp-2">{pub.booktitle}</div>
-                                <div className="text-sm grid grid-cols-[auto_1fr_auto] items-center gap-2 text-right">
-                                    <FaRegCalendar />
+                                    <div className="flex items-center text-sm text-muted-foreground gap-2">
+                                        <FaBook className="shrink-0" />
+                                        <span>{pub.booktitle}</span>
+                                    </div>
+                                </TableCell>
+
+                                <TableCell className="text-sm text-right text-muted-foreground">
                                     {pub.year}
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                ))}
+                                </TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
             </div>
 
             <div className="relative w-full">
-                <div className="absolute right-6 top-2">
+                <div className="absolute right-6">
                     <Button
                         asChild
                         variant="outline"
