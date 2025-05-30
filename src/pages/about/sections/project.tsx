@@ -1,6 +1,8 @@
+import { Link } from "react-router";
 import { FaDiagramProject, FaGithub, FaGlobe, FaRegStar } from "react-icons/fa6";
 
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { FeaturedRepoData } from "@/data/featured_repos";
 
 export default function Project() {
@@ -80,15 +82,25 @@ function ProjectCard({ repoData }: { repoData: (typeof FeaturedRepoData)[number]
                             repoData.display_name || repoData.name
                         )}
                     </div>
+
                     <p className="text-sm text-muted-foreground line-clamp-2">
                         {repoData.description || "Details unavailable"}
                     </p>
+
                     {repoData.topics.length > 0 && (
                         <div className="flex flex-wrap gap-1.5">
                             {repoData.topics.map((topic, idx) => (
-                                <span key={idx} className="bg-muted text-sm px-2 py-0.5 rounded-sm">
-                                    {topic}
-                                </span>
+                                <Button
+                                    key={idx}
+                                    asChild
+                                    variant="secondary"
+                                    size="sm"
+                                    className="rounded-sm font-normal px-2 h-7 text-sm"
+                                >
+                                    <Link to={`/projects?topic=${encodeURIComponent(topic)}`}>
+                                        {topic}
+                                    </Link>
+                                </Button>
                             ))}
                         </div>
                     )}
