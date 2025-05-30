@@ -33,7 +33,7 @@ export default function Publication() {
                         {PubData.publications.map((pub, index) => (
                             <TableRow
                                 key={index}
-                                className="cursor-pointer"
+                                className="cursor-pointer transition-none"
                                 onClick={() => window.open(pub.link, "_blank")}
                             >
                                 <TableCell className="pr-4 break-words whitespace-normal space-y-0.5">
