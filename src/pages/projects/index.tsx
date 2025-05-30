@@ -221,7 +221,7 @@ function ProjectCard({
                                             variant="secondary"
                                             size="sm"
                                             onClick={() => setTopicFilter(topic)}
-                                            className="rounded-sm cursor-pointer font-normal px-2 text-sm"
+                                            className="rounded-sm cursor-pointer font-normal px-2 h-7.5 text-sm"
                                         >
                                             {topic}
                                         </Button>
