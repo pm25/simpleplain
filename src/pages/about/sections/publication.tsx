@@ -31,13 +31,16 @@ export default function Publication() {
                     </TableHeader>
                     <TableBody>
                         {PubData.publications.map((pub, index) => (
-                            <TableRow
-                                key={index}
-                                className="cursor-pointer transition-none"
-                                onClick={() => window.open(pub.link, "_blank")}
-                            >
+                            <TableRow key={index} className="transition-none">
                                 <TableCell className="pr-4 break-words whitespace-normal space-y-0.5">
-                                    <div className="text-base font-semibold">{pub.title}</div>
+                                    <a
+                                        href={pub.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-base font-semibold hover:underline underline-offset-4"
+                                    >
+                                        {pub.title}
+                                    </a>
 
                                     <div className="flex items-center text-sm text-muted-foreground gap-2">
                                         <FaUsers className="shrink-0" />
