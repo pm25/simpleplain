@@ -18,11 +18,7 @@ import AllRepoData from "@/data/repos.json";
 type SortByType = "stars" | "updated" | "created";
 
 const allTopics = Array.from(
-    new Set(
-        Object.values(AllRepoData)
-            .filter((repo) => repo.show)
-            .flatMap((repo) => repo.topics ?? [])
-    )
+    new Set(Object.values(AllRepoData).flatMap((repo) => repo.topics ?? []))
 ).sort();
 
 export default function Projects() {
@@ -36,7 +32,7 @@ export default function Projects() {
             const project = AllRepoData[project_name];
             const topics = (project.topics ?? []) as string[];
             const matchesTopic = topicFilter === "all" || topics.includes(topicFilter);
-            return project.show === true && matchesTopic;
+            return matchesTopic;
         })
         .sort((a, b) => {
             const aData = AllRepoData[a];

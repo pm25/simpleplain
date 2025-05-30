@@ -7,6 +7,7 @@ dotenv.config();
 const username = process.env.GITHUB_USERNAME;
 const token = process.env.GITHUB_TOKEN;
 const outputPath = path.join(process.cwd(), "src", "data", "repos.json");
+const skipListPath = path.join(process.cwd(), "src", "data", "skip-repos.txt");
 
 async function fetchAllRepos() {
     let page = 1;
@@ -43,6 +44,12 @@ async function fetchAllRepos() {
     return allRepos;
 }
 
+function getSkipList() {
+    if (!fs.existsSync(skipListPath)) return new Set();
+    const raw = fs.readFileSync(skipListPath, "utf-8");
+    return new Set(raw.split("\n").map((line) => line.trim()).filter(Boolean));
+}
+
 async function fetchRepos() {
     try {
         // Load existing preview data (if available)
@@ -53,10 +60,10 @@ async function fetchRepos() {
         }
 
         const data = await fetchAllRepos();
-
+        const skipList = getSkipList();
         const merged = {};
 
-        data.filter((repo) => !repo.fork && !repo.private)
+        data.filter((repo) => !repo.fork && !repo.private && !skipList.has(repo.name))
             .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
             .forEach((repo) => {
                 const existing = existingData[repo.name] || {};
@@ -73,7 +80,6 @@ async function fetchRepos() {
                     updated_at: repo.updated_at,
                     pushed_at: repo.pushed_at,
                     preview_image: existing.preview_image || "",
-                    show: existing.show !== undefined ? existing.show : true,
                 };
             });
 
