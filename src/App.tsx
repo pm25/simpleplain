@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from "react-router";
 import Layout from "@/layout";
 import { loadLazy } from "@/lib/loadComponent";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ScrollToTop } from "@/hooks/scroll-to-top";
 
 const About = loadLazy(() => import("@/pages/about"));
 const Movies = loadLazy(() => import("@/pages/movies"));
@@ -15,6 +16,7 @@ export default function App() {
     return (
         <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
             <Router>
+                <ScrollToTop />
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<About />} />
