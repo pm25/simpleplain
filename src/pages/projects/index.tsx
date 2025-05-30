@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams, useNavigate } from "react-router";
 import { FaHammer, FaGithub, FaGlobe, FaRegStar } from "react-icons/fa6";
 import { usePageTitle } from "@/hooks/use-pagetitle";
 
@@ -26,6 +27,32 @@ export default function Projects() {
     const [topicFilter, setTopicFilter] = useState("all");
 
     usePageTitle("Projects");
+
+    const [searchParams] = useSearchParams();
+    const navigate = useNavigate();
+
+    const topic = searchParams.get("topic");
+
+    useEffect(() => {
+        if (topic && allTopics.includes(topic)) {
+            setTopicFilter(topic);
+        } else if (!topic) {
+            setTopicFilter("all");
+        }
+    }, [topic]);
+
+    const updateTopicFilter = (newTopic: string) => {
+        setTopicFilter(newTopic);
+
+        const params = new URLSearchParams(searchParams);
+        if (newTopic === "all") {
+            params.delete("topic");
+        } else {
+            params.set("topic", newTopic);
+        }
+
+        navigate({ search: params.toString() }, { replace: true });
+    };
 
     const filteredProjects = (Object.keys(AllRepoData) as (keyof typeof AllRepoData)[])
         .filter((project_name) => {
@@ -56,7 +83,7 @@ export default function Projects() {
                 </div>
 
                 <div className="flex justify-between flex-wrap gap-2 items-center mx-2 sm:mx-6 my-1 relative -top-2">
-                    <TopicFilter topicFilter={topicFilter} setTopicFilter={setTopicFilter} />
+                    <TopicFilter topicFilter={topicFilter} setTopicFilter={updateTopicFilter} />
                     <SortSelector sortBy={sortBy} setSortBy={setSortBy} />
                 </div>
 
@@ -67,7 +94,7 @@ export default function Projects() {
                         <ProjectCard
                             key={projectName}
                             project_name={projectName}
-                            setTopicFilter={setTopicFilter}
+                            setTopicFilter={updateTopicFilter}
                         />
                     ))}
                 </div>
