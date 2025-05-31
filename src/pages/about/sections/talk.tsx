@@ -39,7 +39,7 @@ export default function Talk() {
                             <div className="text-base font-semibold">{talk.title}</div>
                             <div className="flex flex-row justify-between text-sm text-muted-foreground">
                                 <p className="line-clamp-2">{talk.location}</p>
-                                <p className="flex flex-row gap-1 items-center">
+                                <p className="flex flex-row gap-1 items-center shrink-0">
                                     <FaRegCalendar />
                                     {talk.date}
                                 </p>
