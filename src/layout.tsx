@@ -19,7 +19,7 @@ export default function Layout() {
                 {/* I would really appreciate it if you could keep the footer as it is to preserve attribution. Thank you! */}
                 <footer className="text-sm w-full text-center border-t py-4">
                     Created by
-                    <Button variant="link" className="px-1">
+                    <Button asChild variant="link" className="p-0 ml-1">
                         <a
                             href="https://github.com/pm25/simpleplain"
                             target="_blank"
