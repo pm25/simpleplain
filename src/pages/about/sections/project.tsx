@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { FaDiagramProject, FaGithub, FaGlobe, FaRegStar, FaArrowRight } from "react-icons/fa6";
+import { FaWrench, FaGithub, FaGlobe, FaRegStar, FaArrowRight } from "react-icons/fa6";
 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,7 +9,7 @@ export default function Project() {
     return (
         <div className="w-full max-w-5xl space-y-6">
             <div className="flex flex-row justify-center items-center gap-2 text-plus font-semibold">
-                <FaDiagramProject />
+                <FaWrench />
                 Projects
             </div>
 

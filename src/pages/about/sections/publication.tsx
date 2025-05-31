@@ -1,5 +1,7 @@
 import { Link } from "react-router";
-import { FaArrowRight, FaBook, FaUsers } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
+import { HiUsers, HiDocumentText } from "react-icons/hi2";
+import { IoLibrary } from "react-icons/io5";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -17,7 +19,7 @@ export default function Publication() {
     return (
         <div className="w-full max-w-5xl space-y-6">
             <div className="flex flex-row justify-center items-center gap-2 text-plus font-semibold">
-                <FaBook />
+                <IoLibrary />
                 Publications
             </div>
 
@@ -43,7 +45,7 @@ export default function Publication() {
                                     </a>
 
                                     <div className="flex items-center text-sm text-muted-foreground gap-2">
-                                        <FaUsers className="shrink-0" />
+                                        <HiUsers className="shrink-0" />
                                         <span>
                                             {pub.authors.split(", ").map((author, i) => (
                                                 <span
@@ -62,7 +64,7 @@ export default function Publication() {
                                     </div>
 
                                     <div className="flex items-center text-sm text-muted-foreground gap-2">
-                                        <FaBook className="shrink-0" />
+                                        <HiDocumentText className="shrink-0" />
                                         <span>{pub.booktitle}</span>
                                     </div>
                                 </TableCell>

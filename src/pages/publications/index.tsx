@@ -1,4 +1,5 @@
-import { FaBook, FaUsers } from "react-icons/fa6";
+import { HiUsers, HiDocumentText } from "react-icons/hi2";
+import { IoLibrary } from "react-icons/io5";
 
 import {
     Table,
@@ -19,7 +20,7 @@ export default function Publications() {
         <div className="flex flex-1 flex-col items-center gap-10">
             <div className="w-full max-w-6xl">
                 <div className="flex flex-row justify-center items-center gap-4 text-4xl font-semibold">
-                    <FaBook />
+                    <IoLibrary />
                     Publications
                 </div>
 
@@ -45,7 +46,7 @@ export default function Publications() {
                                         </a>
 
                                         <div className="flex items-center text-sm text-muted-foreground gap-2">
-                                            <FaUsers className="shrink-0" />
+                                            <HiUsers className="shrink-0" />
                                             <span>
                                                 {pub.authors.split(", ").map((author, i) => (
                                                     <span
@@ -65,7 +66,7 @@ export default function Publications() {
                                         </div>
 
                                         <div className="flex items-center text-sm text-muted-foreground gap-2">
-                                            <FaBook className="shrink-0" />
+                                            <HiDocumentText className="shrink-0" />
                                             <span>{pub.booktitle}</span>
                                         </div>
                                     </TableCell>
