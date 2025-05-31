@@ -26,13 +26,13 @@ export default function Publication() {
                     <TableHeader>
                         <TableRow>
                             <TableHead className="w-[calc(100%-50px)]">Publication</TableHead>
-                            <TableHead className="w-[50px] text-right">Year</TableHead>
+                            <TableHead className="w-[46px] text-right">Year</TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
                         {PubData.publications.map((pub, index) => (
                             <TableRow key={index} className="transition-none">
-                                <TableCell className="pr-4 break-words whitespace-normal space-y-0.5">
+                                <TableCell className="whitespace-normal space-y-0.5">
                                     <a
                                         href={pub.link}
                                         target="_blank"
@@ -77,7 +77,7 @@ export default function Publication() {
             </div>
 
             <div className="relative w-full">
-                <div className="absolute right-6">
+                <div className="absolute right-2 sm:right-6">
                     <Button
                         asChild
                         variant="outline"

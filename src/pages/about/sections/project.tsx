@@ -20,7 +20,7 @@ export default function Project() {
             </div>
 
             <div className="relative w-full">
-                <div className="absolute right-6">
+                <div className="absolute right-2 sm:right-6">
                     <Button
                         asChild
                         variant="ghost"
