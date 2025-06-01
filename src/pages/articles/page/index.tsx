@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams, useLocation, Link } from "react-router";
 import fm from "front-matter";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import Giscus from "@giscus/react";
+import { FaArrowLeft } from "react-icons/fa6";
 
 import { Separator } from "@/components/ui/separator";
 import { useTheme } from "@/components/theme-provider";
 import { usePageTitle } from "@/hooks/use-pagetitle";
+import { Button } from "@/components/ui/button";
 
 interface Metadata {
     title?: string;
@@ -50,30 +52,30 @@ export default function Article() {
                 })
                 .catch((err) => {
                     console.error(err);
-                    setError("Failed to load article.");
+                    setError("Failed to load the article.");
+                    setMetadata({ title: "Error" });
                     setLoading(false);
                 });
         } else {
-            setError("Article not found.");
+            setError(`The article "${slug}" could not be found.`);
             setContent("");
             setMetadata({ title: "Not Found" });
             setLoading(false);
         }
     }, [slug]);
 
-    if (loading) {
-        return (
-            <div className="flex justify-center p-12">
-                <p>Loading article...</p>
-            </div>
-        );
-    }
-
     if (error) {
         return (
-            <div className="flex justify-center p-12">
-                <h1 className="text-4xl">{metadata.title || "Error"}</h1>
-                <p>{error}</p>
+            <div className="flex justify-center">
+                <div className="text-center max-w-6xl w-full bg-muted rounded-lg space-y-4 p-6 sm:p-12 border shadow-sm">
+                    <div className="text-4xl font-semibold">{metadata.title || "Error"}</div>
+                    <p>{error}</p>
+                    <Button asChild variant="outline" className="mt-2 gap-1">
+                        <Link to="/articles">
+                            <FaArrowLeft className="w-4 h-4" /> Back to Articles
+                        </Link>
+                    </Button>
+                </div>
             </div>
         );
     }
@@ -85,14 +87,16 @@ export default function Article() {
                     {content}
                 </ReactMarkdown>
 
-                {!loading && slug && <Separator className="my-12" />}
-                {!loading && slug && <ArticleComments term={slug} />}
+                {!loading && <Separator className="my-12" />}
+                {!loading && <ArticleComments />}
             </div>
         </div>
     );
 }
 
-function ArticleComments({ term }: { term: string }) {
+function ArticleComments() {
+    const location = useLocation();
+
     const { theme } = useTheme();
     const [giscusTheme, setGiscusTheme] = useState<"light" | "dark_dimmed">("light");
 
@@ -113,8 +117,8 @@ function ArticleComments({ term }: { term: string }) {
             repoId="R_kgDONgMOyA"
             category="General"
             categoryId="DIC_kwDONgMOyM4Cq4Ga"
-            mapping="title"
-            term={term}
+            mapping="specific"
+            term={location.pathname}
             strict="0"
             reactionsEnabled="1"
             emitMetadata="0"
