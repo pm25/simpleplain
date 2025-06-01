@@ -80,7 +80,7 @@ export default function Article() {
 
     return (
         <div className="flex justify-center">
-            <div className="prose dark:prose-invert max-w-6xl w-full bg-muted rounded-lg overflow-hidden p-12 border shadow-sm">
+            <div className="prose dark:prose-invert max-w-6xl w-full bg-muted rounded-lg overflow-hidden p-6 sm:p-12 border shadow-sm">
                 <ReactMarkdown rehypePlugins={[rehypeRaw]} skipHtml={false}>
                     {content}
                 </ReactMarkdown>
