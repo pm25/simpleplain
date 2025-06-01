@@ -7,6 +7,7 @@ import Giscus from "@giscus/react";
 
 import { Separator } from "@/components/ui/separator";
 import { useTheme } from "@/components/theme-provider";
+import { usePageTitle } from "@/hooks/use-pagetitle";
 
 interface Metadata {
     title?: string;
@@ -25,6 +26,8 @@ export default function Article() {
     const [metadata, setMetadata] = useState<Metadata>({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+
+    usePageTitle(metadata.title ?? slug ?? "");
 
     useEffect(() => {
         if (!slug) return;
@@ -82,14 +85,14 @@ export default function Article() {
                     {content}
                 </ReactMarkdown>
 
-                <Separator className="my-12" />
-                <ArticleComments />
+                {slug && <Separator className="my-12" />}
+                {slug && <ArticleComments term={slug} />}
             </div>
         </div>
     );
 }
 
-function ArticleComments() {
+function ArticleComments({ term }: { term: string }) {
     const { theme } = useTheme();
     const [giscusTheme, setGiscusTheme] = useState<"light" | "dark_dimmed">("light");
 
@@ -110,7 +113,8 @@ function ArticleComments() {
             repoId="R_kgDONgMOyA"
             category="General"
             categoryId="DIC_kwDONgMOyM4Cq4Ga"
-            mapping="pathname"
+            mapping="title"
+            term={term}
             strict="0"
             reactionsEnabled="1"
             emitMetadata="0"
