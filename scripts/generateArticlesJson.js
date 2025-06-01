@@ -21,10 +21,22 @@ function generatePostsJson() {
     const { data } = matter(fileContent);
     const slug = getSlug(filename);
 
+    // define default values
+    const defaults = {
+      title: "Untitled",
+      created_at: "",
+      updated_at: "",
+      summary: "",
+      cover_image: "",
+      author: "Anonymous",
+      draft: false,
+    };
+
     articles[slug] = {
       path: path.relative(process.cwd(), path.join(articlesDir, filename)),
       url: `/articles/${filename}`,
-      ...data,
+      ...defaults,
+      ...data, // data from frontmatter overrides defaults
     };
   });
 
@@ -36,7 +48,7 @@ function generatePostsJson() {
   });
 
   const sortedArticles = Object.fromEntries(sortedEntries);
-  const output = JSON.stringify(sortedArticles, null, 4)
+  const output = JSON.stringify(sortedArticles, null, 4);
 
   fs.writeFileSync(outputPath, output, "utf-8");
   console.log(`✅ articles.json generated with ${Object.keys(sortedArticles).length} posts`);
