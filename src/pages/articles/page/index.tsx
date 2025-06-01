@@ -3,6 +3,10 @@ import { useParams } from "react-router";
 import fm from "front-matter";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import Giscus from "@giscus/react";
+
+import { Separator } from "@/components/ui/separator";
+import { useTheme } from "@/components/theme-provider";
 
 interface Metadata {
     title?: string;
@@ -73,11 +77,47 @@ export default function Article() {
 
     return (
         <div className="flex justify-center">
-            <div className="prose dark:prose-invert max-w-6xl w-full bg-muted rounded-lg overflow-hidden p-12 gap-0 border shadow-sm">
+            <div className="prose dark:prose-invert max-w-6xl w-full bg-muted rounded-lg overflow-hidden p-12 border shadow-sm">
                 <ReactMarkdown rehypePlugins={[rehypeRaw]} skipHtml={false}>
                     {content}
                 </ReactMarkdown>
+
+                <Separator className="my-12" />
+                <ArticleComments />
             </div>
         </div>
+    );
+}
+
+function ArticleComments() {
+    const { theme } = useTheme();
+    const [giscusTheme, setGiscusTheme] = useState<"light" | "dark_dimmed">("light");
+
+    useEffect(() => {
+        if (theme === "dark") {
+            setGiscusTheme("dark_dimmed");
+        } else if (theme === "light") {
+            setGiscusTheme("light");
+        } else {
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            setGiscusTheme(prefersDark ? "dark_dimmed" : "light");
+        }
+    }, [theme]);
+
+    return (
+        <Giscus
+            repo="pm25/simpleplain"
+            repoId="R_kgDONgMOyA"
+            category="General"
+            categoryId="DIC_kwDONgMOyM4Cq4Ga"
+            mapping="pathname"
+            strict="0"
+            reactionsEnabled="1"
+            emitMetadata="0"
+            inputPosition="top"
+            theme={giscusTheme}
+            lang="en"
+            loading="lazy"
+        />
     );
 }

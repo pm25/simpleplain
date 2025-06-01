@@ -18,8 +18,8 @@
     "homepage": "https://pm25.github.io/simpleplain/",
     "html_url": "https://github.com/pm25/simpleplain",
     "created_at": "2024-12-20T10:05:02Z",
-    "updated_at": "2025-06-01T00:41:22Z",
-    "pushed_at": "2025-06-01T00:41:19Z",
+    "updated_at": "2025-06-01T01:47:27Z",
+    "pushed_at": "2025-06-01T01:47:41Z",
     "preview_image": "https://raw.githubusercontent.com/pm25/simpleplain/refs/heads/main/public/full_logo.png"
   },
   "Semi-Supervised-Regression": {
@@ -101,7 +101,7 @@
   "Flappy-Bird": {
     "name": "Flappy-Bird",
     "display_name": "Flappy Bird",
-    "description": "Flappy Bird clone, developed with JavaScript.",
+    "description": "🐤 Flappy Bird clone, developed with JavaScript.",
     "stargazers_count": 2,
     "topics": [
       "game",
@@ -109,10 +109,10 @@
       "website"
     ],
     "language": "JavaScript",
-    "homepage": "https://pm25.github.io/Flappy-Bird",
+    "homepage": "https://pm25.github.io/Flappy-Bird/",
     "html_url": "https://github.com/pm25/Flappy-Bird",
     "created_at": "2020-05-19T03:41:18Z",
-    "updated_at": "2022-09-10T06:18:26Z",
+    "updated_at": "2025-06-01T01:54:33Z",
     "pushed_at": "2022-09-10T06:40:04Z",
     "preview_image": ""
   },
