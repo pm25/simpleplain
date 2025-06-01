@@ -1,10 +1,10 @@
 ---
 title: "Deep Learning with Keras"
-date: "2019-09-04"
-lastEdited: "2025-05-20T21:00:00"
+created_at: "2019-09-04"
+updated_at: "2025-05-20T21:00:00"
 summary: "A simple introduction to deep learning with practical examples using the Keras Python package."
-tags: ["deep-learning", "keras"]
-coverImage: null
+tags: ["deep learning", "keras"]
+cover_image: null
 author: "Pin-Yen Huang"
 draft: false
 ---

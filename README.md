@@ -187,6 +187,7 @@ Pin-Yen Huang - [pyhuang97@gmail.com](mailto:pyhuang97@gmail.com)
 
 I am deeply grateful for the following tools and resources that contributed to the development of this project:
 
+-   [giscus](https://giscus.app)
 -   [React Icons](https://react-icons.github.io/react-icons)
 -   [Best README Template](https://github.com/othneildrew/Best-README-Template)
 

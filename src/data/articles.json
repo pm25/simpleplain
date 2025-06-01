@@ -1,34 +1,32 @@
-[
-    {
-        "slug": "template",
+{
+    "template": {
         "path": "src/data/articles/template.md",
         "url": "/articles/template.md",
         "title": "Your Post Title",
-        "date": "2025-05-20T14:30:00",
-        "lastEdited": "2025-05-20T16:15:00",
+        "created_at": "2025-05-20T14:30:00",
+        "updated_at": "2025-05-20T16:15:00",
         "summary": "A one-sentence summary of the post for previews or meta description.",
         "tags": [
             "tag1",
             "tag2"
         ],
-        "coverImage": "/images/cover.jpg",
+        "cover_image": "/images/cover.jpg",
         "author": "Pin-Yen Huang",
         "draft": true
     },
-    {
-        "slug": "deep-learning-with-keras",
+    "deep-learning-with-keras": {
         "path": "src/data/articles/deep-learning-with-keras.md",
         "url": "/articles/deep-learning-with-keras.md",
         "title": "Deep Learning with Keras",
-        "date": "2019-09-04",
-        "lastEdited": "2025-05-20T21:00:00",
+        "created_at": "2019-09-04",
+        "updated_at": "2025-05-20T21:00:00",
         "summary": "A simple introduction to deep learning with practical examples using the Keras Python package.",
         "tags": [
-            "deep-learning",
+            "deep learning",
             "keras"
         ],
-        "coverImage": null,
+        "cover_image": null,
         "author": "Pin-Yen Huang",
         "draft": false
     }
-]
+}

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSearchParams, useNavigate } from "react-router";
 import { FaWrench, FaGithub, FaGlobe, FaRegStar } from "react-icons/fa6";
-import { usePageTitle } from "@/hooks/use-pagetitle";
 
 import {
     Select,
@@ -14,6 +13,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { usePageTitle } from "@/hooks/use-pagetitle";
 import AllRepoData from "@/data/repos.json";
 
 type SortByType = "stars" | "updated" | "created";

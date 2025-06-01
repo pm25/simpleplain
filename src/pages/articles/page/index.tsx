@@ -96,7 +96,7 @@ export default function Article() {
                     <Button
                         asChild
                         variant="ghost"
-                        size="sm"
+                        size="default"
                         className="gap-1 text-muted-foreground"
                     >
                         <Link to="/articles">
