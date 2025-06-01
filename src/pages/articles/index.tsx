@@ -43,8 +43,9 @@ function ArticleCard({ article }: { article: (typeof articlesData)[number] }) {
             className="block"
         >
             <Card className="rounded-lg overflow-hidden py-4 px-4 sm:px-8 cursor-pointer hover:shadow-[0_0_6px_1px_rgba(59,130,246,0.4)] transition-shadow duration-50">
-                <div className="flex flex-col gap-4">
-                    <h2 className="text-xl font-semibold">{article.title}</h2>
+                <div className="flex flex-col gap-2">
+                    <h2 className="text-lg font-semibold">{article.title}</h2>
+
                     <p className="text-base text-muted-foreground line-clamp-3">
                         {article.summary || "No summary available."}
                     </p>

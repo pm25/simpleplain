@@ -81,7 +81,7 @@ export default function Article() {
     }
 
     return (
-        <div className="flex justify-center">
+        <div className="flex flex-col justify-center items-center">
             <div className="prose dark:prose-invert max-w-6xl w-full bg-muted rounded-lg overflow-hidden p-6 sm:p-12 border shadow-sm">
                 <ReactMarkdown rehypePlugins={[rehypeRaw]} skipHtml={false}>
                     {content}
@@ -89,6 +89,21 @@ export default function Article() {
 
                 {!loading && <Separator className="my-6 sm:my-12" />}
                 {!loading && <ArticleComments />}
+            </div>
+
+            <div className="relative w-full max-w-6xl mt-4">
+                <div className="absolute top-0 right-0">
+                    <Button
+                        asChild
+                        variant="ghost"
+                        size="sm"
+                        className="gap-1 text-muted-foreground"
+                    >
+                        <Link to="/articles">
+                            <FaArrowLeft className="w-4 h-4" /> Back to Articles
+                        </Link>
+                    </Button>
+                </div>
             </div>
         </div>
     );
