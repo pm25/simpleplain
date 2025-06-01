@@ -34,7 +34,9 @@ function generatePostsJson() {
     return dateB.localeCompare(dateA);
   });
 
-  fs.writeFileSync(outputPath, JSON.stringify(articles, null, 2));
+  const output = JSON.stringify(articles, null, 4);
+
+  fs.writeFileSync(outputPath, output, "utf-8");
   console.log(`✅ articles.json generated with ${articles.length} posts`);
 }
 

@@ -6,13 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "prebuild": "npm-run-all --parallel generate:articles fetch:repos",
+    "prebuild": "npm-run-all --parallel generate:articles fetch:repos extract:publications",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "fetch:repos": "node scripts/fetchRepos.js",
-    "generate:articles": "node scripts/generateArticlesJson.js"
+    "generate:articles": "node scripts/generateArticlesJson.js",
+    "extract:publications": "node scripts/extractFeaturedPublications"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.9",

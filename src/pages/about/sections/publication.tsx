@@ -13,7 +13,7 @@ import {
     TableRow,
 } from "@/components/ui/table";
 
-import { PubData } from "@/data/publications";
+import FeatPubData from "@/data/featured_publications.json";
 
 export default function Publication() {
     return (
@@ -32,7 +32,7 @@ export default function Publication() {
                         </TableRow>
                     </TableHeader>
                     <TableBody>
-                        {PubData.publications.map((pub, index) => (
+                        {FeatPubData.publications.map((pub, index) => (
                             <TableRow key={index} className="transition-none">
                                 <TableCell className="whitespace-normal space-y-1">
                                     <a
@@ -51,7 +51,7 @@ export default function Publication() {
                                                 <span
                                                     key={i}
                                                     className={
-                                                        author === PubData.author_name
+                                                        author === FeatPubData.author_name
                                                             ? "font-semibold"
                                                             : ""
                                                     }
