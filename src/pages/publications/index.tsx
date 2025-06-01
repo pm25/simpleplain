@@ -35,19 +35,19 @@ export default function Publications() {
                         <TableBody>
                             {PubData.publications.map((pub, index) => (
                                 <TableRow key={index} className="transition-none">
-                                    <TableCell className="whitespace-normal space-y-0.5">
+                                    <TableCell className="whitespace-normal space-y-1">
                                         <a
                                             href={pub.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-base font-semibold hover:underline underline-offset-4"
+                                            className="text-base text-base/4 font-semibold hover:underline underline-offset-4"
                                         >
                                             {pub.title}
                                         </a>
 
-                                        <div className="flex items-center text-sm text-muted-foreground gap-2">
+                                        <div className="flex items-center text-sm text-muted-foreground gap-2 mt-1">
                                             <HiUsers className="shrink-0" />
-                                            <span>
+                                            <span className="leading-4.5">
                                                 {pub.authors.split(", ").map((author, i) => (
                                                     <span
                                                         key={i}
@@ -65,7 +65,7 @@ export default function Publications() {
                                             </span>
                                         </div>
 
-                                        <div className="flex items-center text-sm text-muted-foreground gap-2">
+                                        <div className="flex items-center text-sm leading-4.5 text-muted-foreground gap-2">
                                             <HiDocumentText className="shrink-0" />
                                             <span>{pub.booktitle}</span>
                                         </div>
