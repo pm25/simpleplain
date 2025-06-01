@@ -87,7 +87,7 @@ export default function Article() {
                     {content}
                 </ReactMarkdown>
 
-                {!loading && <Separator className="my-12" />}
+                {!loading && <Separator className="my-6 sm:my-12" />}
                 {!loading && <ArticleComments />}
             </div>
         </div>

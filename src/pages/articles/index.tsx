@@ -22,9 +22,10 @@ export default function Articles() {
                     <FaNewspaper />
                     Articles
                 </div>
+
                 <Separator />
 
-                <div className="grid grid-cols-1 gap-4 px-6">
+                <div className="grid grid-cols-1 w-full gap-4 px-2 sm:px-6">
                     {sortedArticles.map((article) => (
                         <ArticleCard key={article.slug} article={article} />
                     ))}
@@ -41,7 +42,7 @@ function ArticleCard({ article }: { article: (typeof articlesData)[number] }) {
             aria-label={`Read full article: ${article.title}`}
             className="block"
         >
-            <Card className="rounded-lg overflow-hidden px-8 py-4 cursor-pointer hover:shadow-[0_0_6px_1px_rgba(59,130,246,0.4)] transition-shadow duration-50">
+            <Card className="rounded-lg overflow-hidden py-4 px-4 sm:px-8 cursor-pointer hover:shadow-[0_0_6px_1px_rgba(59,130,246,0.4)] transition-shadow duration-50">
                 <div className="flex flex-col gap-4">
                     <h2 className="text-xl font-semibold">{article.title}</h2>
                     <p className="text-base text-muted-foreground line-clamp-3">
