@@ -189,7 +189,7 @@ function ProjectCard({
         <Card className="rounded-lg overflow-hidden gap-0 py-0 w-full">
             <div className="flex flex-col lg:flex-row">
                 <a href={html_url} target="_blank" rel="noopener noreferrer" className="block">
-                    <div className="aspect-3/2 w-full max-h-72 lg:max-w-78 lg:h-52 overflow-hidden">
+                    <div className="aspect-3/2 w-full max-h-72 lg:max-w-75 lg:h-50 overflow-hidden">
                         {preview_image ? (
                             <img
                                 src={preview_image}
@@ -213,10 +213,10 @@ function ProjectCard({
                 <div className="w-full border-t block lg:hidden" />
                 <div className="h-full border-l hidden lg:block" />
 
-                <div className="flex flex-col p-4 lg:py-2.5 lg:px-5 flex-1 lg:h-52">
+                <div className="flex flex-col p-4 lg:py-2.5 lg:px-5 flex-1 lg:h-50">
                     <ScrollArea className="flex-1 min-h-0">
                         <div className="flex flex-col gap-y-2">
-                            <div className="text-lg font-semibold">
+                            <div className="text-base font-semibold">
                                 {html_url ? (
                                     <a
                                         href={html_url}
