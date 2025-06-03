@@ -238,9 +238,9 @@ function ProjectCard({
 
                             {topics.length > 0 && (
                                 <div className="flex flex-wrap gap-1.5">
-                                    {topics.map((topic, idx) => (
+                                    {topics.map((topic: string) => (
                                         <Button
-                                            key={idx}
+                                            key={topic}
                                             variant="secondary"
                                             size="sm"
                                             onClick={() => setTopicFilter(topic)}

@@ -88,7 +88,11 @@ export default function Articles() {
 
                 <div className="grid grid-cols-1 w-full gap-4 px-2 sm:px-6">
                     {filteredArticles.map((articleName) => (
-                        <ArticleCard key={articleName} articleName={articleName} />
+                        <ArticleCard
+                            key={articleName}
+                            articleName={articleName}
+                            setTagFilter={updateTagFilter}
+                        />
                     ))}
                 </div>
             </div>
@@ -157,7 +161,13 @@ function SortSelector({
     );
 }
 
-function ArticleCard({ articleName }: { articleName: keyof typeof ArticlesData }) {
+function ArticleCard({
+    articleName,
+    setTagFilter,
+}: {
+    articleName: keyof typeof ArticlesData;
+    setTagFilter: (val: string) => void;
+}) {
     const article = ArticlesData[articleName];
 
     return (
@@ -181,14 +191,17 @@ function ArticleCard({ articleName }: { articleName: keyof typeof ArticlesData }
                 </p>
 
                 {article.tags && article.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-2">
+                    <div className="flex flex-wrap gap-2">
                         {article.tags.map((tag: string) => (
-                            <span
+                            <Button
                                 key={tag}
-                                className="bg-muted px-3 py-1 rounded-md text-sm font-medium"
+                                variant="secondary"
+                                size="sm"
+                                onClick={() => setTagFilter(tag)}
+                                className="rounded-sm cursor-pointer font-normal px-3 py-1 text-sm"
                             >
                                 {tag}
-                            </span>
+                            </Button>
                         ))}
                     </div>
                 )}
