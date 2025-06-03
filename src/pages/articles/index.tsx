@@ -161,40 +161,52 @@ function ArticleCard({ articleName }: { articleName: keyof typeof ArticlesData }
     const article = ArticlesData[articleName];
 
     return (
-        <Link
-            to={`/articles/${articleName}`}
-            aria-label={`Read full article: ${article.title}`}
-            className="block"
-        >
-            <Card className="rounded-lg overflow-hidden py-4 px-4 sm:px-8 cursor-pointer hover:shadow-[0_0_6px_1px_rgba(59,130,246,0.4)] transition-shadow duration-50">
-                <div className="flex flex-col gap-2">
-                    <h2 className="text-lg font-semibold">{article.title}</h2>
+        <Card className="rounded-lg overflow-hidden py-4 px-4 sm:px-8">
+            <div className="flex flex-col gap-2">
+                <Button
+                    asChild
+                    variant="link"
+                    className="p-0 text-lg font-semibold text-left justify-start"
+                >
+                    <Link
+                        to={`/articles/${articleName}`}
+                        aria-label={`Read full article: ${article.title}`}
+                    >
+                        {article.title}
+                    </Link>
+                </Button>
 
-                    <p className="text-base text-muted-foreground line-clamp-3">
-                        {article.summary || "No summary available."}
-                    </p>
+                <p className="text-base text-muted-foreground line-clamp-3">
+                    {article.summary || "No summary available."}
+                </p>
 
-                    {article.tags && article.tags.length > 0 && (
-                        <div className="flex flex-wrap gap-2 mt-2">
-                            {article.tags.map((tag: string) => (
-                                <span
-                                    key={tag}
-                                    className="bg-muted px-3 py-1 rounded-md text-sm font-medium"
-                                >
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
-                    )}
-
-                    <div className="flex justify-between items-center text-sm text-muted-foreground mt-auto pt-2">
-                        <time dateTime={article.created_at}>
-                            {new Date(article.created_at).toLocaleDateString()}
-                        </time>
-                        <span className="text-primary underline">Read More →</span>
+                {article.tags && article.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-2">
+                        {article.tags.map((tag: string) => (
+                            <span
+                                key={tag}
+                                className="bg-muted px-3 py-1 rounded-md text-sm font-medium"
+                            >
+                                {tag}
+                            </span>
+                        ))}
                     </div>
+                )}
+
+                <div className="flex justify-between items-center text-sm text-muted-foreground mt-auto pt-2">
+                    <time dateTime={article.created_at}>
+                        {new Date(article.created_at).toLocaleDateString()}
+                    </time>
+                    <Button asChild variant="link" className="p-0 text-primary underline">
+                        <Link
+                            to={`/articles/${articleName}`}
+                            aria-label={`Read full article: ${article.title}`}
+                        >
+                            Read More →
+                        </Link>
+                    </Button>
                 </div>
-            </Card>
-        </Link>
+            </div>
+        </Card>
     );
 }
