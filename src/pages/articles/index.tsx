@@ -92,7 +92,6 @@ export default function Articles() {
                             key={articleName}
                             articleName={articleName}
                             setTagFilter={updateTagFilter}
-                            showUpdatedDate={sortBy === "updated"}
                         />
                     ))}
                 </div>
@@ -165,11 +164,9 @@ function SortSelector({
 function ArticleCard({
     articleName,
     setTagFilter,
-    showUpdatedDate,
 }: {
     articleName: keyof typeof ArticlesData;
     setTagFilter: (val: string) => void;
-    showUpdatedDate: boolean;
 }) {
     const article = ArticlesData[articleName];
 
@@ -210,10 +207,11 @@ function ArticleCard({
                 )}
 
                 <div className="flex justify-between items-center text-sm text-muted-foreground mt-auto pt-2">
-                    <span className="text-sm text-muted-foreground">
-                        {`Published ${formatDate(article.created_at)}${
-                            showUpdatedDate ? ` • Updated ${formatDate(article.updated_at)}` : ""
-                        }`}
+                    <span>
+                        Published {formatDate(article.created_at)}
+                        {!isSameDate(article.created_at, article.updated_at) && (
+                            <> • Updated {formatDate(article.updated_at)}</>
+                        )}
                     </span>
                     <Button asChild variant="link" className="p-0 text-primary underline text-sm">
                         <Link
@@ -235,4 +233,14 @@ function formatDate(dateStr: string) {
         month: "short",
         day: "numeric",
     });
+}
+
+function isSameDate(date1: string, date2: string): boolean {
+    const d1 = new Date(date1);
+    const d2 = new Date(date2);
+    return (
+        d1.getFullYear() === d2.getFullYear() &&
+        d1.getMonth() === d2.getMonth() &&
+        d1.getDate() === d2.getDate()
+    );
 }
