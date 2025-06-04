@@ -197,7 +197,7 @@ function ArticleCard({
                 <Button
                     asChild
                     variant="link"
-                    className="p-0 text-lg font-semibold text-left justify-start"
+                    className="p-0 h-7 text-base font-semibold text-left justify-start"
                 >
                     <Link
                         to={`/articles/${articleName}`}
@@ -207,7 +207,7 @@ function ArticleCard({
                     </Link>
                 </Button>
 
-                <p className="text-base text-muted-foreground line-clamp-3">
+                <p className="text-sm text-muted-foreground line-clamp-3">
                     {article.summary || "No summary available."}
                 </p>
 
