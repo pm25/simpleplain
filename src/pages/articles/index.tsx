@@ -31,6 +31,7 @@ export default function Articles() {
     const navigate = useNavigate();
 
     const tag = searchParams.get("tag");
+    const sort = searchParams.get("sort");
 
     useEffect(() => {
         if (tag && allTags.includes(tag)) {
@@ -39,6 +40,17 @@ export default function Articles() {
             setTagFilter("all");
         }
     }, [tag]);
+
+    useEffect(() => {
+        if (sort === "created" || sort === "updated") {
+            setSortBy(sort);
+        } else {
+            const params = new URLSearchParams(searchParams);
+            params.set("sort", "updated");
+            navigate({ search: params.toString() }, { replace: true });
+            setSortBy("updated");
+        }
+    }, [sort, navigate, searchParams]);
 
     const updateTagFilter = (newTag: string) => {
         setTagFilter(newTag);
@@ -49,6 +61,15 @@ export default function Articles() {
         } else {
             params.set("tag", newTag);
         }
+
+        navigate({ search: params.toString() }, { replace: true });
+    };
+
+    const updateSortBy = (newSortBy: SortByType) => {
+        setSortBy(newSortBy);
+
+        const params = new URLSearchParams(searchParams);
+        params.set("sort", newSortBy);
 
         navigate({ search: params.toString() }, { replace: true });
     };
@@ -81,7 +102,7 @@ export default function Articles() {
 
                 <div className="flex justify-between flex-wrap gap-2 items-center mx-2 sm:mx-6 my-1 relative -top-2">
                     <TagFilter tagFilter={tagFilter} setTagFilter={updateTagFilter} />
-                    <SortSelector sortBy={sortBy} setSortBy={setSortBy} />
+                    <SortSelector sortBy={sortBy} setSortBy={updateSortBy} />
                 </div>
 
                 <Separator />
