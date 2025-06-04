@@ -92,6 +92,7 @@ export default function Articles() {
                             key={articleName}
                             articleName={articleName}
                             setTagFilter={updateTagFilter}
+                            showUpdatedDate={sortBy === "updated"}
                         />
                     ))}
                 </div>
@@ -164,14 +165,16 @@ function SortSelector({
 function ArticleCard({
     articleName,
     setTagFilter,
+    showUpdatedDate,
 }: {
     articleName: keyof typeof ArticlesData;
     setTagFilter: (val: string) => void;
+    showUpdatedDate: boolean;
 }) {
     const article = ArticlesData[articleName];
 
     return (
-        <Card className="rounded-lg overflow-hidden py-4 px-4 sm:px-8">
+        <Card className="rounded-lg overflow-hidden py-2 px-4 sm:px-8">
             <div className="flex flex-col gap-2">
                 <Button
                     asChild
@@ -191,14 +194,14 @@ function ArticleCard({
                 </p>
 
                 {article.tags && article.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-1.5">
                         {article.tags.map((tag: string) => (
                             <Button
                                 key={tag}
                                 variant="secondary"
                                 size="sm"
                                 onClick={() => setTagFilter(tag)}
-                                className="rounded-sm cursor-pointer font-normal px-3 py-1 text-sm"
+                                className="rounded-sm cursor-pointer font-normal px-2 h-7.5 text-sm"
                             >
                                 {tag}
                             </Button>
@@ -207,10 +210,12 @@ function ArticleCard({
                 )}
 
                 <div className="flex justify-between items-center text-sm text-muted-foreground mt-auto pt-2">
-                    <time dateTime={article.created_at}>
-                        {new Date(article.created_at).toLocaleDateString()}
-                    </time>
-                    <Button asChild variant="link" className="p-0 text-primary underline">
+                    <span className="text-sm text-muted-foreground">
+                        {`Published ${formatDate(article.created_at)}${
+                            showUpdatedDate ? ` • Updated ${formatDate(article.updated_at)}` : ""
+                        }`}
+                    </span>
+                    <Button asChild variant="link" className="p-0 text-primary underline text-sm">
                         <Link
                             to={`/articles/${articleName}`}
                             aria-label={`Read full article: ${article.title}`}
@@ -222,4 +227,12 @@ function ArticleCard({
             </div>
         </Card>
     );
+}
+
+function formatDate(dateStr: string) {
+    return new Date(dateStr).toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+    });
 }
