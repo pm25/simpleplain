@@ -34,7 +34,6 @@ function generatePostsJson() {
 
     articles[slug] = {
       path: path.relative(process.cwd(), path.join(articlesDir, filename)),
-      url: `/articles/${filename}`,
       ...defaults,
       ...data, // data from frontmatter overrides defaults
     };
