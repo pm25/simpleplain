@@ -15,7 +15,7 @@ author: Pin-Yen Huang
   <h3 align="center">SimplePlain - A Personal Website Template</h3>
 
   <p align="center">
-    Build your personal website effortlessly with <strong>SimplePlain</strong>!  This template is designed for easy customization and is perfect for showcasing your portfolio — whether you're a researcher, engineer, or student.
+    Effortlessly build your personal website with <strong>SimplePlain</strong>! This React-based template is fully customizable and ideal for showcasing your portfolio — whether you're a researcher, engineer, or student.
     <br />
     <br />
     <a href="https://pm25.github.io/simpleplain">🌐 Live Demo</a>
@@ -48,11 +48,16 @@ author: Pin-Yen Huang
 
 ## About The Template
 
-Having a personal website is essential in today's world—it’s a great way to showcase your portfolio, share your experiences, and highlight your projects so others can get to know you better. However, building a personal website from scratch can be time-consuming, especially for those without web development experience.
+**🥪 SimplePlain** is a React-based website template that makes building a personal website easy. It offers modern UI components, useful built-in features, and flexible customization options. SimplePlain strikes a balance between simplicity and flexibility, letting you get started quickly while still tailoring your site to your style.
 
-🥪 SimplePlain was originally created for my own personal website, but I realized it’s also useful for quick personal website setup. That’s why I’m sharing it, hoping it can benefit others. It’s designed to be easy to set up while maintaining flexibility for customization. Whether you're just getting started or looking for a solid foundation to build upon, SimplePlain is a great choice. It’s user-friendly for both experienced web developers and beginners alike.
+**Why SimplePlain?**
 
-If you find this template helpful, feel free to leave a ⭐ to support the project!
+* ⚡ **Quick Setup** – Get your site running in minutes.
+* 🎨 **Customizable** – Easily adjust the design (basic coding skills required).
+* 🔧 **Built-in Features** – Includes a blog, automatic project fetching, and more.
+* 👥 **Beginner-Friendly** – No advanced coding needed to get started.
+
+✨ **Found this useful?** Give it a ⭐ to support the project!
 
 ### 🛠️ Built With
 
