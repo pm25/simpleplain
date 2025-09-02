@@ -192,7 +192,7 @@ function ArticleCard({
     const article = ArticlesData[articleName];
 
     return (
-        <Card className="rounded-lg overflow-hidden py-2 px-4 sm:px-8">
+        <Card className="rounded-lg overflow-hidden py-4 px-4 sm:px-8">
             <div className="flex flex-col gap-2">
                 <Button
                     asChild
@@ -234,7 +234,11 @@ function ArticleCard({
                             <> • Updated {formatDate(article.updated_at)}</>
                         )}
                     </span>
-                    <Button asChild variant="link" className="p-0 text-primary underline text-sm">
+                    <Button
+                        asChild
+                        variant="link"
+                        className="p-0 text-primary underline text-sm h-7.5"
+                    >
                         <Link
                             to={`/articles/${articleName}`}
                             aria-label={`Read full article: ${article.title}`}
