@@ -27,9 +27,16 @@ export default function Movies() {
     return (
         <div className="flex flex-1 flex-col items-center gap-10">
             <div className="w-full max-w-6xl space-y-10">
-                <div className="flex flex-row justify-center items-center gap-4 text-4xl font-semibold">
-                    <FaFilm />
-                    Movies
+                <div className="space-y-4">
+                    <div className="flex flex-row justify-center items-center gap-4 text-4xl font-semibold">
+                        <FaFilm />
+                        Movies
+                    </div>
+
+                    <p className="text-center text-lg text-muted-foreground leading-relaxed italic opacity-80">
+                        These are some of my favorite movies, each holding a special place in my
+                        heart for their unique stories and the emotions they evoke.
+                    </p>
                 </div>
 
                 <div className="grid w-full gap-4 px-2 sm:px-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
