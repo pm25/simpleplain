@@ -11,7 +11,7 @@ export default function About() {
     usePageTitle("About Me");
 
     return (
-        <div className="flex flex-1 flex-col items-center gap-12">
+        <div className="flex flex-1 flex-col items-center gap-12 py-4">
             <Introduction />
             <Experience />
             <Separator orientation="horizontal" className="max-w-5xl mt-8" />
