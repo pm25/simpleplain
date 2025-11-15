@@ -15,7 +15,7 @@ author: Pin-Yen Huang
   <h3 align="center">Showlit – A Modern and Clean Personal Website Template</h3>
 
   <p align="center">
-    Build your personal website effortlessly with <strong>Showlit</strong>!  <br>
+    Build your personal website effortlessly with <strong>✨Showlit</strong>!  <br>
     This fully customizable React-based template is perfect for showcasing your portfolio with ease.
     <br />
     <br />
