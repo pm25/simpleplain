@@ -8,7 +8,7 @@ author: Pin-Yen Huang
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/pm25/Showlit">
+  <a href="https://github.com/pm25/showlit">
     <img src="public/full_logo_v1.png" alt="Logo" width="640">
   </a>
 
@@ -19,11 +19,11 @@ author: Pin-Yen Huang
     This fully customizable React-based template is perfect for showcasing your portfolio with ease.
     <br />
     <br />
-    <a href="https://pm25.github.io/Showlit">🌐 Live Demo</a>
+    <a href="https://pm25.github.io/showlit">🌐 Live Demo</a>
     ·
-    <a href="https://github.com/pm25/Showlit/issues/new?labels=bug&template=bug-report---.md">🐞 Report Bug</a>
+    <a href="https://github.com/pm25/showlit/issues/new?labels=bug&template=bug-report---.md">🐞 Report Bug</a>
     ·
-    <a href="https://github.com/pm25/Showlit/issues/new?labels=enhancement&template=feature-request---.md">💡 Request Feature</a>
+    <a href="https://github.com/pm25/showlit/issues/new?labels=enhancement&template=feature-request---.md">💡 Request Feature</a>
   </p>
 </div>
 
@@ -105,8 +105,8 @@ npm install npm@latest -g
 1. **Clone the repository**
 
 ```sh
-git clone https://github.com/pm25/Showlit.git
-cd Showlit
+git clone https://github.com/pm25/showlit.git
+cd showlit
 ```
 
 2. **Install dependencies**
