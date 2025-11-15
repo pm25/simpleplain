@@ -2,7 +2,7 @@
   "showlit": {
     "name": "showlit",
     "display_name": "",
-    "description": "✨ Showlit - A modern and clean template for creating a personal website",
+    "description": "✨Showlit - A modern and clean template for creating a personal website",
     "stargazers_count": 5,
     "topics": [
       "personal-website-template",
@@ -18,9 +18,9 @@
     "homepage": "https://pm25.github.io/showlit/",
     "html_url": "https://github.com/pm25/showlit",
     "created_at": "2024-12-20T10:05:02Z",
-    "updated_at": "2025-11-15T13:39:09Z",
-    "pushed_at": "2025-11-15T13:39:05Z",
-    "preview_image": ""
+    "updated_at": "2025-11-15T13:51:40Z",
+    "pushed_at": "2025-11-15T13:51:37Z",
+    "preview_image": "https://pm25.github.io/showlit/full_logo.png"
   },
   "Semi-Supervised-Regression": {
     "name": "Semi-Supervised-Regression",
