@@ -10,6 +10,11 @@ const movies = [
         note: "A timeless story of hope and perseverance that reminds me to stay resilient, no matter the odds.",
     },
     {
+        title: "Schindler's List",
+        poster: "https://image.tmdb.org/t/p/original/doGEE2DgjET0XK0k9BozsMBES5H.jpg",
+        note: "A powerful portrayal of courage and humanity in the face of unimaginable adversity.",
+    },
+    {
         title: "Interstellar",
         poster: "https://image.tmdb.org/t/p/original/mS4EvhsrT0SQZOlWrQEzWI5KiUa.jpg",
         note: "Blends science, love, and human ambition in a way that sparks my curiosity about the universe and our place in it.",
@@ -34,12 +39,11 @@ export default function Movies() {
                     </div>
 
                     <p className="text-center text-lg text-muted-foreground leading-relaxed italic opacity-80">
-                        These are some of my favorite movies, each holding a special place in my
-                        heart for their unique stories and the emotions they evoke.
+                        These are some of my favorite movies
                     </p>
                 </div>
 
-                <div className="grid w-full gap-4 px-2 sm:px-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid w-full gap-4 px-2 sm:px-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {movies.map((movie) => (
                         <Card
                             key={movie.title}
