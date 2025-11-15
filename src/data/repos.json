@@ -18,8 +18,8 @@
     "homepage": "https://pm25.github.io/showlit/",
     "html_url": "https://github.com/pm25/showlit",
     "created_at": "2024-12-20T10:05:02Z",
-    "updated_at": "2025-11-15T13:51:40Z",
-    "pushed_at": "2025-11-15T13:51:37Z",
+    "updated_at": "2025-11-15T13:58:18Z",
+    "pushed_at": "2025-11-15T13:58:32Z",
     "preview_image": "https://pm25.github.io/showlit/full_logo.png"
   },
   "Semi-Supervised-Regression": {
@@ -61,7 +61,7 @@
   "SimplePlus-BeamerTheme": {
     "name": "SimplePlus-BeamerTheme",
     "display_name": "SimplePlus Beamer Theme",
-    "description": "🍃 SimplePlus - A minimalist and clean LaTeX Beamer theme",
+    "description": "🍃SimplePlus - A minimalist and clean LaTeX Beamer theme",
     "stargazers_count": 232,
     "topics": [
       "beamer-template",
@@ -74,14 +74,14 @@
     "homepage": "",
     "html_url": "https://github.com/pm25/SimplePlus-BeamerTheme",
     "created_at": "2021-12-14T08:33:39Z",
-    "updated_at": "2025-11-06T20:34:01Z",
+    "updated_at": "2025-11-15T13:53:48Z",
     "pushed_at": "2025-01-12T22:50:46Z",
     "preview_image": "https://raw.githubusercontent.com/pm25/simpleplus-beamerTheme/master/preview/slide-1.webp"
   },
   "SimpleDarkBlue-BeamerTheme": {
     "name": "SimpleDarkBlue-BeamerTheme",
     "display_name": "SimpleDarkBlue Beamer Theme",
-    "description": "🫐 SimpleDarkBlue - A simple and clear LaTeX Beamer theme",
+    "description": "🫐SimpleDarkBlue - A simple and clear LaTeX Beamer theme",
     "stargazers_count": 88,
     "topics": [
       "beamer-template",
@@ -94,7 +94,7 @@
     "homepage": "",
     "html_url": "https://github.com/pm25/SimpleDarkBlue-BeamerTheme",
     "created_at": "2021-01-12T00:59:09Z",
-    "updated_at": "2025-11-13T10:26:30Z",
+    "updated_at": "2025-11-15T13:53:19Z",
     "pushed_at": "2025-01-14T08:50:14Z",
     "preview_image": "https://raw.githubusercontent.com/pm25/simpledarkblue-beamertheme/master/preview/slide-1.webp"
   },
@@ -136,7 +136,7 @@
   "pm25.github.io": {
     "name": "pm25.github.io",
     "display_name": "",
-    "description": "✨ PlusMore - My personal website",
+    "description": "✨PlusMore - My personal website",
     "stargazers_count": 4,
     "topics": [
       "personal-website",
@@ -150,7 +150,7 @@
     "homepage": "https://pm25.github.io/",
     "html_url": "https://github.com/pm25/pm25.github.io",
     "created_at": "2018-05-24T14:51:50Z",
-    "updated_at": "2025-10-19T03:49:55Z",
+    "updated_at": "2025-11-15T14:16:24Z",
     "pushed_at": "2025-10-21T03:20:53Z",
     "preview_image": ""
   }

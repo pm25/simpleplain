@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams, useLocation, Link } from "react-router";
-import fm from "front-matter";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import Giscus from "@giscus/react";
@@ -10,10 +9,8 @@ import { Separator } from "@/components/ui/separator";
 import { useTheme } from "@/components/theme-provider";
 import { usePageTitle } from "@/hooks/use-pagetitle";
 import { Button } from "@/components/ui/button";
-
-interface Metadata {
-    title?: string;
-}
+import { parseFrontmatter } from "@/utils/parseFrontmatter";
+import type { FrontMatter } from "@/utils/parseFrontmatter";
 
 // import markdown files lazily
 const markdownFiles = import.meta.glob("/src/data/articles/*.md", {
@@ -25,7 +22,7 @@ const markdownFiles = import.meta.glob("/src/data/articles/*.md", {
 export default function Article() {
     const { slug } = useParams<{ slug: string }>();
     const [content, setContent] = useState<string>("");
-    const [metadata, setMetadata] = useState<Metadata>({});
+    const [metadata, setMetadata] = useState<FrontMatter>({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -42,10 +39,7 @@ export default function Article() {
         if (markdownFiles[path]) {
             markdownFiles[path]()
                 .then((rawContent) => {
-                    const { attributes, body } = fm(rawContent as string) as {
-                        attributes: Metadata;
-                        body: string;
-                    };
+                    const { attributes, body } = parseFrontmatter(rawContent as string);
                     setContent(body);
                     setMetadata(attributes);
                     setLoading(false);
@@ -111,7 +105,6 @@ export default function Article() {
 
 function ArticleComments() {
     const location = useLocation();
-
     const { theme } = useTheme();
     const [giscusTheme, setGiscusTheme] = useState<"light" | "dark_dimmed">("light");
 

@@ -1,12 +1,33 @@
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
+import yaml from "js-yaml";
 
 const articlesDir = path.join(process.cwd(), "src", "data", "articles");
 const outputPath = path.join(process.cwd(), "src", "data", "articles.json");
 
 function getSlug(filename) {
   return filename.replace(/\.md$/, "");
+}
+
+// frontmatter extractor
+function parseFrontmatter(content) {
+  const match = /^---\n([\s\S]*?)\n---\n?/.exec(content);
+
+  if (!match) {
+    return { data: {}, content };
+  }
+
+  const yamlBlock = match[1];
+  const body = content.slice(match[0].length);
+
+  let data = {};
+  try {
+    data = yaml.load(yamlBlock) || {};
+  } catch (err) {
+    console.error("YAML parse error:", err);
+  }
+
+  return { data, content: body };
 }
 
 function generatePostsJson() {
@@ -18,10 +39,9 @@ function generatePostsJson() {
     const filePath = path.join(articlesDir, filename);
     const fileContent = fs.readFileSync(filePath, "utf8");
 
-    const { data } = matter(fileContent);
+    const { data } = parseFrontmatter(fileContent);
     const slug = getSlug(filename);
 
-    // define default values
     const defaults = {
       title: "Untitled",
       created_at: "",
@@ -35,11 +55,10 @@ function generatePostsJson() {
     articles[slug] = {
       path: path.relative(process.cwd(), path.join(articlesDir, filename)),
       ...defaults,
-      ...data, // data from frontmatter overrides defaults
+      ...data,
     };
   });
 
-  // sort articles by created date descending (assuming ISO 8601 date format in frontmatter)
   const sortedEntries = Object.entries(articles).sort(([, a], [, b]) => {
     const dateA = a.created_at || "";
     const dateB = b.created_at || "";
@@ -47,9 +66,8 @@ function generatePostsJson() {
   });
 
   const sortedArticles = Object.fromEntries(sortedEntries);
-  const output = JSON.stringify(sortedArticles, null, 4);
 
-  fs.writeFileSync(outputPath, output, "utf-8");
+  fs.writeFileSync(outputPath, JSON.stringify(sortedArticles, null, 4), "utf-8");
   console.log(`✅ articles.json generated with ${Object.keys(sortedArticles).length} posts`);
 }
 
