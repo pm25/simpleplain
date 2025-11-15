@@ -1,5 +1,5 @@
 <!--
-origin repo: https://github.com/pm25/simpleplain
+origin repo: https://github.com/pm25/Showlit
 author: Pin-Yen Huang
 -->
 
@@ -8,21 +8,22 @@ author: Pin-Yen Huang
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/pm25/simpleplain">
-    <img src="public/full_logo.png" alt="Logo" width="640">
+  <a href="https://github.com/pm25/Showlit">
+    <img src="public/full_logo_v1.png" alt="Logo" width="640">
   </a>
 
-  <h3 align="center">SimplePlain - A Personal Website Template</h3>
+  <h3 align="center">Showlit – A Modern and Clean Personal Website Template</h3>
 
   <p align="center">
-    Effortlessly build your personal website with <strong>SimplePlain</strong>! This React-based template is fully customizable and ideal for showcasing your portfolio — whether you're a researcher, engineer, or student.
+    Build your personal website effortlessly with <strong>Showlit</strong>!  <br>
+    This fully customizable React-based template is perfect for showcasing your portfolio with ease.
     <br />
     <br />
-    <a href="https://pm25.github.io/simpleplain">🌐 Live Demo</a>
+    <a href="https://pm25.github.io/Showlit">🌐 Live Demo</a>
     ·
-    <a href="https://github.com/pm25/simpleplain/issues/new?labels=bug&template=bug-report---.md">🐞 Report Bug</a>
+    <a href="https://github.com/pm25/Showlit/issues/new?labels=bug&template=bug-report---.md">🐞 Report Bug</a>
     ·
-    <a href="https://github.com/pm25/simpleplain/issues/new?labels=enhancement&template=feature-request---.md">💡 Request Feature</a>
+    <a href="https://github.com/pm25/Showlit/issues/new?labels=enhancement&template=feature-request---.md">💡 Request Feature</a>
   </p>
 </div>
 
@@ -48,16 +49,16 @@ author: Pin-Yen Huang
 
 ## About The Template
 
-**🥪 SimplePlain** is a React-based website template that makes building a personal website easy. It offers modern UI components, useful built-in features, and flexible customization options. SimplePlain strikes a balance between simplicity and flexibility, letting you get started quickly while still tailoring your site to your style.
+**✨Showlit** is a React-based website template that makes building a personal website easy. It offers modern UI components, useful built-in features, and flexible customization options. Showlit strikes a balance between simplicity and flexibility, letting you get started quickly while still tailoring your site to your style.
 
-**Why SimplePlain?**
+**Why Showlit?**
 
-* ⚡ **Quick Setup** – Get your site running in minutes.
-* 🎨 **Customizable** – Easily adjust the design (basic coding skills required).
-* 🔧 **Built-in Features** – Includes a blog, automatic project fetching, and more.
-* 👥 **Beginner-Friendly** – No advanced coding needed to get started.
+-   ⚡ **Quick Setup** – Get your site running in minutes.
+-   🎨 **Customizable** – Easily adjust the design (basic react skills required).
+-   🔧 **Built-in Features** – Includes a blog, automatic project fetching, and more.
+-   👥 **Beginner-Friendly** – No advanced coding needed to get started.
 
-✨ **Found this useful?** Give it a ⭐ to support the project!
+✨ **Found this project useful?** Give it a ⭐ to support the project!
 
 ### 🛠️ Built With
 
@@ -73,7 +74,7 @@ This project is primarily built using the following frameworks and libraries:
 
 ## Preview
 
-See how 🥪 SimplePlain looks in both light and dark themes:
+See how ✨Showlit looks in both light and dark themes:
 
 ### ☀️ Light Mode
 
@@ -104,8 +105,8 @@ npm install npm@latest -g
 1. **Clone the repository**
 
 ```sh
-git clone https://github.com/pm25/simpleplain.git
-cd simpleplain
+git clone https://github.com/pm25/Showlit.git
+cd Showlit
 ```
 
 2. **Install dependencies**
