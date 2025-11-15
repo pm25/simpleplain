@@ -21,11 +21,11 @@ export default function Layout() {
                     Created by
                     <Button asChild variant="link" className="p-0 ml-1">
                         <a
-                            href="https://github.com/pm25/simpleplain"
+                            href="https://github.com/pm25/showlit"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            SimplePlain Template
+                            Showlit Template
                         </a>
                     </Button>
                 </footer>
