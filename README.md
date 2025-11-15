@@ -9,7 +9,7 @@ author: Pin-Yen Huang
 <br />
 <div align="center">
   <a href="https://github.com/pm25/showlit">
-    <img src="public/full_logo_v1.png" alt="Logo" width="640">
+    <img src="public/full_logo.png" alt="Logo" width="640">
   </a>
 
   <h3 align="center">Showlit – A Modern and Clean Personal Website Template</h3>
