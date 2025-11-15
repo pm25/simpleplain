@@ -1,5 +1,4 @@
 version: 2
-
 updates:
     - package-ecosystem: "npm"
       directory: "/"
@@ -9,10 +8,12 @@ updates:
       target-branch: "dev"
       commit-message:
           prefix: "deps"
-
-groups:
-    all-minor:
-        patterns:
-            - "*"
-        commit-message:
-            prefix: "deps"
+      groups:
+          all-minor-patch:
+              patterns:
+                  - "*"
+              update-types:
+                  - minor
+                  - patch
+              commit-message:
+                  prefix: "deps"
